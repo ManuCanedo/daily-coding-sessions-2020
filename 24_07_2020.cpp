@@ -38,7 +38,7 @@
 // N is an integer within the range [2..100,000];
 // each element of array A is an integer within the range [−10,000..10,000].
 
-// Solution not final, will further debug tomorrow.
+// FIRST VERSION
 
 #include <vector>
 
@@ -106,3 +106,5 @@ inline std::vector<int> getNextAvgVectorR (std::vector<int>& A, std::vector<int>
 
     return nextAvgVector;
 }
+
+// WILL CONTINUE
