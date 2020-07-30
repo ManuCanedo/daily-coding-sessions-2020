@@ -104,7 +104,6 @@ int solution(std::vector<int> &A)
 
     // Tomorrow will complete this section.
 
-
     if (totalIntersections > 10000000)
         return -1;
     return totalIntersections;
