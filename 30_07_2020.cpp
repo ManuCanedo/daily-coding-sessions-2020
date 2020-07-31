@@ -30,49 +30,49 @@
 // each element of array A is an integer within the range [0..2,147,483,647].
 
 
-#include <vector>
-#include <numeric>
-#include <iostream>
+// #include <vector>
+// #include <numeric>
+// #include <iostream>
 
-int solution(std::vector<int> &A) 
-{
-    if (A.empty() || A.size() == 1)
-        return 0;
+// int solution(std::vector<int> &A) 
+// {
+//     if (A.empty() || A.size() == 1)
+//         return 0;
         
-    int totalIntersections = 0, N = A.size() + A[A.size()-2] -1;
-    std::vector<int> hLimit(N,0);
-    unsigned int itIndex = 0;
+//     int totalIntersections = 0, N = A.size() + A[A.size()-2] -1;
+//     std::vector<int> hLimit(N,0);
+//     unsigned int itIndex = 0;
     
-    for (unsigned int i = 0; i < A.size()-1; i++)
-    {   
-        if (A[i] != 0)
-            hLimit[i+A[i]]++; 
-    }
-    // for (auto it = hLimit.begin(); it != hLimit.end(); ++it)
-    // {
-    //     cout << *it << " ";
-    // }
+//     for (unsigned int i = 0; i < A.size()-1; i++)
+//     {   
+//         if (A[i] != 0)
+//             hLimit[i+A[i]]++; 
+//     }
+//     // for (auto it = hLimit.begin(); it != hLimit.end(); ++it)
+//     // {
+//     //     cout << *it << " ";
+//     // }
     
-    // std::cout << std::endl;
+//     // std::cout << std::endl;
             
-    for (int i = A.size()-1; i >= 0; i--)
-    {
-        if (i != (int)A.size()-1)
-            hLimit[i+A[i]]--;
+//     for (int i = A.size()-1; i >= 0; i--)
+//     {
+//         if (i != (int)A.size()-1)
+//             hLimit[i+A[i]]--;
         
-        itIndex = (i-A[i] > 0) ? (i-A[i]) : 0;
-        totalIntersections += (accumulate(hLimit.begin()+itIndex, hLimit.end(), 0));
+//         itIndex = (i-A[i] > 0) ? (i-A[i]) : 0;
+//         totalIntersections += (accumulate(hLimit.begin()+itIndex, hLimit.end(), 0));
         
-        if (totalIntersections > 10000000)
-            return -1;
-    }
-    // for (auto it = hLimit.begin(); it != hLimit.end(); ++it)
-    // {
-    //     cout << *it << " ";
-    // }
+//         if (totalIntersections > 10000000)
+//             return -1;
+//     }
+//     // for (auto it = hLimit.begin(); it != hLimit.end(); ++it)
+//     // {
+//     //     cout << *it << " ";
+//     // }
     
-    return totalIntersections;
-}
+//     return totalIntersections;
+// }
 
 
 //// Discarded first approach because was calculatin unique intersections instead of combination with repetition
