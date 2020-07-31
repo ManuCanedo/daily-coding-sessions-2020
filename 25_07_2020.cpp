@@ -40,46 +40,46 @@
 // N is an integer within the range [2..100,000];
 // each element of array A is an integer within the range [−10,000..10,000].
 
-#include <vector>
-#include <map>
+// #include <vector>
+// #include <map>
 
-int solution(std::vector<int> &A) {
-    std::vector<unsigned int> lowAvgOfTwo;
+// int solution(std::vector<int> &A) {
+//     std::vector<unsigned int> lowAvgOfTwo;
 
-    float lowestAvg = A[0];
-    unsigned int lowestAvgIndex = 0;
-    int previousInt = A[0];
+//     float lowestAvg = A[0];
+//     unsigned int lowestAvgIndex = 0;
+//     int previousInt = A[0];
     
-    for (unsigned int i = 1; i < A.size()-1; ++i)
-    {
-        if ((previousInt + A[i])/2 < lowestAvg)
-        {
-                lowestAvg = (previousInt + A[i])/2;
-                lowestAvgIndex = i-1;   
-        }
-        previousInt = A[i];
-    }
+//     for (unsigned int i = 1; i < A.size()-1; ++i)
+//     {
+//         if ((previousInt + A[i])/2 < lowestAvg)
+//         {
+//                 lowestAvg = (previousInt + A[i])/2;
+//                 lowestAvgIndex = i-1;   
+//         }
+//         previousInt = A[i];
+//     }
 
-    for (unsigned int i = 1; i < A.size()-1; ++i)
-    {
-        if ((previousInt + A[i])/2 == lowestAvg)
-        {
-            lowAvgOfTwo.push_back(i-1);  
-        }
-        previousInt = A[i];
-    }
+//     for (unsigned int i = 1; i < A.size()-1; ++i)
+//     {
+//         if ((previousInt + A[i])/2 == lowestAvg)
+//         {
+//             lowAvgOfTwo.push_back(i-1);  
+//         }
+//         previousInt = A[i];
+//     }
 
-    for (unsigned int i = 1; i < lowAvgOfTwo.size(); ++i)
-    {
-        if ((A[lowAvgOfTwo[i]-1] + A[lowAvgOfTwo[i]] + A[lowAvgOfTwo[i]]) / 3 < lowestAvg)
-        {
-            lowestAvgIndex -= 1;
-            lowestAvg = (A[lowAvgOfTwo[i]-1] + A[lowAvgOfTwo[i]] + A[lowAvgOfTwo[i]]) / 3;
-        }
-    }
+//     for (unsigned int i = 1; i < lowAvgOfTwo.size(); ++i)
+//     {
+//         if ((A[lowAvgOfTwo[i]-1] + A[lowAvgOfTwo[i]] + A[lowAvgOfTwo[i]]) / 3 < lowestAvg)
+//         {
+//             lowestAvgIndex -= 1;
+//             lowestAvg = (A[lowAvgOfTwo[i]-1] + A[lowAvgOfTwo[i]] + A[lowAvgOfTwo[i]]) / 3;
+//         }
+//     }
     
-    return lowestAvgIndex;
-}
+//     return lowestAvgIndex;
+// }
 
 /////////////////// SECOND VERSION
 
