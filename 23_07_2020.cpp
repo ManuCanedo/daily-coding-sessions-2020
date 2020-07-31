@@ -38,177 +38,176 @@
 
 // CODE THAT FAILED THE PERFORMANCE TEST 1
 
-#include <vector>
-#include <string>
+// #include <vector>
+// #include <string>
 
-std::vector<int> solution(std::string &S, std::vector<int> &P, std::vector<int> &Q) {
+// std::vector<int> solution(std::string &S, std::vector<int> &P, std::vector<int> &Q) {
     
-    std::vector<int> result;
-    result.reserve(P.size());
-    std::string mySubString = "";
+//     std::vector<int> result;
+//     result.reserve(P.size());
+//     std::string mySubString = "";
 
-    for (unsigned int i = 0; i < P.size(); ++i)
-    {
-        mySubString = S.substr(P[i], Q[i]-P[i]+1);
-        if (mySubString.find('A') != std::string::npos)
-        {
-            result.push_back(1);
-        }
-        else if (mySubString.find('C') != std::string::npos)
-        {
-            result.push_back(2);
-        }
-        else if (mySubString.find('G') != std::string::npos)
-        {
-            result.push_back(3);
-        }
-        else
-        {
-            result.push_back(4);
-        }
-    }
-    return result;
-}
+//     for (unsigned int i = 0; i < P.size(); ++i)
+//     {
+//         mySubString = S.substr(P[i], Q[i]-P[i]+1);
+//         if (mySubString.find('A') != std::string::npos)
+//         {
+//             result.push_back(1);
+//         }
+//         else if (mySubString.find('C') != std::string::npos)
+//         {
+//             result.push_back(2);
+//         }
+//         else if (mySubString.find('G') != std::string::npos)
+//         {
+//             result.push_back(3);
+//         }
+//         else
+//         {
+//             result.push_back(4);
+//         }
+//     }
+//     return result;
+// }
 
-// CODE THAT FAILED THE PERFORMANCE TEST 2
+// // CODE THAT FAILED THE PERFORMANCE TEST 2
 
-std::vector<int> solution(std::string &S, std::vector<int> &P, std::vector<int> &Q) {
+// std::vector<int> solution(std::string &S, std::vector<int> &P, std::vector<int> &Q) {
     
-    std::vector<int> result;
-    result.reserve(P.size());
-    std::string mySubString = "";
+//     std::vector<int> result;
+//     result.reserve(P.size());
+//     std::string mySubString = "";
 
-    for (unsigned int i = 0; i < P.size(); ++i)
-    {
-        mySubString = S.substr(P[i], Q[i]-P[i]+1);
-        bool bA = false, bC = false, bG = false, bT = false;
+//     for (unsigned int i = 0; i < P.size(); ++i)
+//     {
+//         mySubString = S.substr(P[i], Q[i]-P[i]+1);
+//         bool bA = false, bC = false, bG = false, bT = false;
         
-        for (unsigned int i = 0; i < mySubString.size(); ++i)
-        {
-            if (mySubString[i] == 'A')
-            {
-                bA = true;
-                break;
-            }
-            switch ((int)mySubString[i])
-            {
-                case 'C':
-                    bC = true;
-                    break;
-                case 'G':
-                    bG = true;
-                    break;
-                case 'T':
-                    bT = true;
-                    break;
-            }
-        }
+//         for (unsigned int i = 0; i < mySubString.size(); ++i)
+//         {
+//             if (mySubString[i] == 'A')
+//             {
+//                 bA = true;
+//                 break;
+//             }
+//             switch ((int)mySubString[i])
+//             {
+//                 case 'C':
+//                     bC = true;
+//                     break;
+//                 case 'G':
+//                     bG = true;
+//                     break;
+//                 case 'T':
+//                     bT = true;
+//                     break;
+//             }
+//         }
         
-        if (bA)
-        {
-            result.push_back(1); 
-        }
-        else if (bC)
-        {
-            result.push_back(2); 
-        }
-        else if (bG)
-        {
-            result.push_back(3);
-        }
-        else if (bT)
-        {
-            result.push_back(4);
-        }
-        else {
-            result.push_back(-1);
-        }
-    }
-    return result;
-}
+//         if (bA)
+//         {
+//             result.push_back(1); 
+//         }
+//         else if (bC)
+//         {
+//             result.push_back(2); 
+//         }
+//         else if (bG)
+//         {
+//             result.push_back(3);
+//         }
+//         else if (bT)
+//         {
+//             result.push_back(4);
+//         }
+//         else {
+//             result.push_back(-1);
+//         }
+//     }
+//     return result;
+// }
 
 
-// CODE THAT FAILED THE PERFORMANCE TEST BY A FEW MS
+// // CODE THAT FAILED THE PERFORMANCE TEST BY A FEW MS
 
-#include <vector>
-#include <string>
-#include <iostream>
+// #include <vector>
+// #include <string>
+// #include <iostream>
 
-std::vector<int> solution(std::string &S, std::vector<int> &P, std::vector<int> &Q) {
+// std::vector<int> solution(std::string &S, std::vector<int> &P, std::vector<int> &Q) {
     
-    std::vector<int> result;
-    result.reserve(P.size());
-    std::vector<int> nucleiA;
-    nucleiA.reserve(S.size());
-    std::vector<int> nucleiC;
-    nucleiC.reserve(S.size());
-    std::vector<int> nucleiG;
-    nucleiA.reserve(S.size());
+//     std::vector<int> result;
+//     result.reserve(P.size());
+//     std::vector<int> nucleiA;
+//     nucleiA.reserve(S.size());
+//     std::vector<int> nucleiC;
+//     nucleiC.reserve(S.size());
+//     std::vector<int> nucleiG;
+//     nucleiA.reserve(S.size());
 
-    for (unsigned int i = 0; i < S.size(); ++i)
-    {
-        switch ((int)S[i])
-        {
-            case 'A':
-                nucleiA.push_back(i);
-                break;
-            case 'C':
-                nucleiC.push_back(i);
-                break;
-            case 'G':
-                nucleiG.push_back(i);
-                break;
-        }
-    }
+//     for (unsigned int i = 0; i < S.size(); ++i)
+//     {
+//         switch ((int)S[i])
+//         {
+//             case 'A':
+//                 nucleiA.push_back(i);
+//                 break;
+//             case 'C':
+//                 nucleiC.push_back(i);
+//                 break;
+//             case 'G':
+//                 nucleiG.push_back(i);
+//                 break;
+//         }
+//     }
     
-    bool bFound = false;
-    for (unsigned int i = 0; i < P.size(); ++i)
-    {
-        bFound = false;
-        for (unsigned int j = 0; j < nucleiA.size(); ++j)
-        {
-            if (nucleiA[j] > Q[i])
-                break;
-            if (((unsigned)nucleiA[j]-(unsigned)P[i]) <= ((unsigned)Q[i]-(unsigned)P[i]))
-            {
-                result.push_back(1);
-                bFound = true;
-                break;
-            }
-        }
+//     bool bFound = false;
+//     for (unsigned int i = 0; i < P.size(); ++i)
+//     {
+//         bFound = false;
+//         for (unsigned int j = 0; j < nucleiA.size(); ++j)
+//         {
+//             if (nucleiA[j] > Q[i])
+//                 break;
+//             if (((unsigned)nucleiA[j]-(unsigned)P[i]) <= ((unsigned)Q[i]-(unsigned)P[i]))
+//             {
+//                 result.push_back(1);
+//                 bFound = true;
+//                 break;
+//             }
+//         }
         
-        for (unsigned int j = 0; j < nucleiC.size() && !bFound; ++j)
-        {
-            if (nucleiC[j] > Q[i])
-                break;
-            if ((unsigned)(nucleiC[j]-(unsigned)P[i]) <= ((unsigned)Q[i]-(unsigned)P[i]))
-            {
-                result.push_back(2);
-                bFound = true;
-                break;
-            }
-        }
+//         for (unsigned int j = 0; j < nucleiC.size() && !bFound; ++j)
+//         {
+//             if (nucleiC[j] > Q[i])
+//                 break;
+//             if ((unsigned)(nucleiC[j]-(unsigned)P[i]) <= ((unsigned)Q[i]-(unsigned)P[i]))
+//             {
+//                 result.push_back(2);
+//                 bFound = true;
+//                 break;
+//             }
+//         }
         
-        for (unsigned int j = 0; j < nucleiG.size() && !bFound; ++j)
-        {
-            if (nucleiG[j] > Q[i])
-                break;
-            if (((unsigned)nucleiG[j]-(unsigned)P[i]) <= ((unsigned)Q[i]-(unsigned)P[i]))
-            {
-                result.push_back(3);
-                bFound = true;
-                break;
-            }
-        }
+//         for (unsigned int j = 0; j < nucleiG.size() && !bFound; ++j)
+//         {
+//             if (nucleiG[j] > Q[i])
+//                 break;
+//             if (((unsigned)nucleiG[j]-(unsigned)P[i]) <= ((unsigned)Q[i]-(unsigned)P[i]))
+//             {
+//                 result.push_back(3);
+//                 bFound = true;
+//                 break;
+//             }
+//         }
         
-        if (!bFound) 
-        {
-            result.push_back(4);
-        }
-    }
-    return result;
-}
-
+//         if (!bFound) 
+//         {
+//             result.push_back(4);
+//         }
+//     }
+//     return result;
+// }
 
 // CODE THAT PASSED THE PERFORMANCE TEST
 
