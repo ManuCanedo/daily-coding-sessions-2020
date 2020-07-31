@@ -40,74 +40,74 @@
 // N is an integer within the range [2..100,000];
 // each element of array A is an integer within the range [−10,000..10,000].
 
-#include <vector>
-#include <iostream>
-#include <algorithm> 
+// #include <vector>
+// #include <iostream>
+// #include <algorithm> 
 
-float calcIndexAvg(std::vector<int> &A, int index, float &minAvg, int &minAvgIndex);
+// float calcIndexAvg(std::vector<int> &A, int index, float &minAvg, int &minAvgIndex);
 
-int solution(std::vector<int> &A)
-{
-    int minAvgIndex = 0;
-    float minAvg = (float) (A[0]+A[1]) / 2;
-    float minIndexAvg = minAvg;
+// int solution(std::vector<int> &A)
+// {
+//     int minAvgIndex = 0;
+//     float minAvg = (float) (A[0]+A[1]) / 2;
+//     float minIndexAvg = minAvg;
     
-    for (unsigned int i = 0; i < A.size()-1; i++)
-    {
-        // cout << "Iters for" << endl;
-        minIndexAvg = calcIndexAvg(A, (int)i, minAvg, minAvgIndex);
+//     for (unsigned int i = 0; i < A.size()-1; i++)
+//     {
+//         // cout << "Iters for" << endl;
+//         minIndexAvg = calcIndexAvg(A, (int)i, minAvg, minAvgIndex);
         
-        while (A[i+1] > minIndexAvg)
-        {
-            i++;
-        }
-    }
-    return minAvgIndex;
-}
+//         while (A[i+1] > minIndexAvg)
+//         {
+//             i++;
+//         }
+//     }
+//     return minAvgIndex;
+// }
 
-inline float calcIndexAvg(std::vector<int> &A, int index, float &minAvg, int &minAvgIndex)
-{
-    static int Asize = (int)A.size();
-    static int minValue = *std::min_element(A.begin(),A.end());
+// inline float calcIndexAvg(std::vector<int> &A, int index, float &minAvg, int &minAvgIndex)
+// {
+//     static int Asize = (int)A.size();
+//     static int minValue = *std::min_element(A.begin(),A.end());
     
-    float currentSum = A[index] + A[index+1];
-    int sumLength = 2; 
-    float currentAvg = currentSum / sumLength;
-    float minIndexAvg = currentAvg;
-    float minTheoreticalSum = (minValue)*(Asize - index - sumLength);
-    float minTheoreticalAvg = (currentSum + minTheoreticalSum) / Asize;
+//     float currentSum = A[index] + A[index+1];
+//     int sumLength = 2; 
+//     float currentAvg = currentSum / sumLength;
+//     float minIndexAvg = currentAvg;
+//     float minTheoreticalSum = (minValue)*(Asize - index - sumLength);
+//     float minTheoreticalAvg = (currentSum + minTheoreticalSum) / Asize;
     
-    if (currentAvg < minAvg)
-    {
-        // cout << "Updates Min" << endl;
-        minAvg = currentAvg;
-        minAvgIndex = index;
-    }
+//     if (currentAvg < minAvg)
+//     {
+//         // cout << "Updates Min" << endl;
+//         minAvg = currentAvg;
+//         minAvgIndex = index;
+//     }
     
-    while (minTheoreticalAvg < minAvg && (Asize - index - sumLength) >= 0)
-    {
-        // cout << "Enters While" << endl;
-        // std::cout.precision(2);
-        // std::cout << "Current MinAvg is " << minAvg << endl;
-        currentSum += A[index+sumLength];
-        sumLength++;
-        currentAvg = currentSum / sumLength;
-        minTheoreticalSum = (minValue*(Asize - index - sumLength));
-        minTheoreticalAvg = (currentSum + minTheoreticalSum) / Asize;
+//     while (minTheoreticalAvg < minAvg && (Asize - index - sumLength) >= 0)
+//     {
+//         // cout << "Enters While" << endl;
+//         // std::cout.precision(2);
+//         // std::cout << "Current MinAvg is " << minAvg << endl;
+//         currentSum += A[index+sumLength];
+//         sumLength++;
+//         currentAvg = currentSum / sumLength;
+//         minTheoreticalSum = (minValue*(Asize - index - sumLength));
+//         minTheoreticalAvg = (currentSum + minTheoreticalSum) / Asize;
         
-        if (currentAvg < minIndexAvg)
-            minIndexAvg = currentAvg;
+//         if (currentAvg < minIndexAvg)
+//             minIndexAvg = currentAvg;
         
-        if (currentAvg < minAvg)
-        {
-            // cout << "Updates Min" << endl;
-            minAvg = currentAvg;
-            minAvgIndex = index;
-        }
-    }
+//         if (currentAvg < minAvg)
+//         {
+//             // cout << "Updates Min" << endl;
+//             minAvg = currentAvg;
+//             minAvgIndex = index;
+//         }
+//     }
     
-    return minIndexAvg;
-}
+//     return minIndexAvg;
+// }
 
 // This code is still buggy, I will revert to the correct version and try to optimize from there.
 
