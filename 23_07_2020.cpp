@@ -210,7 +210,7 @@ std::vector<int> solution(std::string &S, std::vector<int> &P, std::vector<int> 
 }
 
 
-// UNORTHODOX CODE THAT PASSED THE PERFORMANCE TEST
+// CODE THAT PASSED THE PERFORMANCE TEST
 
 std::vector<int> solution(std::string &S, std::vector<int> &P, std::vector<int> &Q) {
     
