@@ -32,7 +32,8 @@
 
 
 
-// Been working on a different approach to yesterday's challenge. I don't like the O(N^2) time complexity. Tomorrow I will finish this algorithm so it gets the 100% scores. 
+// Been working on a different approach to yesterday's challenge. I don't like the O(N^2) time complexity. This version will be O(N) in avg cases only getting close to O(N^2) when all radiuses are ~N. 
+// Tomorrow I will finish this algorithm so it gets the 100% scores.
 
 #include <vector>
 #include <algorithm>
