@@ -9,6 +9,7 @@
 //     P[0] = 2    Q[0] = 4
 //     P[1] = 5    Q[1] = 5
 //     P[2] = 0    Q[2] = 6
+
 // The answers to these M = 3 queries are as follows:
 
 // The part of the DNA between positions 2 and 4 contains nucleotides G and C (twice), whose impact factors are 3 and 2 respectively, so the answer is 2.
@@ -27,6 +28,7 @@
 //     P[0] = 2    Q[0] = 4
 //     P[1] = 5    Q[1] = 5
 //     P[2] = 0    Q[2] = 6
+
 // the function should return the values [2, 4, 1], as explained above.
 
 // Write an efficient algorithm for the following assumptions:
@@ -37,7 +39,8 @@
 // P[K] ≤ Q[K], where 0 ≤ K < M;
 // string S consists only of upper-case English letters A, C, G, T.
 
-////////// SOLUTION
+
+////////// SOLUTION PROGRESS
 // CORRECT BUT INEFFICIENT CODE 2
 
 // #include <vector>
@@ -72,6 +75,7 @@
 //     return result;
 // }
 
+////////// SOLUTION PROGRESS
 // // CORRECT BUT INEFFICIENT CODE 2
 
 // std::vector<int> solution(std::string &S, std::vector<int> &P, std::vector<int> &Q) {
@@ -130,6 +134,7 @@
 // }
 
 
+////////// SOLUTION PROGRESS
 // // CODE THAT FAILED THE PERFORMANCE TEST BY A FEW MS
 
 // #include <vector>
@@ -210,6 +215,7 @@
 //     }
 //     return result;
 // }
+
 
 ////////// SOLUTION
 
