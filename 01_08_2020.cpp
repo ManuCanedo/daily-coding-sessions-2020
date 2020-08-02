@@ -32,96 +32,95 @@
 // each element of array A is an integer within the range [0..2,147,483,647].
 
 
-////////// SOLUTION
-// Been working on a different approach to yesterday's challenge. I don't like the O(N^2) time complexity. This version will be O(N) in avg cases only getting close to O(N^2) when all radiuses are ~N. 
-// Tomorrow I will finish this algorithm so it gets the 100% scores.
+// Been working on a different approach to yesterday's challenge. I don't like the O(N*N*N) time complexity. This version will be O(N).
+// Tomorrow I will finish this algorithm.
 
-#include <vector>
-#include <algorithm>
+// #include <vector>
+// #include <algorithm>
 
-int solution(vector<int> &A) {
-    std::vector<int> discOpen, discClose, numDiscs;
-    int intersections = 0, openDiscs = 0, closedDiscs = 0;
+// int solution(vector<int> &A) {
+//     std::vector<int> discOpen, discClose, numDiscs;
+//     int intersections = 0, openDiscs = 0, closedDiscs = 0;
     
-    for (size_t i = 0; i < A.size(); ++i)
-    {
-        discOpen.push_back(i-A[i]);
-        discClose.push_back(i+A[i]);
-    }
-    std::sort(discOpen.begin(), discOpen.end());
-    std::sort(discClose.begin(), discClose.end());
-    // ////
-    // for (int s : discClose)
-    // {
-    //     std::cout << s << " ";
-    // }
-    // std::cout << endl << endl;
-    // ////
+//     for (size_t i = 0; i < A.size(); ++i)
+//     {
+//         discOpen.push_back(i-A[i]);
+//         discClose.push_back(i+A[i]);
+//     }
+//     std::sort(discOpen.begin(), discOpen.end());
+//     std::sort(discClose.begin(), discClose.end());
+//     // ////
+//     // for (int s : discClose)
+//     // {
+//     //     std::cout << s << " ";
+//     // }
+//     // std::cout << endl << endl;
+//     // ////
     
-    int rangeStart = 0, rangeEnd = 0, minValue = discOpen[0];
-    for (size_t i = 0; i < discOpen.size()-1; ++i)
-    {
-        openDiscs++;
-        rangeStart = discOpen[i];
-        rangeEnd = discOpen[i+1];
-        for (int j = rangeStart; j < rangeEnd; j++)
-        {
-            numDiscs.push_back(openDiscs);
-        }
-    }
-    // ////
-    // for (int s : numDiscs)
-    // {
-    //     std::cout << s << " ";
-    // }
-    // std::cout << endl;
-    // ////
+//     int rangeStart = 0, rangeEnd = 0, minValue = discOpen[0];
+//     for (size_t i = 0; i < discOpen.size()-1; ++i)
+//     {
+//         openDiscs++;
+//         rangeStart = discOpen[i];
+//         rangeEnd = discOpen[i+1];
+//         for (int j = rangeStart; j < rangeEnd; j++)
+//         {
+//             numDiscs.push_back(openDiscs);
+//         }
+//     }
+//     // ////
+//     // for (int s : numDiscs)
+//     // {
+//     //     std::cout << s << " ";
+//     // }
+//     // std::cout << endl;
+//     // ////
     
-    for (size_t i = 0; i < discClose.size()-1; ++i)
-    {
-        closedDiscs++;
-        rangeStart = discClose[i];
-        rangeEnd = discClose[i+1];
-        if (rangeStart == rangeEnd)
-        {
-            closedDiscs++;
-            numDiscs[rangeStart-minValue]-=closedDiscs;
-        }
-        for (int j = rangeStart; j < rangeEnd; ++j)
-        {
-            if (j < *(std::end(numDiscs)-1))
-                numDiscs[j-minValue]-=closedDiscs;
-        }
-    }
-    // ////
-    // for (int s : numDiscs)
-    // {
-    //     std::cout << s << " ";
-    // }
-    // std::cout << endl;
-    // ////
+//     for (size_t i = 0; i < discClose.size()-1; ++i)
+//     {
+//         closedDiscs++;
+//         rangeStart = discClose[i];
+//         rangeEnd = discClose[i+1];
+//         if (rangeStart == rangeEnd)
+//         {
+//             closedDiscs++;
+//             numDiscs[rangeStart-minValue]-=closedDiscs;
+//         }
+//         for (int j = rangeStart; j < rangeEnd; ++j)
+//         {
+//             if (j < *(std::end(numDiscs)-1))
+//                 numDiscs[j-minValue]-=closedDiscs;
+//         }
+//     }
+//     // ////
+//     // for (int s : numDiscs)
+//     // {
+//     //     std::cout << s << " ";
+//     // }
+//     // std::cout << endl;
+//     // ////
     
-    openDiscs = numDiscs[0];
-    for (size_t i = 1; i < numDiscs.size(); ++i)
-    {
-        if (numDiscs[i] > openDiscs)
-        {
-            for (int k = 0; k < numDiscs[i]-openDiscs; ++k)
-            {
-                intersections += openDiscs;
-                openDiscs++;
-            }
-            if (intersections > 10000000)
-                    return -1;
-            openDiscs = numDiscs[i];
-        }
-        else if (numDiscs[i] < openDiscs)
-        {
-            openDiscs = numDiscs[i];
-        }
-    }
-    return intersections;
-}
+//     openDiscs = numDiscs[0];
+//     for (size_t i = 1; i < numDiscs.size(); ++i)
+//     {
+//         if (numDiscs[i] > openDiscs)
+//         {
+//             for (int k = 0; k < numDiscs[i]-openDiscs; ++k)
+//             {
+//                 intersections += openDiscs;
+//                 openDiscs++;
+//             }
+//             if (intersections > 10000000)
+//                     return -1;
+//             openDiscs = numDiscs[i];
+//         }
+//         else if (numDiscs[i] < openDiscs)
+//         {
+//             openDiscs = numDiscs[i];
+//         }
+//     }
+//     return intersections;
+// }
 
 
 ////////// OTHER CONTRIBUTIONS
