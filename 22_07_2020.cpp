@@ -1,3 +1,5 @@
+////////// CHALLENGE DESCRIPTION
+
 // Write a function:
 
 // int solution(int A, int B, int K);
@@ -14,6 +16,7 @@
 // K is an integer within the range [1..2,000,000,000];
 // A ≤ B.
 
+////////// SOLUTION
 
 int solution(int A, int B, int K) 
 {
@@ -34,6 +37,12 @@ int solution(int A, int B, int K)
     return factors;
 }
 
+////////// CORRECT BEHAVIOUR
+////////// TIME COMPLEXITY:
+////////// MAX ~ 0(1)
+////////// AVG ~ 0(1)
+
+////////// CHALLENGE DESCRIPTION
 
 // A non-empty array A consisting of N integers is given. The consecutive elements of array A represent consecutive cars on a road.
 
@@ -74,6 +83,7 @@ int solution(int A, int B, int K)
 // N is an integer within the range [1..100,000];
 // each element of array A is an integer that can have one of the following values: 0, 1.
 
+////////// SOLUTION
 
 int solution(vector<int> &A) {
 
@@ -100,3 +110,8 @@ int solution(vector<int> &A) {
     }
     return passingCars;
 }
+
+////////// CORRECT BEHAVIOUR
+////////// TIME COMPLEXITY:
+////////// MAX ~ 0(N)
+////////// AVG ~ 0(N)
