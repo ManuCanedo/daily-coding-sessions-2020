@@ -11,6 +11,7 @@
 //     A[4] = 1
 //     A[5] = 5
 //     A[6] = 8
+
 // contains the following example slices:
 
 // slice (1, 2), whose average is (2 + 2) / 2 = 2;
@@ -33,6 +34,7 @@
 //     A[4] = 1
 //     A[5] = 5
 //     A[6] = 8
+
 // the function should return 1, as explained above.
 
 // Write an efficient algorithm for the following assumptions:
@@ -40,6 +42,8 @@
 // N is an integer within the range [2..100,000];
 // each element of array A is an integer within the range [−10,000..10,000].
 
+
+////////// SOLUTION PROGRESS
 // FIRST VERSION
 
 // #include <vector>
@@ -83,6 +87,7 @@
 //     return lowestAvgIndex;
 // }
 
+////////// SOLUTION PROGRESS
 // /////////////////// SECOND VERSION
 
 // #include <vector>
@@ -120,5 +125,3 @@
     
 //     return lowestAvgIndex;
 // }
-
-// WILL CONTINUE
