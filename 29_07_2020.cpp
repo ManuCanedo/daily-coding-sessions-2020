@@ -33,7 +33,8 @@
 // each element of array A is an integer within the range [−2,147,483,648..2,147,483,647].
 
 
-// Initial code with iteration order = 3.
+////////// SOLUTION PROGRESS
+// Initial code with Time Complexity O(N**3).
 
 // #include <vector>
 
