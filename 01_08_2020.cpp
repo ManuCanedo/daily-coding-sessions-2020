@@ -1,3 +1,5 @@
+////////// CHALLENGE DESCRIPTION
+
 // We draw N discs on a plane. The discs are numbered from 0 to N − 1. An array A of N non-negative integers, specifying the radiuses of the discs, is given. The J-th disc is drawn with its center at (J, 0) and radius A[J].
 
 // We say that the J-th disc and K-th disc intersect if J ≠ K and the J-th and K-th discs have at least one common point (assuming that the discs contain their borders).
@@ -30,8 +32,7 @@
 // each element of array A is an integer within the range [0..2,147,483,647].
 
 
-
-
+////////// SOLUTION
 // Been working on a different approach to yesterday's challenge. I don't like the O(N^2) time complexity. This version will be O(N) in avg cases only getting close to O(N^2) when all radiuses are ~N. 
 // Tomorrow I will finish this algorithm so it gets the 100% scores.
 
@@ -123,6 +124,7 @@ int solution(vector<int> &A) {
 }
 
 
+////////// OTHER CONTRIBUTIONS
 ///////////////////////////////////////////////////////////////////////////////// In addition I created this algorithm to help a friend in a challenge of his own. 
 // I don't have the written specifications for it.
 
