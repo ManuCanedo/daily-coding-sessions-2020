@@ -1,3 +1,5 @@
+////////// CHALLENGE DESCRIPTION
+
 // Write a function
 
 // int solution(vector<int> &A);
@@ -15,6 +17,8 @@
 // N is an integer within the range [0..100,000];
 // each element of array A is an integer within the range [−1,000,000..1,000,000].
 
+////////// SOLUTION
+
 #include <algorithm>
 #include <vector>
 
@@ -28,3 +32,8 @@ int solution(vector<int> &A) {
     
     return A.size();
 }
+
+////////// CORRECT BEHAVIOUR
+////////// TIME COMPLEXITY:
+////////// MAX ~ O(N*logN)
+////////// AVG ~ 0(N*logN)
