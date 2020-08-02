@@ -36,4 +36,4 @@ int solution(vector<int> &A) {
 ////////// CORRECT BEHAVIOUR
 ////////// TIME COMPLEXITY:
 ////////// MAX ~ O(N*logN)
-////////// AVG ~ 0(N*logN)
+////////// AVG ~ O(N*logN)
