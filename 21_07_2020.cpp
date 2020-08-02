@@ -1,4 +1,4 @@
-// CHALLENGE 1
+////////// CHALLENGE DESCRIPTION
 
 // A small frog wants to get to the other side of a river. The frog is initially located on one bank of the river (position 0) and wants to get to the opposite bank (position X+1). Leaves fall from a tree onto the surface of the river.
 
@@ -43,13 +43,11 @@
 // N and X are integers within the range [1..100,000];
 // each element of array A is an integer within the range [1..X].
 
+////////// SOLUTION
 // I have no record of the solution of this challenge. Although it was achieved with a 100% performance and correctness score.
 
 
-
-
-
-// CHALLENGE 2
+////////// CHALLENGE DESCRIPTION
 
 // A non-empty array A consisting of N integers is given. Array A represents numbers on a tape.
 
@@ -92,4 +90,5 @@
 // N is an integer within the range [2..100,000];
 // each element of array A is an integer within the range [−1,000..1,000].
 
+////////// SOLUTION
 // I have no record of the solution of this challenge. Although it was achieved with a 100% performance and correctness score.
