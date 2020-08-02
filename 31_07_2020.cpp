@@ -13,7 +13,6 @@
 //   A[4] = 4
 //   A[5] = 0
 
-
 // There are eleven (unordered) pairs of discs that intersect, namely:
 
 // discs 1 and 4 intersect, and both intersect with all the other discs;
@@ -31,6 +30,8 @@
 // N is an integer within the range [0..100,000];
 // each element of array A is an integer within the range [0..2,147,483,647].
 
+
+////////// SOLUTION PROGRESS
 // INITIAL APPROACH 
 
 // #include <vector>
@@ -79,8 +80,9 @@
 //     return totalIntersections;
 // }
 
+
 ////////// SOLUTION
-// CORRECT CODE, OPTIMIZATION TOMORROW 
+// CORRECT BEHAVIOUR CODE, OPTIMIZATION TOMORROW 
 
 #include <vector>
 #include <numeric>
