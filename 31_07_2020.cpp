@@ -1,3 +1,5 @@
+////////// CHALLENGE DESCRIPTION
+
 // We draw N discs on a plane. The discs are numbered from 0 to N − 1. An array A of N non-negative integers, specifying the radiuses of the discs, is given. The J-th disc is drawn with its center at (J, 0) and radius A[J].
 
 // We say that the J-th disc and K-th disc intersect if J ≠ K and the J-th and K-th discs have at least one common point (assuming that the discs contain their borders).
@@ -29,9 +31,7 @@
 // N is an integer within the range [0..100,000];
 // each element of array A is an integer within the range [0..2,147,483,647].
 
-
-
-// INITIAL APPROACH ////////////////////////////////////////////////////////////////////////////////////////////////////
+// INITIAL APPROACH 
 
 // #include <vector>
 // #include <numeric>
@@ -79,7 +79,8 @@
 //     return totalIntersections;
 // }
 
-// CORRECT CODE, OPTIMIZATION TOMORROW ////////////////////////////////////////////////////////////////////////////////////////////////////
+////////// SOLUTION
+// CORRECT CODE, OPTIMIZATION TOMORROW 
 
 #include <vector>
 #include <numeric>
@@ -144,4 +145,8 @@ inline bool has_common_elements(ForwardIt1 first, ForwardIt1 last, ForwardIt2 s_
     return false;
 }
 
-// Will optimize iteration tomorrow. Current time complexity order is N**2
+// Will re-do it tomorrow.
+////////// CORRECT BEHAVIOUR
+////////// TIME COMPLEXITY:
+////////// MAX ~ O(N*N*N)
+////////// AVG ~ O(N*N*N)
