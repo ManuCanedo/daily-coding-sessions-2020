@@ -39,7 +39,7 @@
 
 int solution(std::vector<int> &A) 
 {
-    std::vector<int> discOpen, discClose;
+    std::vector<long int> discOpen, discClose;
     int intersections = 0, openDiscs = 0;
     
     for (size_t i = 0; i < A.size(); ++i)
