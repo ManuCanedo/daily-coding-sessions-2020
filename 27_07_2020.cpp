@@ -1,4 +1,4 @@
-// CONTINUATION 25_07
+////////// CHALLENGE DESCRIPTION
 
 // A non-empty array A consisting of N integers is given. A pair of integers (P, Q), such that 0 ≤ P < Q < N, is called a slice of array A (notice that the slice contains at least two elements). The average of a slice (P, Q) is the sum of A[P] + A[P + 1] + ... + A[Q] divided by the length of the slice. To be precise, the average equals (A[P] + A[P + 1] + ... + A[Q]) / (Q − P + 1).
 
@@ -11,6 +11,7 @@
 //     A[4] = 1
 //     A[5] = 5
 //     A[6] = 8
+
 // contains the following example slices:
 
 // slice (1, 2), whose average is (2 + 2) / 2 = 2;
@@ -33,12 +34,16 @@
 //     A[4] = 1
 //     A[5] = 5
 //     A[6] = 8
+
 // the function should return 1, as explained above.
 
 // Write an efficient algorithm for the following assumptions:
 
 // N is an integer within the range [2..100,000];
 // each element of array A is an integer within the range [−10,000..10,000].
+
+
+////////// SOLUTION PROGRESS
 
 // #include <vector>
 // #include <iostream>
@@ -109,6 +114,8 @@
 //     return minIndexAvg;
 // }
 
+
+////////// SOLUTION PROGRESS
 // This code is still buggy, I will revert to the correct version and try to optimize from there.
 
 // #include <vector>
