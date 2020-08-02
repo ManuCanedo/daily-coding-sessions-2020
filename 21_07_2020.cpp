@@ -16,6 +16,7 @@
 //   A[5] = 3
 //   A[6] = 5
 //   A[7] = 4
+
 // In second 6, a leaf falls into position 5. This is the earliest time when leaves appear in every position across the river.
 
 // Write a function:
@@ -36,12 +37,14 @@
 //   A[5] = 3
 //   A[6] = 5
 //   A[7] = 4
+
 // the function should return 6, as explained above.
 
 // Write an efficient algorithm for the following assumptions:
 
 // N and X are integers within the range [1..100,000];
 // each element of array A is an integer within the range [1..X].
+
 
 ////////// SOLUTION
 // I have no record of the solution of this challenge. Although it was achieved with a 100% performance and correctness score.
@@ -83,12 +86,14 @@
 //   A[2] = 2
 //   A[3] = 4
 //   A[4] = 3
+
 // the function should return 1, as explained above.
 
 // Write an efficient algorithm for the following assumptions:
 
 // N is an integer within the range [2..100,000];
 // each element of array A is an integer within the range [−1,000..1,000].
+
 
 ////////// SOLUTION
 // I have no record of the solution of this challenge. Although it was achieved with a 100% performance and correctness score.
