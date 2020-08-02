@@ -1,3 +1,5 @@
+////////// CHALLENGE DESCRIPTION
+
 // You are given N counters, initially set to 0, and you have two possible operations on them:
 
 // increase(X) − counter X is increased by 1,
@@ -51,5 +53,5 @@
 
 // each element of array A is an integer within the range [1..N + 1].
 
-////////////
+////////// SOLUTION
 // I have no record of the solution of this challenge. Although it was achieved with a 100% performance and correctness score.
