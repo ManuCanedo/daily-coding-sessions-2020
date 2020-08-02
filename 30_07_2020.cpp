@@ -1,3 +1,5 @@
+////////// CHALLENGE DESCRIPTION
+
 // We draw N discs on a plane. The discs are numbered from 0 to N − 1. An array A of N non-negative integers, specifying the radiuses of the discs, is given. The J-th disc is drawn with its center at (J, 0) and radius A[J].
 
 // We say that the J-th disc and K-th disc intersect if J ≠ K and the J-th and K-th discs have at least one common point (assuming that the discs contain their borders).
@@ -77,34 +79,34 @@
 
 //// Discarded first approach because was calculatin unique intersections instead of combination with repetition
 
-#include <vector>
-#include <numeric>
-#include <iostream>
+// #include <vector>
+// #include <numeric>
+// #include <iostream>
 
-int solution(std::vector<int> &A) 
-{
-    if (A.empty() || A.size() == 1)
-        return 0;
+// int solution(std::vector<int> &A) 
+// {
+//     if (A.empty() || A.size() == 1)
+//         return 0;
     
-    int lBound = 0, hBound = 0;
-    int totalIntersections = 0;
+//     int lBound = 0, hBound = 0;
+//     int totalIntersections = 0;
     
-    std::vector<std::vector<int>> myIntersections;
-    myIntersections.resize(A.size());
+//     std::vector<std::vector<int>> myIntersections;
+//     myIntersections.resize(A.size());
     
-    for (int i = 0; i < (int)A.size(); i++)
-    {
-        lBound = (i-A[i] > 0) ? i-A[i] : 0;
-        hBound = (i+A[i] < (int)A.size()) ? i+A[i] : (int)A.size();
-        for (int j = lBound; j < hBound; j++)
-        {
-            myIntersections[j].push_back(i);
-        }
-    }
+//     for (int i = 0; i < (int)A.size(); i++)
+//     {
+//         lBound = (i-A[i] > 0) ? i-A[i] : 0;
+//         hBound = (i+A[i] < (int)A.size()) ? i+A[i] : (int)A.size();
+//         for (int j = lBound; j < hBound; j++)
+//         {
+//             myIntersections[j].push_back(i);
+//         }
+//     }
 
-    // Tomorrow will complete this section.
+//     // Tomorrow will complete this section.
 
-    if (totalIntersections > 10000000)
-        return -1;
-    return totalIntersections;
-}
+//     if (totalIntersections > 10000000)
+//         return -1;
+//     return totalIntersections;
+// }
