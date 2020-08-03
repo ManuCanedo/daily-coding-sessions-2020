@@ -32,7 +32,8 @@
 
 
 ////////// SOLUTION PROGRESS
-// Been working on a different approach to yesterday's challenge. I don't like the O(N*N*N) time complexity. This version will be O(N).
+// Solved 02_08_2020 with time complexity O(N*logN)
+// Been working on a different approach to yesterday's challenge. I don't like the O(N*N*N) time complexity. This version will be O(N*logN).
 // Tomorrow I will finish this algorithm.
 
 // #include <vector>
