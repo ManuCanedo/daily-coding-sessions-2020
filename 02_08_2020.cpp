@@ -32,7 +32,7 @@
 
 ////////// SOLUTION
 // I re-did the algortithm from past days in order to reduce time complexity.
-// This is the final O(N) solution with 100% performance scores.
+// This is the final O(N*logN) solution with 100% performance scores.
     
 #include <vector>
 #include <algorithm>
