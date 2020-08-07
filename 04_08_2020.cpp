@@ -1,3 +1,5 @@
+////////// CHALLENGE DESCRIPTION
+
 // A string S consisting of N characters is considered to be properly nested if any of the following conditions is true:
 
 // S is empty;
@@ -19,7 +21,7 @@
 // string S consists only of the following characters: "(", "{", "[", "]", "}" and/or ")".
 
 
-
+////////// SOLUTION 
 
 #include <vector>
 #include <string>
@@ -75,6 +77,11 @@ int solution(std::string &S) {
     }
     return (nesting.size() == 0) ? 1 : 0;
 }
+
+////////// CORRECT BEHAVIOUR
+////////// TIME COMPLEXITY:
+////////// MAX ~ O(N)
+////////// AVG ~ O(N)
 
 
 // Draft code to reduce 27_07 time complexity.
