@@ -47,11 +47,11 @@ int solution(std::vector<int> &A)
         discOpen.push_back(i-A[i]);
         discClose.push_back(i+A[i]);
     }
+    
     std::sort(discOpen.begin(), discOpen.end());
     std::sort(discClose.begin(), discClose.end());
     
-    size_t j = 0;
-    for (size_t i = 0; i < discOpen.size(); i++)
+    for (size_t i = 0, j = 0; i < discOpen.size(); i++)
     {
         if (discOpen[i] <= discClose[j])
         {
@@ -66,6 +66,7 @@ int solution(std::vector<int> &A)
             i--;
         }
     }
+    
     return intersections;
 }
 
