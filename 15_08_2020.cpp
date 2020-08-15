@@ -11,7 +11,6 @@
 //     A[2] = 2
 //     A[3] = 3
 //     A[4] = 6
-
 // For the following elements:
 
 // A[0] = 3, the non-divisors are: 2, 6,
