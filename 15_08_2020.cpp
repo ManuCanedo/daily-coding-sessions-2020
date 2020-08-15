@@ -49,29 +49,22 @@
 #include <algorithm>
 #include <vector>
 
-
-vector<int> solution(vector<int> &A) 
+std::vector<int> solution(std::vector<int> &A) 
 {
     std::vector<int> nonDivisors;
     int nonDivCount = 0;
     
     for (auto it = A.begin(); it != A.end(); ++it)
     {
-        std::vector<int> factors;
-        
         nonDivCount = 0;
-        for (long int i = 1; i*i <= *it; i++)
+        for (long int i = 1; i*i <= *it && (*it)%i == 0; i++)
         {
-            if ((*it)%i == 0)
-            {
-                if (i*i != *it)
-                    nonDivCount += std::count(A.begin(), A.end(), (*it)/i);
-                nonDivCount += std::count(A.begin(), A.end(), i);
-            }
+            if (i*i != *it)
+                nonDivCount += std::count(A.begin(), A.end(), (*it)/i);
+            nonDivCount += std::count(A.begin(), A.end(), i);
         }
         nonDivisors.push_back(A.size()-nonDivCount);
     }
-
     return nonDivisors;
 }
 
