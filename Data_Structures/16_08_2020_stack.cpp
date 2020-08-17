@@ -64,8 +64,7 @@ void fetchNode()
 {
     int fetchValue = 0;
     bool bFound = false;
-    node* currentNode = new node();
-    currentNode = previousNode;
+    node* currentNode = previousNode;
 
     std::cout << "Please enter a value to fetch: ";
     std::cin >> fetchValue;
@@ -103,8 +102,8 @@ void insertNode()
 // Iterates through the stack retrieving each node data
 void printStack()
 {
-    node* currentNode = new node();
-    currentNode = previousNode;
+    node* currentNode = previousNode;
+    
     if (previousNode != nullptr)
     {
         while (currentNode != nullptr)
