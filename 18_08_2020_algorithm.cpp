@@ -39,7 +39,7 @@ int solution(int N, int M)
     int sieveSize = (N>M) ? N : M;
     int sieveIndexN = N, sieveIndexM = M, MCD = 1;
     std::vector<int> sieve(sieveSize+1,0);
-    std::vector<int> primeFactorsN, primeFactorsM;
+    std::vector<int> primeFactorsN, primeFactorsM, MCDFactors;
 
     for (int i = 2; i*i <= sieveSize; ++i)
         if (sieve[i] == 0)
@@ -63,7 +63,6 @@ int solution(int N, int M)
     std::sort(primeFactorsN.begin(), primeFactorsN.end());
     std::sort(primeFactorsM.begin(), primeFactorsM.end());
 
-    std::vector<int> MCDFactors;
     for (size_t i = 0, j = 0; i < primeFactorsN.size() && j < primeFactorsM.size(); ++i)
     {
         while (primeFactorsM[j] < primeFactorsN[i])
