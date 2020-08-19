@@ -36,7 +36,7 @@ struct Vector3
     }
     Vector3& operator=(const Vector3&& other)
     {
-        // std::cout << "Move\n";
+        // std::cout << "Moved\n";
         x = other.x;
         y = other.y;
         z = other.z;
