@@ -1,6 +1,6 @@
 ////////// DATA STRUCTURES PRACTICE
 
-// Implementing my own version of the std::vector data structure.
+// Implementing my own version of std::vector
 // In this file I define struct Vector3 and the corresponding templated functions to print Vectors and Vector3s.
 
 #include <iostream>
