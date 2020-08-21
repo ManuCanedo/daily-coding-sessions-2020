@@ -18,6 +18,7 @@
 //     A[9] = 4
 //     A[10] = 6
 //     A[11] = 2
+
 // has exactly three peaks: 3, 5, 10.
 
 // We want to divide this array into blocks containing the same number of elements. More precisely, we want to choose a number K that will yield the following blocks:
