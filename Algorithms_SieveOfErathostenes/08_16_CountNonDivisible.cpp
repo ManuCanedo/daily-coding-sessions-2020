@@ -56,9 +56,7 @@ std::vector<int> solution(std::vector<int> &A)
     unsigned long int k = 1, product = 0;
     
     for (int a : A)
-    {
         ++factors[a];
-    }
     
     for (size_t i = 0; i < sieve.size(); ++i)
     {
@@ -75,9 +73,8 @@ std::vector<int> solution(std::vector<int> &A)
     }
     
     for (int a : A)
-    {
         result.push_back(A.size()-sieve[a]);
-    }
+    
     return result;
 }
 
