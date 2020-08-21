@@ -84,7 +84,7 @@ inline int greatestCommonDivisor(int A, int B, int res)
         return greatestCommonDivisor(A, B-A, res);
 }
 
-////////// CORRECT BEHAVIOUR FOR SMALL ARRAYS (POOR SPACE COMPLEXITY)
+////////// CORRECT BEHAVIOUR
 ////////// TIME COMPLEXITY:
 ////////// MAX ~ O(Z*log(A+B)*log(A+B))
 
