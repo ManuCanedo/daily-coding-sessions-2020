@@ -17,6 +17,7 @@
 // slice (1, 2), whose average is (2 + 2) / 2 = 2;
 // slice (3, 4), whose average is (5 + 1) / 2 = 3;
 // slice (1, 4), whose average is (2 + 2 + 5 + 1) / 4 = 2.5.
+
 // The goal is to find the starting position of a slice whose average is minimal.
 
 // Write a function:
