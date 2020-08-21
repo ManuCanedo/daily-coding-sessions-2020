@@ -58,4 +58,4 @@
 
 
 ////////// SOLUTION
-// I have no record of the solution of this challenge. Although it was achieved with a 100% performance and correctness score.
+// I have no record of the solution of this challenge.
