@@ -4,7 +4,7 @@
 // In this file I define struct Vector3 and the corresponding templated functions to print Vectors and Vector3s.
 
 #include <iostream>
-#include "08_19_Vector3AndMain.h"
+#include "08_19_Vector.h"
 
 struct Vector3
 {
