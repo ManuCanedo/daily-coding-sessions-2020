@@ -63,12 +63,14 @@ std::vector<int> solution(int N, std::vector<int> &P, std::vector<int> &Q)
     for (int i = 2; i <= N; ++i)
     {
         if (sieve[i] == 0)
+        {
             for (int k = 2, product = k*i; product <= N; ++k)
             {
                 if (sieve[k] == 0)
                     semiPrimes[product] = 1;
                 product = (k+1)*i;
             }
+        }
     }
     
     for (size_t i = 1; i < semiPrimes.size(); ++i)
