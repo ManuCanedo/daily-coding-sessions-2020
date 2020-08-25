@@ -5,6 +5,7 @@
 // S is empty;
 // S has the form "(U)" where U is a properly nested string;
 // S has the form "VW" where V and W are properly nested strings.
+
 // For example, string "(()(())())" is properly nested but string "())" isn't.
 
 // Write a function:
@@ -47,6 +48,7 @@ int solution(std::string &S)
                 break;
         }
     }
+    
     return (nesting.empty()) ? 1 : 0;
 }
 
