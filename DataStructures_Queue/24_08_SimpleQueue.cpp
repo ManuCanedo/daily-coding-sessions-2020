@@ -161,38 +161,12 @@ void removeNode()
     int fetchValue = 0;
     bool bFound = false;
     node *currentNode = firstNode;
-    node* previousNode = nullptr;
 
-    std::cout << "Please enter a node to fetch: ";
-    std::cin >> fetchValue;
     if (firstNode != nullptr)
     {
-        while (currentNode != nullptr && !bFound)
-        {
-            if (currentNode->data == fetchValue)
-            {
-                if (currentNode == firstNode)
-                {
-                    firstNode = firstNode->nextNode;
-                }
-                else if (currentNode == lastNode)
-                {
-                    previousNode->nextNode = nullptr;
-                    lastNode = previousNode;
-                }
-                else
-                {
-                    previousNode->nextNode = currentNode->nextNode;
-                }
-                delete currentNode;
-                bFound = true;
-                std::cout << "Node removed" << std::endl;
-            }
-            previousNode = currentNode;
-            currentNode = currentNode->nextNode;
-        }
-        if (!bFound)
-            std::cout << "Node with value " << fetchValue << " was never found" << std::endl;
+        firstNode = firstNode->nextNode;
+        delete currentNode;
+        std::cout << "First node removed" << std::endl;
     }
     else
         std::cout << "The queue is empty" << std::endl;
