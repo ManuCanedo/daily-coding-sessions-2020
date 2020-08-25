@@ -56,7 +56,6 @@ int solution(std::vector<int> &A)
             occurrences = 1;
             previousValue = myVector[i];
         }
-        
         if (occurrences > half)
         {
             auto it = std::find (A.begin(), A.end(), previousValue);
