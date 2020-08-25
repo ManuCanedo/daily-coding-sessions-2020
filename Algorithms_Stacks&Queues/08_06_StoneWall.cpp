@@ -37,13 +37,12 @@ int solution(std::vector<int> &H)
     {
         while (!blocks.empty() && H[i] < blocks.back()) 
             blocks.pop_back();
-        
         if (!blocks.empty() && H[i] == blocks.back())
             continue;
-        
         blocks.push_back(H[i]);
         ++numBlocks;
     }
+    
     return numBlocks;
 }
 
