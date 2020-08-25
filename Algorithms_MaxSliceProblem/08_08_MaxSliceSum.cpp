@@ -12,12 +12,14 @@
 
 // A[0] = 3  A[1] = 2  A[2] = -6
 // A[3] = 4  A[4] = 0
+
 // the function should return 5 because:
 
 // (3, 4) is a slice of A that has sum 4,
 // (2, 2) is a slice of A that has sum −6,
 // (0, 1) is a slice of A that has sum 5,
 // no other slice of A has sum greater than (0, 1).
+
 // Write an efficient algorithm for the following assumptions:
 
 // N is an integer within the range [1..1,000,000];
@@ -39,7 +41,6 @@ int solution(std::vector<int> &A)
             currentSum = *it;
         else 
             currentSum += *it;
-            
         if (currentSum > maxSum)
             maxSum = currentSum;
     }
