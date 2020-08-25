@@ -5,6 +5,7 @@
 // S is empty;
 // S has the form "(U)" or "[U]" or "{U}" where U is a properly nested string;
 // S has the form "VW" where V and W are properly nested strings.
+
 // For example, the string "{[()()]}" is properly nested but "([)()]" is not.
 
 // Write a function:
@@ -28,6 +29,7 @@
 
 int solution(std::string &S) {
     std::vector<int> nesting;
+    
     for (auto it = S.begin(); it != S.end(); it++)
     {
         switch (*it)
@@ -75,6 +77,7 @@ int solution(std::string &S) {
                 break;
         }
     }
+    
     return (nesting.size() == 0) ? 1 : 0;
 }
 
