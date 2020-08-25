@@ -53,9 +53,7 @@ int solution(std::vector<int> &A, std::vector<int> &B) {
         {
             case 0:
                 while (!fishDown.empty() && fishDown.back() < A[i])
-                {
                     fishDown.pop_back();   
-                }
                 if (fishDown.empty())
                     fishUp.push_back(A[i]);
                 break;
@@ -66,6 +64,7 @@ int solution(std::vector<int> &A, std::vector<int> &B) {
                 break;
         }
     }
+    
     return fishUp.size() + fishDown.size();
 }
 
