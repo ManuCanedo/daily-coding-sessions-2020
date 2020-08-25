@@ -12,6 +12,7 @@
 // (2, 15), with a perimeter of 34,
 // (3, 10), with a perimeter of 26,
 // (5, 6), with a perimeter of 22.
+
 // Write a function:
 
 // int solution(int N);
