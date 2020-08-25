@@ -48,7 +48,6 @@
 
 #include <algorithm>
 #include <vector>
-//#include <iostream>
 
 int solution(std::vector<int> &A) 
 {
@@ -70,7 +69,6 @@ int solution(std::vector<int> &A)
             occurrences = 1;
             previousValue = myVector[i];
         }
-
         if (occurrences > maxOccurrences)
         {
             maxOccurrences = occurrences;
@@ -89,7 +87,6 @@ int solution(std::vector<int> &A)
             ++leaderOccurrencesL;
             --leaderOccurrencesR;
         }
-        
         if (leaderOccurrencesL > (lenL/2) && leaderOccurrencesR > (lenR/2))
             ++equiLeadersCount;
     }
