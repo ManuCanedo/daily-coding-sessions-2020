@@ -79,7 +79,7 @@ int solution(std::vector<int> &A)
             peaks.push_back(it-A.begin());
     }
     
-    for (int i = 1; i <= (int)peaks.size(); ++i)
+    for (int i = 1; i <= peaks.size(); ++i)
     {
         flags = i;
         for (auto it = peaks.begin(); it != peaks.end(); ++it)
@@ -97,7 +97,7 @@ int solution(std::vector<int> &A)
         return i-1;
     }
     
-    return (int)peaks.size();
+    return peaks.size();
 }
 
 ////////// CORRECT BEHAVIOUR
