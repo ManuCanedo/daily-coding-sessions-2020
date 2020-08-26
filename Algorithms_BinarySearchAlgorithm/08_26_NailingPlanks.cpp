@@ -67,26 +67,30 @@
 ////////// SOLUTION PROGRESS
 
 #include <vector>
-#include <iostream>
+#include <map>
+#include <set>
 
-bool enoughNails(const std::vector<int> &A, const std::vector<int> &B, const std::vector<int> &C, unsigned int endSearch);
+
+bool enoughNails(const std::multimap<int,int> boards, const std::vector<int> &C, int endSearch);
 
 int solution(std::vector<int> &A, std::vector<int> &B, std::vector<int> &C) 
 {
+    std::multimap<int, int> boards;
+    for (size_t i = 0; i < A.size(); ++i)
+        boards.insert(std::pair<int,int>(A[i],B[i]));
+
     std::vector<int>::iterator beg = C.begin(), end = C.end(), mid;
     int result = -1;
 
     while (beg != end)
     {
         mid = beg + (end-beg)/2;
-        if (!enoughNails(A, B, C, mid-C.begin()))
+        if (!enoughNails(boards, C, mid-C.begin()))
         {
-            // std::cout << "There are not enough nails from 0 to " << mid-C.begin() << std::endl << std::endl;
             beg = mid + 1;
         }
         else
         {
-            // std::cout << "There are enough nails from 0 to " << mid-C.begin() << std::endl << std::endl;
             end = mid;
             result = mid-C.begin()+1;
         }
@@ -95,28 +99,19 @@ int solution(std::vector<int> &A, std::vector<int> &B, std::vector<int> &C)
     return result;
 }
 
-inline bool enoughNails(const std::vector<int> &A, const std::vector<int> &B, const std::vector<int> &C, unsigned int endSearch)
+inline bool enoughNails(std::multimap<int,int> boards, const std::vector<int> &C, int endSearch)
 {
-    size_t indexIt = 0;
-    bool bAllBoardsNailed = false;
+    std::vector<std::multimap<int,int>::iterator> nailedBoards;
     
-    for (unsigned int j = 0; j <= endSearch && !bAllBoardsNailed; ++j)
+    for (unsigned int j = 0; j <= endSearch; ++j)
     {
-        // std::cout << j << ": ";
-        for (size_t i = indexIt; i < A.size(); ++i)
-        {
-            if (A[i] > C[j] || B[i] < C[j])
-            {
-                // std::cout << " - " << j << " ya no clava " << i;
-                indexIt = i;
-                break;
-            }
-            if (i == A.size()-1)
-                bAllBoardsNailed = true;
-            // std::cout << i << " ";
-        }
-        // std::cout << std::endl;
+        for (std::multimap<int,int>::iterator it = boards.begin(); it != boards.end(); ++it)
+            if (it->first <= C[j] && C[j] <= it->second)
+                nailedBoards.push_back(it);
+
+        for (std::multimap<int,int>::iterator it : nailedBoards)
+            boards.erase(it);
     }
-    
-    return bAllBoardsNailed;
+
+    return (boards.size() == 0) ? true : false;
 }
