@@ -44,13 +44,13 @@ I am doing a C++ coding session a day. Whithin this files there are dozens of al
 #### Stacks And Queues
 
 04-08-2020: [Brackets](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_Stacks%26Queues/08_04_Brackets.cpp)  
-05-08-2020: [Fish](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_Stacks%26Queues/08_05_Fish.cpp)
+05-08-2020: [Fish](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_Stacks%26Queues/08_05_Fish.cpp)  
 06-08-2020: [Nesting](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_Stacks%26Queues/08_06_Nesting.cpp)  
 06-08-2020: [StoneWall](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_Stacks%26Queues/08_06_StoneWall.cpp)
 
 #### Sorting
 
-28-07-2020: [Distinct](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_Sorting/07_28_Distinct.cpp)
+28-07-2020: [Distinct](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_Sorting/07_28_Distinct.cpp)  
 02-08-2020: [NumberOfDiscIntersections](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_Sorting/08_02_NumberOfDiscIntersections.cpp)  
 03-08-2020: [MaxProductOfThree](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_Sorting/%2008_03_MaxProductOfThree.cpp)
 
