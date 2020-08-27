@@ -1,8 +1,6 @@
 # Daily Coding Challenges
   
-I am doing a C++ coding session a day. Whithin this files there are dozens of algorithms and contributions to other projects. Most days I start a new  mathematical or data management coding challenge and I submit a correct and efficient solution to it. Time Complexity of the solution provided is displayed at the bottom of each file.<br/><br/><br/>
-
-## Guide of Contents<br/> 
+I am doing a C++ coding session a day. Whithin this files there are dozens of algorithms and contributions to other projects. Most days I start a new  mathematical or data management coding challenge and I submit a correct and efficient solution to it. Time Complexity of the solution provided is displayed at the bottom of each file.<br/><br/>
 
 ## **Algorithms**
 
@@ -15,7 +13,7 @@ I am doing a C++ coding session a day. Whithin this files there are dozens of al
 22-08-2020: [FibFrog](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_FibonacciNumbers/08_22_FibFrog.cpp)
 24-08-2020: [Ladder](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_FibonacciNumbers/08_24_Ladder.cpp)
 
-#### [Euclidean Algorithm](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_EuclideanAlgorithm)
+### Euclidean Algorithm
 
 19-08-2020: [ChocolatesByNumbers](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_EuclideanAlgorithm/08_19_ChocolatesByNumbers.cpp)
 20-08-2020: [CommonPrimeDivisors](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_EuclideanAlgorithm/08_20_CommonPrimeDivisors.cpp)
