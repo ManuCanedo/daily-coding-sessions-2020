@@ -2,6 +2,7 @@
 
 I am doing a C++ coding session a day. Whithin this files there are dozens of algorithms and contributions to other projects. Most days I start a new  mathematical or data management coding challenge and I submit a correct and efficient solution to it. Time Complexity of the solution provided is displayed at the bottom of each file.
 
+
 ## Guide of Contents
 
 ### Algorithms
@@ -69,6 +70,7 @@ I am doing a C++ coding session a day. Whithin this files there are dozens of al
 21-07-2020: [FrogRiverOne](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_CountingElements/07_21_FrogRiverOne.cpp)
 21-07-2020: [PermCheck](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_CountingElements/07_21_PermCheck.cpp)
 
+
 ### Data Structures
 
 #### [Recreating the STL Vector Class](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_StdVectorClass)
@@ -76,11 +78,17 @@ I am doing a C++ coding session a day. Whithin this files there are dozens of al
 22-08-2020: [Vector Class](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/DataStructures_StdVectorClass/08_22_Vector.h)
 22-08-2020: [Vector3 Struct and Main](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/DataStructures_StdVectorClass/08_22_Vector3AndMain.cpp)
 
-#### [Simple List](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/DataStructures_SimpleList/25_08_SimpleList.cpp)
+#### Simple List
 
-#### [Queue](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/DataStructures_Queue/24_08_SimpleQueue.cpp)
+25-08-2020: [Simple List](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/DataStructures_SimpleList/25_08_SimpleList.cpp)
 
-#### [Stack](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/DataStructures_Stack/08_17_SimpleStack.cpp)
+#### Queue
+
+24-08-2020: [Queue](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/DataStructures_Queue/24_08_SimpleQueue.cpp)
+
+#### Stack
+
+17-08-2020: [Stack](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/DataStructures_Stack/08_17_SimpleStack.cpp)
 
 
 
