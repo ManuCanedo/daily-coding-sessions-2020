@@ -2,15 +2,15 @@
   
 I am doing a C++ coding session a day. Whithin this files there are dozens of algorithms and contributions to other projects. Most days I start a new  mathematical or data management coding challenge and I submit a correct and efficient solution to it. Time Complexity of the solution provided is displayed at the bottom of each file.<br/><br/><br/>
 
-## Guide of Contents<br/> 
+# Guide of Contents<br/> 
 
-### **Algorithms**
+## **Algorithms**
 
-#### [Binary Search Algorithm]
+### Binary Search Algorithm
 
 27-08-2020: [NailingPlanks](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_BinarySearchAlgorithm/08_27_NailingPlanks.cpp)
 
-#### [Fibonacci Numbers](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_FibonacciNumbers)
+### Fibonacci Numbers
 
 22-08-2020: [FibFrog](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_FibonacciNumbers/08_22_FibFrog.cpp)
 24-08-2020: [Ladder](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_FibonacciNumbers/08_24_Ladder.cpp)
