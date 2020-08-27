@@ -4,16 +4,16 @@ I am doing a C++ coding session a day. Whithin this files there are dozens of al
 
 ## **Algorithms**
 
-### Binary Search Algorithm
+#### Binary Search Algorithm
 
 27-08-2020: [NailingPlanks](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_BinarySearchAlgorithm/08_27_NailingPlanks.cpp)
 
-### Fibonacci Numbers
+#### Fibonacci Numbers
 
 22-08-2020: [FibFrog](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_FibonacciNumbers/08_22_FibFrog.cpp)
 24-08-2020: [Ladder](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_FibonacciNumbers/08_24_Ladder.cpp)
 
-### Euclidean Algorithm
+#### Euclidean Algorithm
 
 19-08-2020: [ChocolatesByNumbers](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_EuclideanAlgorithm/08_19_ChocolatesByNumbers.cpp)
 20-08-2020: [CommonPrimeDivisors](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_EuclideanAlgorithm/08_20_CommonPrimeDivisors.cpp)
@@ -36,7 +36,7 @@ I am doing a C++ coding session a day. Whithin this files there are dozens of al
 08-08-2020: [MaxSliceSum](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_MaxSliceProblem/08_08_MaxSliceSum.cpp)
 09-08-2020: [MaxDoubleSliceSum](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_MaxSliceProblem/08_09_MaxDoubleSliceSum.cpp)
 
-### Leader]
+### Leader
 
 07-08-2020: [Dominator](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_Leader/08_07_Dominator.cpp)
 07-08-2020: [EquiLeader](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_Leader/08_07_EquiLeader.cpp)
