@@ -6,11 +6,11 @@ I am doing a C++ coding session a day. Whithin this files there are dozens of al
 
 ### Algorithms
 
-#### [Binary Search Algorithm](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_BinarySearchAlgorithm)
+#### **[Binary Search Algorithm]**(https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_BinarySearchAlgorithm)
 
 27-08-2020: [NailingPlanks](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_BinarySearchAlgorithm/08_27_NailingPlanks.cpp)
 
-#### [Fibonacci Numbers](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_FibonacciNumbers)
+#### **[Fibonacci Numbers]**(https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_FibonacciNumbers)
 
 22-08-2020: [FibFrog](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_FibonacciNumbers/08_22_FibFrog.cpp)
 24-08-2020: [Ladder](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_FibonacciNumbers/08_24_Ladder.cpp)
