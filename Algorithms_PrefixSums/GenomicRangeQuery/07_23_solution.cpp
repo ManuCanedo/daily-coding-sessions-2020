@@ -2,14 +2,7 @@
 
 std::vector<int> solution(std::string &S, std::vector<int> &P, std::vector<int> &Q) {
     
-    std::vector<int> result;
-    result.reserve(P.size());
-    std::vector<int> nucleiA;
-    nucleiA.reserve(S.size());
-    std::vector<int> nucleiC;
-    nucleiC.reserve(S.size());
-    std::vector<int> nucleiG;
-    nucleiA.reserve(S.size());
+    std::vector<int> result(P.size()), nucleiA(S.size()),  nucleiC(S.size()), nucleiG(S.size());
 
     for (unsigned int i = 0; i < S.size(); ++i)
     {
