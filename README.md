@@ -15,8 +15,8 @@ I am doing a C++ coding session a day. Whithin this files there are dozens of al
 
 #### Euclidean Algorithm
 
-19-08-2020: [ChocolatesByNumbers](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_EuclideanAlgorithm/08_19_ChocolatesByNumbers.cpp)  
-20-08-2020: [CommonPrimeDivisors](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_EuclideanAlgorithm/08_20_CommonPrimeDivisors.cpp)
+19-08-2020: [ChocolatesByNumbers](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_EuclideanAlgorithm/ChocolatesByNumbers)  
+20-08-2020: [CommonPrimeDivisors](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_EuclideanAlgorithm/CommonPrimeDivisors)
 
 #### Sieve of Erathostenes
 
