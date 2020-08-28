@@ -38,5 +38,5 @@ the function should return 60, as the product of triplet (2, 4, 5) is maximal.
 
 Write an efficient algorithm for the following assumptions:
 
-N is an integer within the range [3..100,000];
-each element of array A is an integer within the range [−1,000..1,000].
+    N is an integer within the range [3..100,000];
+    each element of array A is an integer within the range [−1,000..1,000].
