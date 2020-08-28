@@ -25,4 +25,3 @@ int solution(std::vector<int> &A)
 ////////// CORRECT BEHAVIOUR
 ////////// TIME COMPLEXITY:
 ////////// MAX ~ 0(N)
-////////// AVG ~ 0(N)
