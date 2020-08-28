@@ -106,4 +106,3 @@ std::vector<int> solution(std::string &S, std::vector<int> &P, std::vector<int> 
 ////////// CORRECT BEHAVIOUR
 ////////// TIME COMPLEXITY:
 ////////// MAX ~ 0(N)
-////////// AVG ~ 0(N)
