@@ -50,9 +50,9 @@ I am doing a C++ coding session a day. Whithin this files there are dozens of al
 
 #### Sorting
 
-28-07-2020: [Distinct](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_Sorting/07_28_Distinct.cpp)  
-02-08-2020: [NumberOfDiscIntersections](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_Sorting/08_02_NumberOfDiscIntersections.cpp)  
-03-08-2020: [MaxProductOfThree](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_Sorting/%2008_03_MaxProductOfThree.cpp)
+28-07-2020: [Distinct](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_Sorting/Distinct)  
+02-08-2020: [NumberOfDiscIntersections](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_Sorting/NumberOfDiscIntersections)  
+03-08-2020: [MaxProductOfThree](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_Sorting/MaxProductOfThree)
 
 #### Prefix Sums
 
