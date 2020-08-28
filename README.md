@@ -65,20 +65,19 @@ I am doing a C++ coding session a day. Whithin this files there are dozens of al
 
 #### Recreating the STL Vector Class
 
-22-08-2020: [Vector Class](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/DataStructures_StdVectorClass/08_22_Vector.h)  
-22-08-2020: [Vector3 Struct and Main](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/DataStructures_StdVectorClass/08_22_Vector3AndMain.cpp)
+22-08-2020: [STL-like Vector Class](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_StdVectorClass)
 
 #### Simple List
 
-25-08-2020: [Simple List](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/DataStructures_SimpleList/25_08_SimpleList.cpp)
+25-08-2020: [Simple List](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_SimpleList)
 
 #### Queue
 
-24-08-2020: [Queue](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/DataStructures_Queue/24_08_SimpleQueue.cpp)
+24-08-2020: [Queue](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_Queue)
 
 #### Stack
 
-17-08-2020: [Stack](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/DataStructures_Stack/08_17_SimpleStack.cpp)
+17-08-2020: [Stack](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_Stack)
 
 
 
