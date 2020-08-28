@@ -52,4 +52,3 @@ int solution(int N, int M)
 ////////// CORRECT BEHAVIOUR
 ////////// TIME COMPLEXITY:
 ////////// MAX ~ O(N+M)
-////////// AVG ~ 0(N+M)
