@@ -1,4 +1,4 @@
 ## Queue
 <br/>
 
-Basic Queue implementation and testing throug a console application.
+Console application that allows the modification of a **QUEUE** Data Structure.
