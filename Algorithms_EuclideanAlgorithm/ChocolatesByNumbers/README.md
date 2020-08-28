@@ -24,4 +24,4 @@ For example, given integers N = 10 and M = 4. the function should return 5, as e
 
 Write an efficient algorithm for the following assumptions:
 
-N and M are integers within the range [1..1,000,000,000].
+    N and M are integers within the range [1..1,000,000,000].
