@@ -28,3 +28,5 @@ Write an efficient algorithm for the following assumptions:
 
     N is an integer within the range [0..100,000];
     each element of array A is an integer within the range [−2,147,483,648..2,147,483,647].
+
+<br/>[Back](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp) 
