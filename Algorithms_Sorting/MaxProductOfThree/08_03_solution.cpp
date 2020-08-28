@@ -11,8 +11,7 @@ int solution(std::vector<int> &A)
     if (A[lastElement] < 0)
         return A[lastElement-2]*A[lastElement-1]*A[lastElement];
 
-    int productMinNumbers = A[0]*A[1];
-    int productSecondMaxNumbers = A[lastElement-1]*A[lastElement-2];
+    int productMinNumbers = A[0]*A[1], productSecondMaxNumbers = A[lastElement-1]*A[lastElement-2];
     
     return (productMinNumbers > productSecondMaxNumbers) ? productMinNumbers*A[lastElement] : productSecondMaxNumbers*A[lastElement];
 }
