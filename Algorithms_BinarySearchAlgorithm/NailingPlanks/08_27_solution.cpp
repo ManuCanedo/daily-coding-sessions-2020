@@ -7,8 +7,7 @@ bool enoughNails(const std::vector<int> &A, const std::vector<int> &B, const std
 
 int solution(std::vector<int> &A, std::vector<int> &B, std::vector<int> &C) 
 {
-    int maxValBoards = *std::max_element(B.begin(), B.end());
-    int maxValNails = *std::max_element(C.begin(), C.end());
+    int maxValBoards = *std::max_element(B.begin(), B.end()), maxValNails = *std::max_element(C.begin(), C.end());
     int maxVal = std::max(maxValBoards,maxValNails), result = -1;
     std::vector<int>::iterator beg = C.begin(), end = C.end(), mid;
     
