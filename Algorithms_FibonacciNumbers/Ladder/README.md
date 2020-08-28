@@ -2,9 +2,10 @@
 <br/>
 You have to climb up a ladder. The ladder has exactly N rungs, numbered from 1 to N. With each step, you can ascend by one or two rungs. More precisely:
 
-with your first step you can stand on rung 1 or 2,
-if you are on rung K, you can move to rungs K + 1 or K + 2,
-finally you have to stand on rung N.
+    with your first step you can stand on rung 1 or 2,
+    if you are on rung K, you can move to rungs K + 1 or K + 2,
+    finally you have to stand on rung N.
+    
 Your task is to count the number of different ways of climbing to the top of the ladder.
 
 For example, given N = 4, you have five different ways of climbing, ascending by:
@@ -46,6 +47,6 @@ the function should return the sequence [5, 1, 8, 0, 1], as explained above.
 
 Write an efficient algorithm for the following assumptions:
 
-L is an integer within the range [1..50,000];
-each element of array A is an integer within the range [1..L];
-each element of array B is an integer within the range [1..30].
+    L is an integer within the range [1..50,000];
+    each element of array A is an integer within the range [1..L];
+    each element of array B is an integer within the range [1..30].
