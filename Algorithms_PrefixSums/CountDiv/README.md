@@ -15,3 +15,5 @@ Write an efficient algorithm for the following assumptions:
     A and B are integers within the range [0..2,000,000,000];
     K is an integer within the range [1..2,000,000,000];
     A ≤ B.
+
+<br/>[Back](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp) 
