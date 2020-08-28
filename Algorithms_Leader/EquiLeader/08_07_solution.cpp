@@ -30,9 +30,8 @@ int solution(std::vector<int> &A)
         }
     }
 
-    unsigned int lenL = 1, lenR = A.size()-1;
+    unsigned int lenL = 1, lenR = A.size()-1, equiLeadersCount = 0;
     unsigned int leaderOccurrencesL = 0, leaderOccurrencesR = maxOccurrences;
-    unsigned int equiLeadersCount = 0;
     
     for (size_t i = 0; i < A.size(); ++i, ++lenL, --lenR)
     {
@@ -51,4 +50,3 @@ int solution(std::vector<int> &A)
 ////////// CORRECT BEHAVIOUR
 ////////// TIME COMPLEXITY:
 ////////// MAX ~ O(NlogN)
-////////// AVG ~ O(N)
