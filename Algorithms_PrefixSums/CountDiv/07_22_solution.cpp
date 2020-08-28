@@ -22,4 +22,3 @@ int solution(int A, int B, int K)
 ////////// CORRECT BEHAVIOUR
 ////////// TIME COMPLEXITY:
 ////////// MAX ~ 0(1)
-////////// AVG ~ 0(1)
