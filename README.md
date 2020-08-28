@@ -32,9 +32,9 @@ I am doing a C++ coding session a day. Whithin this files there are dozens of al
 
 #### Maximum Slice Problem
 
-08-08-2020: [MaxProfit](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_MaxSliceProblem/08_08_MaxProfit.cpp)  
-08-08-2020: [MaxSliceSum](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_MaxSliceProblem/08_08_MaxSliceSum.cpp)  
-09-08-2020: [MaxDoubleSliceSum](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_MaxSliceProblem/08_09_MaxDoubleSliceSum.cpp)
+08-08-2020: [MaxProfit](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_MaxSliceProblem/MaxProfit)  
+08-08-2020: [MaxSliceSum](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_MaxSliceProblem/MaxSliceSum)  
+09-08-2020: [MaxDoubleSliceSum](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_MaxSliceProblem/MaxDoubleSliceSum)
 
 #### Leader
 
