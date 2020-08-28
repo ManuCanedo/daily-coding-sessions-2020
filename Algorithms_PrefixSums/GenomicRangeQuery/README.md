@@ -38,3 +38,5 @@ Write an efficient algorithm for the following assumptions:
     each element of arrays P, Q is an integer within the range [0..N − 1];
     P[K] ≤ Q[K], where 0 ≤ K < M;
     string S consists only of upper-case English letters A, C, G, T.
+
+<br/>[Back](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp) 
