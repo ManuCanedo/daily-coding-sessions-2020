@@ -28,5 +28,4 @@ inline int gcd (int A, int B, int res)
 ////////// CORRECT BEHAVIOUR
 ////////// TIME COMPLEXITY:
 ////////// MAX ~ O(log(N+M))
-////////// AVG ~ 0(log(N+M))
 
