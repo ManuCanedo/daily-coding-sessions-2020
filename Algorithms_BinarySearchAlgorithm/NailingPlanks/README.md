@@ -27,10 +27,10 @@ Given array C such that:
 
 if we use the following nails:
 
-0, then planks [1, 4] and [4, 5] will both be nailed.
-0, 1, then planks [1, 4], [4, 5] and [5, 9] will be nailed.
-0, 1, 2, then planks [1, 4], [4, 5] and [5, 9] will be nailed.
-0, 1, 2, 3, then all the planks will be nailed.
+    0, then planks [1, 4] and [4, 5] will both be nailed.
+    0, 1, then planks [1, 4], [4, 5] and [5, 9] will be nailed.
+    0, 1, 2, then planks [1, 4], [4, 5] and [5, 9] will be nailed.
+    0, 1, 2, 3, then all the planks will be nailed.
 
 Thus, four is the minimum number of nails that, used sequentially, allow all the planks to be nailed.
 
@@ -59,8 +59,8 @@ the function should return 4, as explained above.
 
 Write an efficient algorithm for the following assumptions:
 
-N and M are integers within the range [1..30,000];
-each element of arrays A, B, C is an integer within the range [1..2*M];
-A[K] ≤ B[K].
+    N and M are integers within the range [1..30,000];
+    each element of arrays A, B, C is an integer within the range [1..2*M];
+    A[K] ≤ B[K].
 
 
