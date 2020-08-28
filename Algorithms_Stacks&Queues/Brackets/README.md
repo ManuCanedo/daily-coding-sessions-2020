@@ -20,3 +20,5 @@ Write an efficient algorithm for the following assumptions:
 
     N is an integer within the range [0..200,000];
     string S consists only of the following characters: "(", "{", "[", "]", "}" and/or ")".
+
+<br/>[Back](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp) 
