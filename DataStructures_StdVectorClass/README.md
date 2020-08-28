@@ -38,7 +38,7 @@ Vector3AndMain.cpp contains the definition of a Vector3 struct including the fol
 
         Vector3 &operator=(const Vector3&) {}
         Vector3 &operator=(Vector3&&) {}
-    }
+    };
     
 Vector3AndMain.cpp also contains the Main function, used to test the behaviour of the aforementioned class and struct.
 
