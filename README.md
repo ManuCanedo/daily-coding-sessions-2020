@@ -25,10 +25,10 @@ I am doing a C++ coding session a day. Whithin this files there are dozens of al
 
 #### Prime And Composite Numbers
 
-11-08-2020: [CountFactors](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_Prime%26CompositeNumbers/08_11_CountFactors.cpp)  
-11-08-2020: [MinPerimeterRectangle](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_Prime%26CompositeNumbers/08_11_MinPerimeterRectangle.cpp)  
-13-08-2020: [Flags](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_Prime%26CompositeNumbers/08_13_Flags.cpp)  
-14-08-2020: [Peaks](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_Prime%26CompositeNumbers/08_14_Peaks.cpp)
+11-08-2020: [CountFactors](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_Prime%26CompositeNumbers/CountFactors)  
+11-08-2020: [MinPerimeterRectangle](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_Prime%26CompositeNumbers/MinPerimeterRectangle)  
+13-08-2020: [Flags](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_Prime&CompositeNumbers/Flags)  
+14-08-2020: [Peaks](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_Prime%26CompositeNumbers/Peaks)
 
 #### Maximum Slice Problem
 
