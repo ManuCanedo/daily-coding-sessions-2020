@@ -24,3 +24,5 @@ For example, given an integer N = 30, the function should return 22, as explaine
 Write an efficient algorithm for the following assumptions:
 
     N is an integer within the range [1..1,000,000,000].
+
+<br/>[Back](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp) 
