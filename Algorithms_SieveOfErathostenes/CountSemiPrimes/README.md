@@ -36,7 +36,7 @@ the function should return the values [10, 4, 0], as explained above.
 
 Write an efficient algorithm for the following assumptions:
 
-N is an integer within the range [1..50,000];
-M is an integer within the range [1..30,000];
-each element of arrays P, Q is an integer within the range [1..N];
-P[i] ≤ Q[i].
+    N is an integer within the range [1..50,000];
+    M is an integer within the range [1..30,000];
+    each element of arrays P, Q is an integer within the range [1..N];
+    P[i] ≤ Q[i].
