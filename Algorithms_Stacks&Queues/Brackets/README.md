@@ -18,5 +18,5 @@ For example, given S = "{[()()]}", the function should return 1 and given S = "(
 
 Write an efficient algorithm for the following assumptions:
 
-N is an integer within the range [0..200,000];
-string S consists only of the following characters: "(", "{", "[", "]", "}" and/or ")".
+    N is an integer within the range [0..200,000];
+    string S consists only of the following characters: "(", "{", "[", "]", "}" and/or ")".
