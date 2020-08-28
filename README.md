@@ -43,10 +43,10 @@ I am doing a C++ coding session a day. Whithin this files there are dozens of al
 
 #### Stacks And Queues
 
-04-08-2020: [Brackets](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_Stacks%26Queues/08_04_Brackets.cpp)  
-05-08-2020: [Fish](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_Stacks%26Queues/08_05_Fish.cpp)  
-06-08-2020: [Nesting](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_Stacks%26Queues/08_06_Nesting.cpp)  
-06-08-2020: [StoneWall](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_Stacks%26Queues/08_06_StoneWall.cpp)
+04-08-2020: [Brackets](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_Stacks&Queues/Brackets)  
+05-08-2020: [Fish](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_Stacks%26Queues/Fish)  
+06-08-2020: [Nesting](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_Stacks&Queues/Nesting)  
+06-08-2020: [StoneWall](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_Stacks&Queues/StoneWall)
 
 #### Sorting
 
