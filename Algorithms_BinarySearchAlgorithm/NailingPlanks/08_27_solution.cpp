@@ -15,15 +15,12 @@ int solution(std::vector<int> &A, std::vector<int> &B, std::vector<int> &C)
     while (beg != end)
     {
         mid = beg + (end-beg)/2;
-        
         std::vector<int> nails(maxVal+1,0);
         for (std::vector<int>::iterator it = C.begin(); it != mid+1; ++it)
             nails[*it] = 1;
             
         if (!enoughNails(A, B, nails))
-        {
             beg = mid + 1;
-        }
         else
         {
             end = mid;
