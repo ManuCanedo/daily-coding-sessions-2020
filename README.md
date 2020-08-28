@@ -38,8 +38,8 @@ I am doing a C++ coding session a day. Whithin this files there are dozens of al
 
 #### Leader
 
-07-08-2020: [Dominator](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_Leader/08_07_Dominator.cpp)  
-07-08-2020: [EquiLeader](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_Leader/08_07_EquiLeader.cpp)
+07-08-2020: [Dominator](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_Leader/Dominator)  
+07-08-2020: [EquiLeader](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_Leader/EquiLeader)
 
 #### Stacks And Queues
 
