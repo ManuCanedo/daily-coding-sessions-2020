@@ -6,7 +6,7 @@ I am doing a C++ coding session a day. Whithin this files there are dozens of al
 
 #### Binary Search Algorithm
 
-27-08-2020: [NailingPlanks](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_BinarySearchAlgorithm/08_27_NailingPlanks.cpp)
+27-08-2020: [NailingPlanks](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_BinarySearchAlgorithm/NailingPlanks)
 
 #### Fibonacci Numbers
 
