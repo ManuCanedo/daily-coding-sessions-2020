@@ -40,3 +40,5 @@ Write an efficient algorithm for the following assumptions:
     M is an integer within the range [1..30,000];
     each element of arrays P, Q is an integer within the range [1..N];
     P[i] ≤ Q[i].
+
+<br/>[Back](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp) 
