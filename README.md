@@ -56,10 +56,10 @@ I am doing a C++ coding session a day. Whithin this files there are dozens of al
 
 #### Prefix Sums
 
-22-07-2020: [CountDiv](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_PrefixSums/07_22_CountDiv.cpp)  
-22-07-2020: [PassingCars](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_PrefixSums/07_22_PassingCars.cpp)  
-23-07-2020: [GenomicRangeQuery](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_PrefixSums/07_23_GenomicRangeQuery.cpp)  
-26-07-2020: [MinAvgTwoSlice*](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_PrefixSums/07_26_MinAvgTwoSlice.cpp)
+22-07-2020: [CountDiv](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_PrefixSums/CountDiv)  
+22-07-2020: [PassingCars](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_PrefixSums/PassingCars)  
+23-07-2020: [GenomicRangeQuery](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_PrefixSums/GenomicRangeQuery)  
+26-07-2020: [MinAvgTwoSlice](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_PrefixSums/MinAvgTwoSlice)
 
 #### Counting Elements
 
