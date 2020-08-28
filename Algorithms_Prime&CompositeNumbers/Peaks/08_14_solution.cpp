@@ -6,8 +6,7 @@
 int solution(std::vector<int> &A)
 {
     std::vector<int> peaks, blocks;
-    int elements = A.end() - A.begin();
-    int lowLimit = 0, topLimit = 0, maxBlocks = 1;
+    int elements = A.end() - A.begin(), lowLimit = 0, topLimit = 0, maxBlocks = 1;
 
     if (A.size() < 3)
         return 0;
