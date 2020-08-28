@@ -20,8 +20,8 @@ I am doing a C++ coding session a day. Whithin this files there are dozens of al
 
 #### Sieve of Erathostenes
 
-16-08-2020: [CountNonDivisible](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_SieveOfErathostenes/08_16_CountNonDivisible.cpp)  
-17-08-2020: [CountSemiPrimes](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_SieveOfErathostenes/08_17_CountSemiPrimes.cpp)
+16-08-2020: [CountNonDivisible](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_SieveOfErathostenes/CountNonDivisible)  
+17-08-2020: [CountSemiPrimes](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_SieveOfErathostenes/CountSemiPrimes)
 
 #### Prime And Composite Numbers
 
