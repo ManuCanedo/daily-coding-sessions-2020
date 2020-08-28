@@ -20,10 +20,10 @@ For example, you are given integers K = 3, M = 5 and array A such that:
     
 The array can be divided, for example, into the following blocks:
 
-    [2, 1, 5, 1, 2, 2, 2], [], [] with a large sum of 15;
-    [2], [1, 5, 1, 2], [2, 2] with a large sum of 9;
-    [2, 1, 5], [], [1, 2, 2, 2] with a large sum of 8;
-    [2, 1], [5, 1], [2, 2, 2] with a large sum of 6.
+    [2, 1, 5, 1, 2, 2, 2], [], []           with a large sum of 15;
+    [2], [1, 5, 1, 2], [2, 2]               with a large sum of 9;
+    [2, 1, 5], [], [1, 2, 2, 2]             with a large sum of 8;
+    [2, 1], [5, 1], [2, 2, 2]               with a large sum of 6.
 
 The goal is to minimize the large sum. In the above example, 6 is the minimal large sum.
 
