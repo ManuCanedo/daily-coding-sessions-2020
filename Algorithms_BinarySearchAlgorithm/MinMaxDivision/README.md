@@ -47,6 +47,8 @@ the function should return 6, as explained above.
 
 Write an efficient algorithm for the following assumptions:
 
-N and K are integers within the range [1..100,000];
-M is an integer within the range [0..10,000];
-each element of array A is an integer within the range [0..M].
+     N and K are integers within the range [1..100,000];
+     M is an integer within the range [0..10,000];
+     each element of array A is an integer within the range [0..M].
+
+<br/>[Back](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp) 
