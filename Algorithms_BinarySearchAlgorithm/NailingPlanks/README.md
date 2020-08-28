@@ -1,4 +1,4 @@
-## Challenge Description
+## Challenge Description <br/>
 
 You are given two non-empty arrays A and B consisting of N integers. These arrays represent N planks. More precisely, A[K] is the start and B[K] the end of the K−th plank.
 
@@ -36,7 +36,7 @@ Thus, four is the minimum number of nails that, used sequentially, allow all the
 
 Write a function:
 
-int solution(vector<int> &A, vector<int> &B, vector<int> &C);
+    int solution(vector<int> &A, vector<int> &B, vector<int> &C);
 
 that, given two non-empty arrays A and B consisting of N integers and a non-empty array C consisting of M integers, returns the minimum number of nails that, used sequentially, allow all the planks to be nailed.
 
