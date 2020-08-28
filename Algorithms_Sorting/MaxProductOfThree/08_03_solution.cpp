@@ -20,4 +20,3 @@ int solution(std::vector<int> &A)
 ////////// CORRECT BEHAVIOUR
 ////////// TIME COMPLEXITY:
 ////////// MAX ~ O(NlogN)
-////////// AVG ~ O(NlogN)
