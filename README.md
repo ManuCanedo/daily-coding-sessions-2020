@@ -10,8 +10,8 @@ I am doing a C++ coding session a day. Whithin this files there are dozens of al
 
 #### Fibonacci Numbers
 
-22-08-2020: [FibFrog](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_FibonacciNumbers/08_22_FibFrog.cpp)  
-24-08-2020: [Ladder](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/blob/master/Algorithms_FibonacciNumbers/08_24_Ladder.cpp)
+22-08-2020: [FibFrog](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_FibonacciNumbers/FibFrog)  
+24-08-2020: [Ladder](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_FibonacciNumbers/Ladder)
 
 #### Euclidean Algorithm
 
