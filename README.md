@@ -70,6 +70,11 @@ I am doing a C++ coding session a day. Whithin this files there are dozens of al
 
 #### Simple List
 
+29-08-2020: [Double List](
+https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_DoubleList)  
+
+#### Simple List
+
 25-08-2020: [Simple List](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_SimpleList)
 
 #### Queue
@@ -79,8 +84,4 @@ I am doing a C++ coding session a day. Whithin this files there are dozens of al
 #### Stack
 
 17-08-2020: [Stack](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_Stack)
-
-
-
-
 
