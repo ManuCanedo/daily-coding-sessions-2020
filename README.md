@@ -4,6 +4,12 @@ I am doing a C++ coding session a day. Whithin this files there are dozens of al
 
 ## **Algorithms**
 
+#### Caterpillar Method
+
+30-08-2020: [AbsDistinct](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_CaterpillarMethod/AbsDistinct)   
+30-08-2020: [CountDistinctSlices](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_CaterpillarMethod/CountDistinctSlices)  
+31-08-2020: [MinAbsSumOfTwo](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_CaterpillarMethod/MinAbsSumOfTwo)  
+
 #### Binary Search Algorithm
 
 27-08-2020: [NailingPlanks](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_BinarySearchAlgorithm/NailingPlanks)  
