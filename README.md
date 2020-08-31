@@ -68,20 +68,15 @@ I am doing a C++ coding session a day. Whithin this files there are dozens of al
 
 22-08-2020: [STL-like Vector Class](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_StdVectorClass)
 
-#### Simple List
+#### Lists
 
-29-08-2020: [Double List](
-https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_DoubleList)  
+29-08-2020: [Double List](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_Lists/DoubleList)  
+25-08-2020: [Simple List](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_Lists/SimpleList)  
 
-#### Simple List
+#### Stacks and Queues
 
-25-08-2020: [Simple List](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_SimpleList)
+24-08-2020: [Queue](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_Stacks%26Queues/Queue)  
+17-08-2020: [Stack](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_Stacks%26Queues/Stack)  
 
-#### Queue
 
-24-08-2020: [Queue](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_Queue)
-
-#### Stack
-
-17-08-2020: [Stack](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_Stack)
 
