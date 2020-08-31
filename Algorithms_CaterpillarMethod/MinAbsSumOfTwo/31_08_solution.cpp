@@ -8,7 +8,7 @@ int solution(std::vector<int> &A)
 {
     std::set<int> negatives;
     std::vector<int>::iterator it = A.begin();
-    long long int minSum = 2000000000;
+    int minSum = 2000000000;
     
     std::sort(A.begin(), A.end());
     
@@ -17,10 +17,10 @@ int solution(std::vector<int> &A)
     
     while (*it <= 0)
     {
-        if (*it == 0) return 0;
+        if (*it == 0) 
+            return 0;
         minSum = (abs(*it*2) < minSum) ? abs(*it*2) : minSum;
-        negatives.insert(abs(*it));
-        ++it;
+        negatives.insert(abs(*it++));
     }
     
     while (it != A.end())
@@ -42,14 +42,11 @@ int solution(std::vector<int> &A)
                 minSum = (abs(*(ret.first)-*next) < minSum) ? abs(*(ret.first)-*next) : minSum;
             }
             else if (ret.first == negatives.begin())
-            {
                 minSum = (abs(*(ret.first)-*next) < minSum) ? abs(*(ret.first)-*next) : minSum;
-            }
             else if (ret.first == --(negatives.end()))
-            {
                 minSum = (abs(*(ret.first)-*prev) < minSum) ? abs(*(ret.first)-*prev) : minSum;
-            }
-            negatives.erase(*(ret.first));
+            
+            negatives.erase(ret.first);
         }
         else
             return 0;
