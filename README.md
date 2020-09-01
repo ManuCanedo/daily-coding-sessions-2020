@@ -8,7 +8,7 @@ I am doing a C++ coding session a day. Whithin this files there are dozens of al
 
 30-08-2020: [AbsDistinct](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_CaterpillarMethod/AbsDistinct)   
 30-08-2020: [CountDistinctSlices](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_CaterpillarMethod/CountDistinctSlices)  
-31-08-2020: [MinAbsSumOfTwo](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_CaterpillarMethod/MinAbsSumOfTwo)
+31-08-2020: [MinAbsSumOfTwo](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_CaterpillarMethod/MinAbsSumOfTwo)  
 01-09-2020: [CountTriangles](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_CaterpillarMethod/CountTriangles) 
 
 #### Binary Search Algorithm
