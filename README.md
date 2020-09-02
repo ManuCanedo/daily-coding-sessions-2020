@@ -1,8 +1,16 @@
 # Daily Coding Challenges
   
-I am doing a C++ coding session a day. Whithin this files there are dozens of algorithms and contributions to other projects. Most days I start a new  mathematical or data management coding challenge and I submit a correct and efficient solution to it. Time Complexity of the solution provided is displayed at the bottom of each file.<br/><br/>
+I am doing a C++ coding session a day. Whithin this files there are dozens of algorithms and contributions to other projects.
+<br/><br/>
+Most days I start a new  mathematical or data management coding challenge and I submit a correct and efficient solution to it. Time Complexity of the solution provided is displayed at the bottom of each file.
+<br/><br/>
 
 ## **Algorithms**
+
+#### Caterpillar Method
+
+02-09-2020: [MaxNonOverlappingSegments](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_GreedyAlgorithm/MaxNonOverlappingSegments) 
+02-09-2020: [TieRopes](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_GreedyAlgorithm/TieRopes)   
 
 #### Caterpillar Method
 
@@ -77,7 +85,8 @@ I am doing a C++ coding session a day. Whithin this files there are dozens of al
 
 #### Lists
 
-29-08-2020: [Circular Simple List](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_Lists/CircularSimpleList)  
+01-09-2020: [Circular Simple List](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_Lists/CircularSimpleList) 
+01-09-2020: [Circular Simple List](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_Lists/CircularSimpleList)  
 29-08-2020: [Double List](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_Lists/DoubleList)  
 25-08-2020: [Simple List](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_Lists/SimpleList)  
 
