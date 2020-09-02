@@ -9,7 +9,7 @@ Most days I start a new  mathematical or data management coding challenge and I 
 
 #### Caterpillar Method
 
-02-09-2020: [MaxNonOverlappingSegments](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_GreedyAlgorithm/MaxNonOverlappingSegments) 
+02-09-2020: [MaxNonOverlappingSegments](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_GreedyAlgorithm/MaxNonOverlappingSegments)  
 02-09-2020: [TieRopes](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_GreedyAlgorithm/TieRopes)   
 
 #### Caterpillar Method
