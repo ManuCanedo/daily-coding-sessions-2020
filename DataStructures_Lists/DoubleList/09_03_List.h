@@ -7,15 +7,15 @@
 ////////////////////////            LIST        ////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////
 
-struct Node
-{
-    int data = 0;
-    Node *previousNode = nullptr;
-    Node *nextNode = nullptr;
-};
-
 class List
 {
+    struct Node
+    {
+        int data = 0;
+        Node *previousNode = nullptr;
+        Node *nextNode = nullptr;
+    };
+
 public:
     ~List() { clear(); }
 
@@ -245,4 +245,4 @@ void List::iterate()
     }
 }
 
-#endif      /* LIST_H */
+#endif /* LIST_H */
