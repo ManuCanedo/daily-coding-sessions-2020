@@ -85,7 +85,7 @@ Most days I start a new  mathematical or data management coding challenge and I 
 
 #### Lists
 
-01-09-2020: [Circular Simple List](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_Lists/CircularSimpleList) 
+01-09-2020: [Circular Double List](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_Lists/CircularDoubleList)  
 01-09-2020: [Circular Simple List](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_Lists/CircularSimpleList)  
 29-08-2020: [Double List](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_Lists/DoubleList)  
 25-08-2020: [Simple List](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_Lists/SimpleList)  
