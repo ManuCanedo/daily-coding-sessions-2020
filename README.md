@@ -95,5 +95,8 @@ Most days I start a new  mathematical or data management coding challenge and I 
 24-08-2020: [Queue](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_Stacks%26Queues/Queue)  
 17-08-2020: [Stack](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_Stacks%26Queues/Stack)  
 
+## **C++ Features**
 
+04_09_2020: [Exceptions](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/CppFeatures/Exceptions)  
+04_09_2020: [FilesAndBinaries](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/CppFeatures/FilesAndBinaries)  
 
