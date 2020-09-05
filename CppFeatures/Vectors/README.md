@@ -1,6 +1,6 @@
-## Exceptions
+## Vectors
 <br/>
 
-Console application that tests basic handling of exceptions.
+Console applications to test Vectors functionality.
 
 <br/>[Back](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp) 
