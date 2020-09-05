@@ -93,7 +93,7 @@ Most days I start a new  mathematical or data management coding challenge and I 
 #### Stacks and Queues
 
 24-08-2020: [Queue](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_Stacks%26Queues/Queue)  
-17-08-2020: [Stack](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_Stacks%26Queues/Stack)  
+17-08-2020: [Stack](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_Stacks%26Queues/Stack)<br/><br/> 
 
 ## **C++ Features**
 
