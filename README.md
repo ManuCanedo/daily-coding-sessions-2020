@@ -79,9 +79,9 @@ Most days I start a new  mathematical or data management coding challenge and I 
 
 ## **Data Structures**
 
-#### Recreating the STL Vector Class
+#### STL-like Vector Class
 
-22-08-2020: [STL-like Vector Class](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_StdVectorClass)
+22-08-2020: [STL-like Vector Class](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_STL-like_Vector)
 
 #### Lists
 
@@ -93,7 +93,12 @@ Most days I start a new  mathematical or data management coding challenge and I 
 #### Stacks and Queues
 
 24-08-2020: [Queue](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_Stacks%26Queues/Queue)  
-17-08-2020: [Stack](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_Stacks%26Queues/Stack)<br/><br/> 
+17-08-2020: [Stack](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_Stacks%26Queues/Stack)
+
+#### STL Containers
+
+07-09-2020: [Map](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_STL_Containers/Map)  
+06-09-2020: [List](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_STL_Containers/List)<br/><br/> 
 
 ## **C++ Features**
 
