@@ -8,80 +8,80 @@ Most days I start a new  mathematical or data management coding challenge and I 
 ## **Algorithms**
 
 #### Caterpillar Method
- 
-02-09-2020: [TieRopes](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_GreedyAlgorithm/TieRopes)  
+
 02-09-2020: [MaxNonOverlappingSegments](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_GreedyAlgorithm/MaxNonOverlappingSegments)  
+02-09-2020: [TieRopes](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_GreedyAlgorithm/TieRopes)  
 
 #### Caterpillar Method
 
-30-08-2020: [AbsDistinct](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_CaterpillarMethod/AbsDistinct)   
-30-08-2020: [CountDistinctSlices](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_CaterpillarMethod/CountDistinctSlices)  
+01-09-2020: [CountTriangles](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_CaterpillarMethod/CountTriangles)  
 31-08-2020: [MinAbsSumOfTwo](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_CaterpillarMethod/MinAbsSumOfTwo)  
-01-09-2020: [CountTriangles](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_CaterpillarMethod/CountTriangles) 
+30-08-2020: [CountDistinctSlices](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_CaterpillarMethod/CountDistinctSlices)  
+30-08-2020: [AbsDistinct](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_CaterpillarMethod/AbsDistinct)  
 
 #### Binary Search Algorithm
 
+28-08-2020: [MinMaxDivision](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_BinarySearchAlgorithm/MinMaxDivision)  
 27-08-2020: [NailingPlanks](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_BinarySearchAlgorithm/NailingPlanks)  
-28-08-2020: [MinMaxDivision](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_BinarySearchAlgorithm/MinMaxDivision)
 
 #### Fibonacci Numbers
 
+24-08-2020: [Ladder](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_FibonacciNumbers/Ladder)  
 22-08-2020: [FibFrog](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_FibonacciNumbers/FibFrog)  
-24-08-2020: [Ladder](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_FibonacciNumbers/Ladder)
 
 #### Euclidean Algorithm
 
+20-08-2020: [CommonPrimeDivisors](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_EuclideanAlgorithm/CommonPrimeDivisors)  
 19-08-2020: [ChocolatesByNumbers](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_EuclideanAlgorithm/ChocolatesByNumbers)  
-20-08-2020: [CommonPrimeDivisors](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_EuclideanAlgorithm/CommonPrimeDivisors)
 
 #### Sieve of Erathostenes
 
+17-08-2020: [CountSemiPrimes](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_SieveOfErathostenes/CountSemiPrimes)  
 16-08-2020: [CountNonDivisible](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_SieveOfErathostenes/CountNonDivisible)  
-17-08-2020: [CountSemiPrimes](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_SieveOfErathostenes/CountSemiPrimes)
 
 #### Prime And Composite Numbers
 
-11-08-2020: [CountFactors](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_Prime%26CompositeNumbers/CountFactors)  
-11-08-2020: [MinPerimeterRectangle](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_Prime%26CompositeNumbers/MinPerimeterRectangle)  
+14-08-2020: [Peaks](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_Prime%26CompositeNumbers/Peaks)  
 13-08-2020: [Flags](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_Prime&CompositeNumbers/Flags)  
-14-08-2020: [Peaks](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_Prime%26CompositeNumbers/Peaks)
+11-08-2020: [MinPerimeterRectangle](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_Prime%26CompositeNumbers/MinPerimeterRectangle)  
+11-08-2020: [CountFactors](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_Prime%26CompositeNumbers/CountFactors)  
 
 #### Maximum Slice Problem
 
-08-08-2020: [MaxProfit](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_MaxSliceProblem/MaxProfit)  
+09-08-2020: [MaxDoubleSliceSum](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_MaxSliceProblem/MaxDoubleSliceSum)  
 08-08-2020: [MaxSliceSum](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_MaxSliceProblem/MaxSliceSum)  
-09-08-2020: [MaxDoubleSliceSum](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_MaxSliceProblem/MaxDoubleSliceSum)
+08-08-2020: [MaxProfit](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_MaxSliceProblem/MaxProfit)  
 
 #### Leader
 
+07-08-2020: [EquiLeader](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_Leader/EquiLeader)  
 07-08-2020: [Dominator](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_Leader/Dominator)  
-07-08-2020: [EquiLeader](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_Leader/EquiLeader)
 
 #### Stacks And Queues
 
-04-08-2020: [Brackets](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_Stacks&Queues/Brackets)  
-05-08-2020: [Fish](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_Stacks%26Queues/Fish)  
+06-08-2020: [StoneWall](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_Stacks&Queues/StoneWall)  
 06-08-2020: [Nesting](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_Stacks&Queues/Nesting)  
-06-08-2020: [StoneWall](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_Stacks&Queues/StoneWall)
+05-08-2020: [Fish](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_Stacks%26Queues/Fish)  
+04-08-2020: [Brackets](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_Stacks&Queues/Brackets)  
 
 #### Sorting
 
-28-07-2020: [Distinct](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_Sorting/Distinct)  
+03-08-2020: [MaxProductOfThree](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_Sorting/MaxProductOfThree)  
 02-08-2020: [NumberOfDiscIntersections](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_Sorting/NumberOfDiscIntersections)  
-03-08-2020: [MaxProductOfThree](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_Sorting/MaxProductOfThree)
+28-07-2020: [Distinct](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_Sorting/Distinct)  
 
 #### Prefix Sums
 
-22-07-2020: [CountDiv](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_PrefixSums/CountDiv)  
+26-07-2020: [MinAvgTwoSlice](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_PrefixSums/MinAvgTwoSlice)  
+23-07-2020: [GenomicRangeQuery](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_PrefixSums/GenomicRangeQuery)    
 22-07-2020: [PassingCars](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_PrefixSums/PassingCars)  
-23-07-2020: [GenomicRangeQuery](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_PrefixSums/GenomicRangeQuery)  
-26-07-2020: [MinAvgTwoSlice](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_PrefixSums/MinAvgTwoSlice)<br/><br/>
+22-07-2020: [CountDiv](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/Algorithms_PrefixSums/CountDiv)  <br/><br/>
 
 ## **Data Structures**
 
 #### STL-like Vector Class
 
-22-08-2020: [STL-like Vector Class](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_STL-like_Vector)
+22-08-2020: [STL-like Vector Class](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_STL-like_Vector)  
 
 #### Lists
 
@@ -93,15 +93,18 @@ Most days I start a new  mathematical or data management coding challenge and I 
 #### Stacks and Queues
 
 24-08-2020: [Queue](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_Stacks%26Queues/Queue)  
-17-08-2020: [Stack](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_Stacks%26Queues/Stack)
+17-08-2020: [Stack](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_Stacks%26Queues/Stack)  
 
 #### STL Containers
 
+08-09-2020: [Stacks&Queues](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_STL_Containers/Stacks&Queues)  
+08-09-2020: [Set](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_STL_Containers/Set)  
 07-09-2020: [Map](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_STL_Containers/Map)  
-06-09-2020: [List](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_STL_Containers/List)<br/><br/> 
+06-09-2020: [List](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_STL_Containers/List)  <br/><br/> 
 
 ## **C++ Features**
 
-04_09_2020: [Exceptions](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/CppFeatures/Exceptions)  
 05_09_2020: [FilesAndBinaries](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/CppFeatures/FilesAndBinaries)  
+04_09_2020: [Exceptions](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/CppFeatures/Exceptions)  
+
 

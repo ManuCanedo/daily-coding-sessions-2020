@@ -1,5 +1,5 @@
-## Map
+## Vector
 <br/>
-STL Map and Multimap containers practice and functionality testing.
+STL Vector container sorting testing.
 
 <br/>[Back](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp) 
