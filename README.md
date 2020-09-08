@@ -97,6 +97,7 @@ Most days I start a new  mathematical or data management coding challenge and I 
 
 #### STL Containers
 
+08-09-2020: [Vector](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_STL_Containers/Vector)  
 08-09-2020: [Stacks&Queues](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_STL_Containers/Stacks&Queues)  
 08-09-2020: [Set](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_STL_Containers/Set)  
 07-09-2020: [Map](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/DataStructures_STL_Containers/Map)  
@@ -104,6 +105,7 @@ Most days I start a new  mathematical or data management coding challenge and I 
 
 ## **C++ Features**
 
+09_09_2020: [OperatorOverloading](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/CppFeatures/OperatorOverloading)  
 05_09_2020: [FilesAndBinaries](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/CppFeatures/FilesAndBinaries)  
 04_09_2020: [Exceptions](https://github.com/ManuCanedo/DailyCodingChallenges-Cpp/tree/master/CppFeatures/Exceptions)  
 
