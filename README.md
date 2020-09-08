@@ -1,4 +1,4 @@
-# Daily Coding Challenges
+# Daily Coding Sessions
   
 I am doing a C++ coding session a day. Whithin this files there are dozens of algorithms and contributions to other projects.
 <br/><br/>
