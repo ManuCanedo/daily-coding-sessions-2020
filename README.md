@@ -105,6 +105,7 @@ Most days I start a new  mathematical or data management coding challenge and I 
 
 ## **C++ Features**
 
+11_09_2020: [Templates](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/CppFeatures/Templates)
 09_09_2020: [OperatorOverloading](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/CppFeatures/OperatorOverloading)  
 05_09_2020: [FilesAndBinaries](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/CppFeatures/FilesAndBinaries)  
 04_09_2020: [Exceptions](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/CppFeatures/Exceptions)  
