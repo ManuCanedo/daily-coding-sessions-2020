@@ -105,10 +105,9 @@ Most days I start a new  mathematical or data management coding challenge and I 
 
 ## **C++11 Features**
 
-
 ## **C++ Features**
 
-12_09_2020: [Polymorphism&VirtualMethods](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/CppFeatures/Polymorphism&VirtualMethods)
+12_09_2020: [Polymorphism&VirtualMethods](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/CppFeatures/Polymorphism&VirtualMethods)  
 11_09_2020: [FunctionPointers](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/CppFeatures/FunctionPointers)    
 10_09_2020: [Templates](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/CppFeatures/Templates)  
 09_09_2020: [OperatorOverloading](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/CppFeatures/OperatorOverloading)  
