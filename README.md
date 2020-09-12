@@ -103,11 +103,17 @@ Most days I start a new  mathematical or data management coding challenge and I 
 07-09-2020: [Map](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/DataStructures_STL_Containers/Map)  
 06-09-2020: [List](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/DataStructures_STL_Containers/List)  <br/><br/> 
 
+## **C++11 Features**
+
+
 ## **C++ Features**
 
-11_09_2020: [Templates](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/CppFeatures/Templates)
+12_09_2020: [Polymorphism&VirtualMethods](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/CppFeatures/Polymorphism&VirtualMethods)
+11_09_2020: [FunctionPointers](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/CppFeatures/FunctionPointers)    
+10_09_2020: [Templates](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/CppFeatures/Templates)  
 09_09_2020: [OperatorOverloading](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/CppFeatures/OperatorOverloading)  
 05_09_2020: [FilesAndBinaries](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/CppFeatures/FilesAndBinaries)  
-04_09_2020: [Exceptions](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/CppFeatures/Exceptions)  
+04_09_2020: [Exceptions](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/CppFeatures/Exceptions)  <br/><br/> 
+
 
 
