@@ -39,11 +39,22 @@ private:
 
 int main()
 {
-    std::map<int, Sound> sounds;
+    using SoundMap = std::map<int, Sound>;
+    SoundMap sounds;
 
     sounds.emplace(3, Sound("folder/sound4.wav", 45));
-    for (std::map<int, Sound>::iterator it = sounds.begin(); it != sounds.end(); ++it)
+    sounds.emplace(2, Sound("folder/sound3.wav", 60));
+    sounds.emplace(1, Sound("folder/sound2.wav", 65));
+    sounds.emplace(0, Sound("folder/sound1.wav", 55));
+
+    for (SoundMap::iterator it = sounds.begin(); it != sounds.end(); ++it)
         std::cout << it->second << std::endl;
+
+    std::cout << std::endl;
+
+    // C++17 Structured Bindings test
+    for (auto &[key, sound] : sounds)
+        std::cout << key << "- " << sound << std::endl;
 
     return 0;
 }
