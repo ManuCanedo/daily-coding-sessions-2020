@@ -4,7 +4,8 @@
 // In this file I define struct Vector3 and some functions to test the functionality of Vectors and Vector3s.
 
 #include <iostream>
-#include "08_19_Vector.h"
+#include <string>
+#include "09_12_Vector.h"
 
 struct Vector3
 {
@@ -43,13 +44,11 @@ struct Vector3
 
     ~Vector3()
     {
-        // std::cout << "Destroyed\n";
         delete[] m_MemoryBlock;
     }
 
     Vector3 &operator=(const Vector3 &other)
     {
-        // std::cout << "Copied\n";
         x = other.x;
         y = other.y;
         z = other.z;
@@ -57,13 +56,18 @@ struct Vector3
     }
     Vector3 &operator=(Vector3 &&other)
     {
-        // std::cout << "Moved\n";
         m_MemoryBlock = other.m_MemoryBlock;
         other.m_MemoryBlock = nullptr;
         x = other.x;
         y = other.y;
         z = other.z;
         return *this;
+    }
+
+    friend std::ostream &operator<<(std::ostream &os, Vector3 &other)
+    {
+        os << "(" << other.x << "," << other.y << "," << other.z << ")";
+        return os;
     }
 };
 
@@ -72,7 +76,7 @@ void PrintVector(const Vector<T> &vector)
 {
     for (size_t i = 0; i < vector.Size(); ++i)
         std::cout << vector[i] << std::endl;
-    std::cout << "-----------------------------------------------" << std::endl;
+    std::cout << std::endl;
 }
 
 template <>
@@ -80,20 +84,49 @@ void PrintVector(const Vector<Vector3> &vector)
 {
     for (size_t i = 0; i < vector.Size(); ++i)
         std::cout << vector[i].x << ", " << vector[i].y << ", " << vector[i].z << std::endl;
-    std::cout << "-----------------------------------------------" << std::endl;
+    std::cout << std::endl;
 }
 
 int main()
 {
-    Vector<Vector3> vector;
-    vector.PushBack(Vector3(1.0f));
-    vector.EmplaceBack(2, 3, 4);
-    PrintVector(vector);
+    // Testing Vector<std::string> type
+    Vector<std::string> vector;
+    vector.EmplaceBack("Hello");
+    vector.EmplaceBack("Hello1");
+    vector.EmplaceBack("Hello12");
+    vector.EmplaceBack("Hello123");
     vector.PopBack();
+    vector.PushBack("test1");
+
     PrintVector(vector);
-    vector.PushBack(Vector3(0.2f, 0.4f, 0.8f));
-    vector.Clear();
-    PrintVector(vector);
+
+    std::cout << "Range for loop" << std::endl;
+    for (auto &v : vector)
+        std::cout << v << std::endl;
+
+    std::cout << std::endl;
+    std::cout << "Iterators for loop" << std::endl;
+    for (auto it = vector.begin(); it != vector.end(); ++it)
+        std::cout << *it << std::endl;
+    std::cout << std::endl;
+
+    // Testing iterators on a Vector<Vector3> type
+    Vector<Vector3> vector3;
+    vector3.EmplaceBack(1, 2, 3);
+    vector3.EmplaceBack(2, 3, 4);
+    vector3.EmplaceBack(3, 4, 5);
+    vector3.EmplaceBack(4, 5, 6);
+
+    PrintVector(vector3);
+
+    std::cout << "Range for loop" << std::endl;
+    for (auto &v : vector3)
+        std::cout << v << std::endl;
+
+    std::cout << std::endl;
+    std::cout << "Iterators for loop" << std::endl;
+    for (auto it = vector3.begin(); it != vector3.end(); ++it)
+        std::cout << *it << std::endl;
 
     std::cin.get();
 }
