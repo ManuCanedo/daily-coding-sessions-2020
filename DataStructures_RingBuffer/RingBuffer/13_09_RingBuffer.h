@@ -70,7 +70,7 @@ public:
     {
         ReAlloc(ringSize);
         m_Size = ringSize;
-        Init();
+        Init(0);
     }
 
     ~Ring()
@@ -97,8 +97,10 @@ public:
 
     void resize(size_t size)
     {
+        size_t initIndex = m_Size;
         ReAlloc(size);
-        m_Size = size;
+        if (initIndex < m_Size)
+            Init(initIndex);
     }
 
     Iterator begin()
@@ -145,9 +147,9 @@ private:
         m_Data = newBlock;
     }
 
-    void Init()
+    void Init(size_t startIndex)
     {
-        for (size_t i = 0; i < m_Size; ++i)
+        for (size_t i = startIndex; i < m_Size; ++i)
             new (&m_Data[i]) T();
     }
 

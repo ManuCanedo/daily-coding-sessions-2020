@@ -22,11 +22,13 @@ int main()
     std::cout << std::endl;
 
     // testing more complex ring
-    Ring<std::vector<std::string>> vecRing(6);
+    Ring<std::vector<std::string>> vecRing(10);
 
     for (auto &vr : vecRing)
         vr.push_back("this");
     vecRing[2].push_back("other");
+
+    vecRing.resize(4);
 
     for (auto &vr : vecRing)
         std::cout << vr.back() << std::endl;
