@@ -79,9 +79,13 @@ Most days I start a new  mathematical or data management coding challenge and I 
 
 ## **Data Structures**
 
+#### Ring Buffer
+
+13-09-2020: [RingBuffer](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/DataStructures_RingBuffer/RingBuffer)    
+
 #### STL-like Vector Class
 
-22-08-2020: [STL-like Vector Class](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/DataStructures_STL-like_Vector)  
+22-08-2020: [STL-like Vector](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/DataStructures_STL-like_Vector)  
 
 #### Lists
 
@@ -103,7 +107,10 @@ Most days I start a new  mathematical or data management coding challenge and I 
 07-09-2020: [Map](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/DataStructures_STL_Containers/Map)  
 06-09-2020: [List](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/DataStructures_STL_Containers/List)  <br/><br/> 
 
-## **C++11 Features**
+## **C++ 11 Features**
+
+13_09_2020: [NestedTemplateClasses](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Cpp11Features/NestedTemplateClasses)  
+13_09_2020: [Decltype&Auto](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Cpp11Features/Decltype&Auto)    
 
 ## **C++ Features**
 
