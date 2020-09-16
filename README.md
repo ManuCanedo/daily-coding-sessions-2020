@@ -7,7 +7,7 @@ Most days I start a new  mathematical or data management coding challenge and I 
 
 ## **Algorithms**
 
-#### Caterpillar Method
+#### Greedy Algorithm
 
 02-09-2020: [MaxNonOverlappingSegments](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_GreedyAlgorithm/MaxNonOverlappingSegments)  
 02-09-2020: [TieRopes](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_GreedyAlgorithm/TieRopes)  
