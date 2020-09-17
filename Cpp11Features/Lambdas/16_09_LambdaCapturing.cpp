@@ -26,6 +26,12 @@ int main()
         std::cout << one + two << std::endl;
     };
 
+    // Capture one by value (modifiable)
+    [one]() mutable {
+        one = 99;
+        std::cout << one << std::endl;
+    };
+
     // Capture all by value and three by reference
     [=, &three]() {
         three = 10;
