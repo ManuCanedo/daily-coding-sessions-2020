@@ -7,7 +7,8 @@ class Test
 {
 public:
     Test(int size = 1)
-        : m_Size(size), m_pData(new T[size]{}) {}
+        : m_Size(size),
+          m_pData(std::make_unique<T[]>(size) /* new T[size]{} */) {}
 
     ~Test()
     {
@@ -49,6 +50,6 @@ int main()
 {
     Test<int> test(5);
     std::cout << test << std::endl;
-    
+
     return 0;
 }
