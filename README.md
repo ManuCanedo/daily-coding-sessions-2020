@@ -109,8 +109,10 @@ Most days I start a new  mathematical or data management coding challenge and I 
 
 ## **C++ 11 Features**
 
+18_09_2020: [SmartPointers](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Cpp11Features/SmartPointers)  
+18_09_2020: [Binding](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Cpp11Features/Binding)  
 18_09_2020: [Casting](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Cpp11Features/Casting)  
-18_09_2020: [Memory](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Cpp11Features/Memory)  
+17_09_2020: [MemoryAllocation](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Cpp11Features/MemoryAllocation)  
 16_09_2020: [Lambdas](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Cpp11Features/Lambdas)  
 16_09_2020: [Initialization](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Cpp11Features/Initialization)  
 13_09_2020: [NestedTemplateClasses](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Cpp11Features/NestedTemplateClasses)  
