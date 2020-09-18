@@ -1,8 +1,8 @@
 # Daily Coding Sessions
   
-I am doing a C++ coding session a day. Whithin this files there are dozens of algorithms and contributions to other projects.
+I am doing a C++ coding session a day. Whithin this files there are dozens of algorithms, data structures and language features test programs.
 <br/><br/>
-Most days I start a new  mathematical or data management coding challenge and I submit a correct and efficient solution to it. Time Complexity of the solution provided is displayed at the bottom of each file.
+Most days I start a new  mathematical or data management coding challenge and I submit a correct and efficient solution to it. Time Complexity of the solution provided is displayed at the bottom of each file. Other days I do some data structures and C++ language features workout.
 <br/><br/>
 
 ## **Algorithms**
