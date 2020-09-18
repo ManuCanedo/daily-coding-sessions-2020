@@ -5,7 +5,7 @@ class Test
 public:
     Test(int value = 0)
     {
-        // m_pBuffer = (int *)::operator new(size * sizeof(int)); // Raw memory allocation
+        // m_pBuffer = (int *) ::operator new(size * sizeof(int)); // Raw memory allocation
         m_pBuffer = new int[SIZE]{value}; // The curly brackets with initialize the array ints to 0
         // memset(m_pBuffer, 0, sizeof(int)*SIZE) // Initialize each byte to 0s alternative way
     }
