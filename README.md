@@ -81,7 +81,7 @@ Most days I start a new  mathematical or data management coding challenge and I 
 
 #### Ring Buffer
 
-13-09-2020: [RingBuffer](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/DataStructures_RingBuffer/RingBuffer)    
+13-09-2020: [RingBuffer](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/DataStructures_RingBuffer)    
 
 #### STL-like Vector Class
 
