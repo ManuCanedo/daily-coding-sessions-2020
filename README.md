@@ -1,6 +1,6 @@
-# Daily Coding Sessions
+# Welcome to my Daily Coding Sessions
   
-I am doing a C++ coding session a day. Whithin these files there are dozens of algorithms, data structures and language features test applications.
+I am doing a C++ coding session per day. Whithin these files there are dozens of algorithms, data structures and language features test applications.
 <br/><br/>
 Most days I start a new  mathematical or data management coding challenge and I submit a correct and efficient solution to it. Time Complexity of the solution provided is displayed at the bottom of each file. Other days I do some data structures and C++ language features workout.
 <br/><br/>
@@ -127,5 +127,6 @@ Most days I start a new  mathematical or data management coding challenge and I 
 05_09_2020: [FilesAndBinaries](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/CppFeatures/FilesAndBinaries)  
 04_09_2020: [Exceptions](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/CppFeatures/Exceptions)  <br/><br/> 
 
+## Stay in touch
 
-
++ Linkedin - https://www.linkedin.com/in/manuel-tabares/
