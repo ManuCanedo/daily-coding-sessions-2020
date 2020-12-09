@@ -7,10 +7,9 @@ Most days I start a new  mathematical or data management coding challenge and I 
 
 ## **Algorithms**
 
-#### Computer Science Hall of Fame
+#### Hall of Fame
 
 09-12-2020: [MergeSort Algorithm](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_Sorting/Implementation_MergeSort)  
-
 09-12-2020: [BinarySearch Algorithm](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_BinarySearchAlgorithm/Implementation_BinarySearch)  
 
 #### Greedy Algorithm
