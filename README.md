@@ -9,73 +9,74 @@ Most days I start a new  mathematical or data management coding challenge and I 
 
 #### Greedy Algorithm
 
-02-09-2020: [MaxNonOverlappingSegments](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_GreedyAlgorithm/MaxNonOverlappingSegments)  
-02-09-2020: [TieRopes](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_GreedyAlgorithm/TieRopes)  
+02-09-2020: [MaxNonOverlappingSegments Challenge](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_GreedyAlgorithm/MaxNonOverlappingSegments)  
+02-09-2020: [TieRopes Challenge](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_GreedyAlgorithm/TieRopes)  
 
 #### Caterpillar Method
 
-01-09-2020: [CountTriangles](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_CaterpillarMethod/CountTriangles)  
-31-08-2020: [MinAbsSumOfTwo](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_CaterpillarMethod/MinAbsSumOfTwo)  
-30-08-2020: [CountDistinctSlices](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_CaterpillarMethod/CountDistinctSlices)  
-30-08-2020: [AbsDistinct](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_CaterpillarMethod/AbsDistinct)  
+01-09-2020: [CountTriangles Challenge](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_CaterpillarMethod/CountTriangles)  
+31-08-2020: [MinAbsSumOfTwo Challenge](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_CaterpillarMethod/MinAbsSumOfTwo)  
+30-08-2020: [CountDistinctSlices Challenge](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_CaterpillarMethod/CountDistinctSlices)  
+30-08-2020: [AbsDistinct Challenge](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_CaterpillarMethod/AbsDistinct)  
 
 #### Binary Search Algorithm
 
-28-08-2020: [MinMaxDivision](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_BinarySearchAlgorithm/MinMaxDivision)  
-27-08-2020: [NailingPlanks](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_BinarySearchAlgorithm/NailingPlanks)  
+28-08-2020: [MinMaxDivision Challenge](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_BinarySearchAlgorithm/MinMaxDivision)  
+27-08-2020: [NailingPlanks Challenge](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_BinarySearchAlgorithm/NailingPlanks)  
 
 #### Fibonacci Numbers
 
-24-08-2020: [Ladder](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_FibonacciNumbers/Ladder)  
-22-08-2020: [FibFrog](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_FibonacciNumbers/FibFrog)  
+24-08-2020: [Ladder Challenge](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_FibonacciNumbers/Ladder)  
+22-08-2020: [FibFrog Challenge](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_FibonacciNumbers/FibFrog)  
 
 #### Euclidean Algorithm
 
-20-08-2020: [CommonPrimeDivisors](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_EuclideanAlgorithm/CommonPrimeDivisors)  
-19-08-2020: [ChocolatesByNumbers](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_EuclideanAlgorithm/ChocolatesByNumbers)  
+20-08-2020: [CommonPrimeDivisors Challenge](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_EuclideanAlgorithm/CommonPrimeDivisors)  
+19-08-2020: [ChocolatesByNumbers Challenge](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_EuclideanAlgorithm/ChocolatesByNumbers)  
 
 #### Sieve of Erathostenes
 
-17-08-2020: [CountSemiPrimes](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_SieveOfErathostenes/CountSemiPrimes)  
-16-08-2020: [CountNonDivisible](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_SieveOfErathostenes/CountNonDivisible)  
+17-08-2020: [CountSemiPrimes Challenge](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_SieveOfErathostenes/CountSemiPrimes)  
+16-08-2020: [CountNonDivisible Challenge](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_SieveOfErathostenes/CountNonDivisible)  
 
 #### Prime And Composite Numbers
 
-14-08-2020: [Peaks](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_Prime%26CompositeNumbers/Peaks)  
-13-08-2020: [Flags](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_Prime&CompositeNumbers/Flags)  
-11-08-2020: [MinPerimeterRectangle](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_Prime%26CompositeNumbers/MinPerimeterRectangle)  
-11-08-2020: [CountFactors](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_Prime%26CompositeNumbers/CountFactors)  
+14-08-2020: [Peaks Challenge](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_Prime%26CompositeNumbers/Peaks)  
+13-08-2020: [Flags Challenge](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_Prime&CompositeNumbers/Flags)  
+11-08-2020: [MinPerimeterRectangle Challenge](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_Prime%26CompositeNumbers/MinPerimeterRectangle)  
+11-08-2020: [CountFactors Challenge](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_Prime%26CompositeNumbers/CountFactors)  
 
 #### Maximum Slice Problem
 
-09-08-2020: [MaxDoubleSliceSum](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_MaxSliceProblem/MaxDoubleSliceSum)  
-08-08-2020: [MaxSliceSum](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_MaxSliceProblem/MaxSliceSum)  
-08-08-2020: [MaxProfit](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_MaxSliceProblem/MaxProfit)  
+09-08-2020: [MaxDoubleSliceSum Challenge](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_MaxSliceProblem/MaxDoubleSliceSum)  
+08-08-2020: [MaxSliceSum Challenge](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_MaxSliceProblem/MaxSliceSum)  
+08-08-2020: [MaxProfit Challenge](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_MaxSliceProblem/MaxProfit)  
 
 #### Leader
 
-07-08-2020: [EquiLeader](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_Leader/EquiLeader)  
-07-08-2020: [Dominator](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_Leader/Dominator)  
+07-08-2020: [EquiLeader Challenge](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_Leader/EquiLeader)  
+07-08-2020: [Dominator Challenge](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_Leader/Dominator)  
 
 #### Stacks And Queues
 
-06-08-2020: [StoneWall](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_Stacks&Queues/StoneWall)  
-06-08-2020: [Nesting](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_Stacks&Queues/Nesting)  
-05-08-2020: [Fish](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_Stacks%26Queues/Fish)  
-04-08-2020: [Brackets](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_Stacks&Queues/Brackets)  
+06-08-2020: [StoneWall Challenge](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_Stacks&Queues/StoneWall)  
+06-08-2020: [Nesting Challenge](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_Stacks&Queues/Nesting)  
+05-08-2020: [Fish Challenge](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_Stacks%26Queues/Fish)  
+04-08-2020: [Brackets Challenge](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_Stacks&Queues/Brackets)  
 
 #### Sorting
 
-03-08-2020: [MaxProductOfThree](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_Sorting/MaxProductOfThree)  
-02-08-2020: [NumberOfDiscIntersections](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_Sorting/NumberOfDiscIntersections)  
-28-07-2020: [Distinct](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_Sorting/Distinct)  
+09-12-2020: [MergeSort Algorithm](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_Sorting/Implementation_MergeSort)
+03-08-2020: [MaxProductOfThree Challenge](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_Sorting/MaxProductOfThree)  
+02-08-2020: [NumberOfDiscIntersections Challenge](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_Sorting/NumberOfDiscIntersections)  
+28-07-2020: [Distinct Challenge](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_Sorting/Distinct)  
 
 #### Prefix Sums
 
-26-07-2020: [MinAvgTwoSlice](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_PrefixSums/MinAvgTwoSlice)  
-23-07-2020: [GenomicRangeQuery](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_PrefixSums/GenomicRangeQuery)    
-22-07-2020: [PassingCars](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_PrefixSums/PassingCars)  
-22-07-2020: [CountDiv](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_PrefixSums/CountDiv)  <br/><br/>
+26-07-2020: [MinAvgTwoSlice Challenge](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_PrefixSums/MinAvgTwoSlice)  
+23-07-2020: [GenomicRangeQuery Challenge](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_PrefixSums/GenomicRangeQuery)    
+22-07-2020: [PassingCars Challenge](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_PrefixSums/PassingCars)  
+22-07-2020: [CountDiv Challenge](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_PrefixSums/CountDiv)  <br/><br/>
 
 ## **Data Structures**
 
