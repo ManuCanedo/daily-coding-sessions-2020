@@ -7,6 +7,12 @@ Most days I start a new  mathematical or data management coding challenge and I 
 
 ## **Algorithms**
 
+#### Computer Science Hall of Fame
+
+09-12-2020: [MergeSort Algorithm](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_Sorting/Implementation_MergeSort)  
+
+09-12-2020: [BinarySearch Algorithm](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_BinarySearchAlgorithm/Implementation_BinarySearch)  
+
 #### Greedy Algorithm
 
 02-09-2020: [MaxNonOverlappingSegments Challenge](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_GreedyAlgorithm/MaxNonOverlappingSegments)  
@@ -21,6 +27,7 @@ Most days I start a new  mathematical or data management coding challenge and I 
 
 #### Binary Search Algorithm
 
+09-12-2020: [BinarySearch Algorithm](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_BinarySearchAlgorithm/Implementation_BinarySearch)  
 28-08-2020: [MinMaxDivision Challenge](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_BinarySearchAlgorithm/MinMaxDivision)  
 27-08-2020: [NailingPlanks Challenge](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_BinarySearchAlgorithm/NailingPlanks)  
 
@@ -66,7 +73,7 @@ Most days I start a new  mathematical or data management coding challenge and I 
 
 #### Sorting
 
-09-12-2020: [MergeSort Algorithm](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_Sorting/Implementation_MergeSort)
+09-12-2020: [MergeSort Algorithm](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_Sorting/Implementation_MergeSort)  
 03-08-2020: [MaxProductOfThree Challenge](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_Sorting/MaxProductOfThree)  
 02-08-2020: [NumberOfDiscIntersections Challenge](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_Sorting/NumberOfDiscIntersections)  
 28-07-2020: [Distinct Challenge](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_Sorting/Distinct)  
