@@ -1,9 +1,10 @@
 #include <vector>
 #include <iostream>
 
-inline std::vector<int> Merge(const std::vector<int>& a, const std::vector<int>& b)
+template<typename T>
+inline std::vector<T> Merge(const std::vector<T>& a, const std::vector<T>& b)
 {
-    std::vector<int> solution(a.size() + b.size());
+    std::vector<T> solution(a.size() + b.size());
     int aIndex {0}, bIndex {0};
 
     for (auto& element : solution)
@@ -23,10 +24,11 @@ inline std::vector<int> Merge(const std::vector<int>& a, const std::vector<int>&
     return solution;
 }
 
-void MergeSort(std::vector<int>& arr)
+template<typename T>
+void MergeSort(std::vector<T>& arr)
 {
-    std::vector<int> a(arr.begin(), arr.begin()+arr.size()/2);
-    std::vector<int> b(arr.begin()+arr.size()/2, arr.end());
+    std::vector<T> a(arr.begin(), arr.begin()+arr.size()/2);
+    std::vector<T> b(arr.begin()+arr.size()/2, arr.end());
 
     if (a.size() > 1) MergeSort(a);
     if (b.size() > 1) MergeSort(b);
@@ -35,10 +37,17 @@ void MergeSort(std::vector<int>& arr)
 
 int main()
 {
-    std::vector<int> array {10, 5, 2, 6, 3, 9, 8, 3, 4, 1, 7, 10};
-    MergeSort(array);
+    std::vector<int> arrayInts {10, 5, 2, 6, 3, 9, 8, 3, 4, 1, 7, 10};
 
-    for (auto& element : array)
+    MergeSort(arrayInts);
+    for (auto& element : arrayInts)
+        std::cout << element << " ";
+    std::cout << std::endl;
+
+    std::vector<char> arrayChars {'a', 'd', 'z', 'f', 'p'};
+    
+    MergeSort(arrayChars);
+    for (auto& element : arrayChars)
         std::cout << element << " ";
 
     return 0;
@@ -46,3 +55,4 @@ int main()
 
 // Uses at most 6n * log2n + 6n operations
 // Time Complexity: O(n*logn)
+// Space Complexity could be improved.
