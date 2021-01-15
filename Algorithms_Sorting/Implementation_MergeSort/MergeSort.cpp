@@ -38,15 +38,15 @@ void MergeSort(std::vector<T>& arr)
 int main()
 {
     std::vector<int> arrayInts {10, 5, 2, 6, 3, 9, 8, 3, 4, 1, 7, 10};
-
     MergeSort(arrayInts);
+
     for (auto& element : arrayInts)
         std::cout << element << " ";
     std::cout << std::endl;
-
-    std::vector<char> arrayChars {'a', 'd', 'z', 'f', 'p'};
     
+    std::vector<char> arrayChars {'a', 'd', 'z', 'f', 'p'};
     MergeSort(arrayChars);
+
     for (auto& element : arrayChars)
         std::cout << element << " ";
 
