@@ -12,6 +12,10 @@ Most days I start a new  mathematical or data management coding challenge and I 
 09-12-2020: [MergeSort Algorithm](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_Sorting/Implementation_MergeSort)  
 09-12-2020: [BinarySearch Algorithm](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_BinarySearchAlgorithm/Implementation_BinarySearch)  
 
+#### Multiplication Algorithm
+
+16-01-2021: [PrimarySchool Multiplication Algorithm](https://github.com/ManuCanedo/daily-coding-sessions/tree/master/Algorithms_Multiplication/Implementation_PrimarySchool)  
+
 #### Greedy Algorithm
 
 02-09-2020: [MaxNonOverlappingSegments Challenge](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Algorithms_GreedyAlgorithm/MaxNonOverlappingSegments)  
