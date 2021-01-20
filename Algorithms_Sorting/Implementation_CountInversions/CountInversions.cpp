@@ -2,10 +2,10 @@
 #include <iostream>
 
 template<typename T>
-inline std::vector<T> Merge(const std::vector<T>& a, const std::vector<T>& b)
+inline std::pair<std::vector<T>, int> MergeCount(const std::vector<T>& a, const std::vector<T>& b)
 {
     std::vector<T> solution(a.size() + b.size());
-    int aIndex {0}, bIndex {0};
+    int aIndex {0}, bIndex {0}, invCount{0};
 
     for (auto& element : solution)
     {
@@ -19,33 +19,46 @@ inline std::vector<T> Merge(const std::vector<T>& a, const std::vector<T>& b)
             element = a[aIndex++];
             continue;
         }
-        element = (b[bIndex] < a[aIndex]) ? b[bIndex++] : a[aIndex++];
+        if (b[bIndex] < a[aIndex])
+        {
+            element = b[bIndex++];
+            invCount += solution.size() - aIndex;
+        }
+        else
+            a[aIndex++];
     }
-    return solution;
+
+    return { solution, invCount };
 }
 
 template<typename T>
-void CountInversions(std::vector<T>& arr)
+int CountInversions(std::vector<T>& arr)
 {
+    if (arr.size() == 1) return 0;
+
     std::vector<T> a(arr.begin(), arr.begin()+arr.size()/2);
     std::vector<T> b(arr.begin()+arr.size()/2, arr.end());
 
-    if (a.size() > 1) CountInversions(a);
-    if (b.size() > 1) CountInversions(b);
-    arr = Merge(a, b);
+    const int invCountA = CountInversions(a);
+    const int invCountB = CountInversions(b);
+    auto merge = MergeCount(a, b);
+
+    arr = merge.first;
+    return invCountA + invCountB + merge.second;
 }   
 
 int main()
 {
+    std::cout << "Hello world!";
     std::vector<int> arrayInts {10, 5, 2, 6, 3, 9, 8, 3, 4, 1, 7, 10};
-    CountInversions(arrayInts);
+    std::cout << "The number of total inversions is " << CountInversions(arrayInts) << std::endl;
 
     for (auto& element : arrayInts)
         std::cout << element << " ";
     std::cout << std::endl;
     
     std::vector<char> arrayChars {'a', 'd', 'z', 'f', 'p'};
-    CountInversions(arrayChars);
+    std::cout << "The number of total inversions is " << CountInversions(arrayChars) << std::endl;
 
     for (auto& element : arrayChars)
         std::cout << element << " ";
