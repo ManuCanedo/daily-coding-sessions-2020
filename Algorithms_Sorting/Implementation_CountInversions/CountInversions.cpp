@@ -1,10 +1,9 @@
 #include <vector>
 #include <iostream>
 
-template<typename T>
-inline std::pair<std::vector<T>, int> MergeCount(const std::vector<T>& a, const std::vector<T>& b)
+inline std::pair<std::vector<int>, int> MergeCount(const std::vector<int>& a, const std::vector<int>& b)
 {
-    std::vector<T> solution(a.size() + b.size());
+    std::vector<int> solution(a.size() + b.size());
     int aIndex {0}, bIndex {0}, invCount{0};
 
     for (auto& element : solution)
@@ -22,46 +21,43 @@ inline std::pair<std::vector<T>, int> MergeCount(const std::vector<T>& a, const 
         if (b[bIndex] < a[aIndex])
         {
             element = b[bIndex++];
-            invCount += solution.size() - aIndex;
+            invCount += a.size() - aIndex;
         }
         else
-            a[aIndex++];
+            element = a[aIndex++];
     }
 
     return { solution, invCount };
 }
 
-template<typename T>
-int CountInversions(std::vector<T>& arr)
+std::pair<std::vector<int>, int> CountInversions(const std::vector<int>& arr)
 {
-    if (arr.size() == 1) return 0;
+    if (arr.size() == 1) return { arr, 0 };
 
-    std::vector<T> a(arr.begin(), arr.begin()+arr.size()/2);
-    std::vector<T> b(arr.begin()+arr.size()/2, arr.end());
+    std::vector<int> a(arr.begin(), arr.begin()+arr.size()/2);
+    std::vector<int> b(arr.begin()+arr.size()/2, arr.end());
 
-    const int invCountA = CountInversions(a);
-    const int invCountB = CountInversions(b);
-    auto merge = MergeCount(a, b);
+    std::pair<std::vector<int>, int> countInvA = CountInversions(a), countInvB = CountInversions(b);
+    std::pair<std::vector<int>, int> countInvMerged = MergeCount(countInvA.first, countInvB.first);
 
-    arr = merge.first;
-    return invCountA + invCountB + merge.second;
+    return { countInvMerged.first, countInvA.second + countInvB.second + countInvMerged.second };
 }   
 
 int main()
 {
-    std::cout << "Hello world!";
     std::vector<int> arrayInts {10, 5, 2, 6, 3, 9, 8, 3, 4, 1, 7, 10};
-    std::cout << "The number of total inversions is " << CountInversions(arrayInts) << std::endl;
 
+    std::cout << "The unsorted int array is the following: " << std::endl;
     for (auto& element : arrayInts)
         std::cout << element << " ";
-    std::cout << std::endl;
     
-    std::vector<char> arrayChars {'a', 'd', 'z', 'f', 'p'};
-    std::cout << "The number of total inversions is " << CountInversions(arrayChars) << std::endl;
-
-    for (auto& element : arrayChars)
+    std::cout << std::endl;
+    std::pair<std::vector<int>, int> countInvInts = CountInversions(arrayInts);
+    std::cout << "\nThe sorted int array is the following: " << std::endl;
+    for (auto& element : countInvInts.first)
         std::cout << element << " ";
+
+    std::cout << "\nThe number of total inversions is " << countInvInts.second << std::endl;
 
     return 0;
 }
