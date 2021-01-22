@@ -31,10 +31,12 @@ private:
 __global__
 void addCUDA(int N, float* x, float* y)
 {
-    int index = threadIdx.x;
-    int stride = blockDim.x;
-    for (int i = index; i < N; i += stride)
-        y[i] += x[i];
+    int i = threadIdx.x + blockDim.x * blockIdx.x;
+    if (i < N) y[i] += x[i];
+
+    //int stride = blockDim.x;
+    //for (int i = index; i < N; i += stride)
+    //    y[i] += x[i];
 }
 
 // Standard CPU add function
@@ -82,7 +84,7 @@ int main()
     {
         Timer CUDA;
         // Run kernel on 1M elements on the CPU
-        addCUDA << <1, N >> > (N, x, y);
+        addCUDA <<<1, N >>> (N, x, y);
         // Wait for GPU to finish before assessing the result
         cudaDeviceSynchronize();
     }
