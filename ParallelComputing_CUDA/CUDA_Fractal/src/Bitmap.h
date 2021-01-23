@@ -47,6 +47,26 @@ public:
 		return true;
 	}
 
+public:
+	static void SaveFractal(uint8_t* pMemory, unsigned int width, unsigned int height)
+	{
+		static uint8_t index{ 0 };
+
+		Bitmap image(width, height);
+		for (size_t y = 0; y < height; ++y)
+			for (size_t x = 0; x < width; ++x)
+			{
+				uint8_t* pPixel = &pMemory[3 * (y * static_cast<int64_t>(width) + x)];
+				image.SetPixel(x, y, pPixel[0], pPixel[1], pPixel[2]);
+			}
+
+		std::string fileName("Fractal_Screenshot_");
+		fileName.append(std::to_string(index++));
+		fileName.append(".bmp");
+
+		image.Write(fileName);
+	}
+
 private:
 	const int m_Width, m_Height;
 	std::unique_ptr<uint8_t[]> m_pPixels;

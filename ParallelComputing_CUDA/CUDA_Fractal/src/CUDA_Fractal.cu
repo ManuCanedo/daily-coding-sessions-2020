@@ -5,78 +5,117 @@
 
 #include <cstdint>
 #include <string>
+#include <iostream>
 
-// Function that generates a Bitmap Image with the fractal
-void SaveFractal(uint8_t* pMemory, unsigned int width, unsigned int height)
+// Kernel executed at the Device
+__global__ void fractalKernel(uint8_t* a, const unsigned width, const unsigned height, const unsigned iterations)
 {
-	static uint8_t index{ 0 };
+	const int i = threadIdx.x + blockIdx.x * blockDim.x;
 
-	Bitmap image(width, height);
-	for (size_t y = 0; y < height; ++y)
-		for (size_t x = 0; x < width; ++x)
-		{
-			uint8_t* pPixel = &pMemory[3 * (y * static_cast<int64_t>(width) + x)];
-			image.SetPixel(x, y, pPixel[0], pPixel[1], pPixel[2]);
-		}
+    if (i < width * height * 3)
+    {
+        const double xScale = (2.0) / width;
+ 	    const double yScale = (1.0) / height;
 
-	std::string fileName("Fractal_Screenshot_");
-	fileName.append(std::to_string(index++));
-	fileName.append(".bmp");
+        double cr = (i % width) * xScale;
+        double ci = (i / width) * yScale;
+        double zr = 0.0;
+        double zi = 0.0;
 
-	image.Write(fileName);
+        int n = 0;
+
+        while ((zr * zr + zi * zi) < 4.0 && n < iterations)
+        {
+            zr = zr * zr - zi * zi + cr;
+            zi = zr * zi * 2.0 + ci;
+            n++;
+        }
+
+        if (n == iterations)
+            a[3 * i + 0] = uint8_t(255);
+    }
 }
 
-// Function that performs the fractal computation using CUDA
-__global__ void calculateFractal(uint8_t* pMemory, unsigned int width, unsigned int height, unsigned int iterations)
+cudaError_t calculateWithCuda(uint8_t* a, const unsigned width, const unsigned height, const unsigned iterations)
 {
-	int i = threadIdx.x + blockDim.x * blockIdx.x;
+    unsigned size = width * height * 3;
+    uint8_t *dev_a = nullptr;
+    cudaError_t cudaStatus;
 
-	if (i < width * height)
+    // Choose which GPU to run on, change this on a multi-GPU system.
+    cudaStatus = cudaSetDevice(0);
+	if (cudaStatus != cudaSuccess) 
 	{
-		const double xScale = (3.0) / width;
-		const double yScale = (2.0) / height;
+        fprintf(stderr, "cudaSetDevice failed!  Do you have a CUDA-capable GPU installed?");
+        goto Error;
+    }
 
-		double cr = 1.0 + (i % width) * xScale;
-		double ci = 2.0 + (i / width) * yScale;
-		double zr = 0.0;
-		double zi = 0.0;
+    // Allocate GPU buffer    .
+    cudaStatus = cudaMalloc((void**)&dev_a, size * sizeof(uint8_t));
+	if (cudaStatus != cudaSuccess) 
+	{
+        fprintf(stderr, "cudaMalloc failed!");
+        goto Error;
+    }
 
-		int n = 0;
+    // Copy input vectors from host memory to GPU buffer.
+    cudaStatus = cudaMemcpy(dev_a, a, size * sizeof(uint8_t), cudaMemcpyHostToDevice);
+	if (cudaStatus != cudaSuccess) 
+	{
+        fprintf(stderr, "cudaMemcpy failed!");
+        goto Error;
+    }
 
-		while ((zr * zr + zi * zi) < 4.0 && n < iterations)
-		{
-			zr = zr * zr - zi * zi + cr;
-			zi = zr * zi * 2.0 + ci;
-			n++;
-		}
+    // Launch a kernel on the GPU with one thread for each element.
+    fractalKernel<<<900, 1024>>>(dev_a, width, height, iterations);
 
-		if (n < iterations)
-		{
-			pMemory[3 * i + 0] = static_cast<uint8_t>(255);
-			pMemory[3 * i + 1] = static_cast<uint8_t>(255);
-			pMemory[3 * i + 2] = static_cast<uint8_t>(255);
-		}
-	}
+    // Check for any errors launching the kernel
+    cudaStatus = cudaGetLastError();
+	if (cudaStatus != cudaSuccess) 
+	{
+        fprintf(stderr, "addKernel launch failed: %s\n", cudaGetErrorString(cudaStatus));
+        goto Error;
+    }
+    
+    // cudaDeviceSynchronize waits for the kernel to finish, and returns
+    // any errors encountered during the launch.
+    cudaStatus = cudaDeviceSynchronize();
+	if (cudaStatus != cudaSuccess) 
+	{
+        fprintf(stderr, "cudaDeviceSynchronize returned error code %d after launching addKernel!\n", cudaStatus);
+        goto Error;
+    }
+
+    // Copy output vector from GPU buffer to host memory.
+    cudaStatus = cudaMemcpy(a, dev_a, size * sizeof(uint8_t), cudaMemcpyDeviceToHost);
+	if (cudaStatus != cudaSuccess) 
+	{
+        fprintf(stderr, "cudaMemcpy failed!");
+        goto Error;
+    }
+
+Error:
+    cudaFree(dev_a);
+    
+    return cudaStatus;
 }
 
 int main()
 {
-	uint8_t* x;
-	const unsigned int width = 1280, height = 720;
-	const unsigned int N = width * height, iterations = 128;
+    const unsigned width = 1280, height = 720, arraySize = { width * height * 3 };
+	const unsigned iterations = 128;
+	uint8_t* x = new uint8_t[arraySize]{ 0 };
 
-	// Allocate Unified Memory
-	cudaMallocManaged(&x, N * 3 * sizeof(uint8_t));
-	
-	// Calculate Fractal
-	calculateFractal <<<1, N>>> (x, width, height, iterations);
-	cudaDeviceSynchronize();
+    // Generate Fractal using CUDA
+	cudaError_t cudaStatus = calculateWithCuda(x, width, height, iterations);
+	if (cudaStatus != cudaSuccess) 
+	{
+        fprintf(stderr, "calculateWithCuda failed!");
+        return 1;
+	}
 
-	// Save Fractal to a Bitmap
-	SaveFractal(x, width, height);
-
-	// Free Memory
-	cudaFree(x);
+	// Save Fractal to a bitmap file
+	Bitmap::SaveFractal(x, width, height);
 	
 	return 0;
 }
