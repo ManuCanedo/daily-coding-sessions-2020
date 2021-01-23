@@ -118,6 +118,11 @@ Most days I start a new  mathematical or data management coding challenge and I 
 07-09-2020: [Map](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/DataStructures_STL_Containers/Map)  
 06-09-2020: [List](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/DataStructures_STL_Containers/List)  <br/><br/> 
 
+## **Parallel Computing - CUDA**
+
+23-01-2021: [Fractal](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/ParallelComputing_CUDA/CUDA_Fractal)  
+21-01-2021: [ArraySum](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/ParallelComputing_CUDA/CUDA_ArraySum)  
+
 ## **C++ 11 Features**
 
 18_09_2020: [SmartPointers](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Cpp11Features/SmartPointers)  
