@@ -4,6 +4,7 @@
 #include "Bitmap.h"
 
 #include <cstdint>
+#include <math.h>
 #include <string>
 #include <iostream>
 
@@ -36,7 +37,7 @@ __global__ void fractalKernel(uint8_t* a, const unsigned width, const unsigned h
     }
 }
 
-cudaError_t calculateWithCuda(uint8_t* a, const unsigned width, const unsigned height, const unsigned iterations)
+cudaError_t calculateWithCuda(uint8_t* hst_a, const unsigned width, const unsigned height, const unsigned iterations)
 {
     unsigned size = width * height * 3;
     uint8_t *dev_a = nullptr;
@@ -59,15 +60,25 @@ cudaError_t calculateWithCuda(uint8_t* a, const unsigned width, const unsigned h
     }
 
     // Copy input vectors from host memory to GPU buffer.
-    cudaStatus = cudaMemcpy(dev_a, a, size * sizeof(uint8_t), cudaMemcpyHostToDevice);
+    cudaStatus = cudaMemcpy(dev_a, hst_a, size * sizeof(uint8_t), cudaMemcpyHostToDevice);
 	if (cudaStatus != cudaSuccess) 
 	{
         fprintf(stderr, "cudaMemcpy failed!");
         goto Error;
     }
 
+    //// Get Device Properties
+    cudaDeviceProp props;
+    cudaStatus = cudaGetDeviceProperties(&props, 0);
+    if (cudaStatus != cudaSuccess)
+    {
+        fprintf(stderr, "cudaGetDeviceProperties failed!");
+        goto Error;
+    }
+    std::cout << "GPU: " << props.name << ", maxThreadsPerBlock: " << props.maxThreadsPerBlock << std::endl;
+
     // Launch a kernel on the GPU with one thread for each element.
-    fractalKernel<<<900, 1024>>>(dev_a, width, height, iterations);
+    fractalKernel <<< std::ceil(width*height/props.maxThreadsPerBlock), props.maxThreadsPerBlock >>>(dev_a, width, height, iterations);
 
     // Check for any errors launching the kernel
     cudaStatus = cudaGetLastError();
@@ -87,7 +98,7 @@ cudaError_t calculateWithCuda(uint8_t* a, const unsigned width, const unsigned h
     }
 
     // Copy output vector from GPU buffer to host memory.
-    cudaStatus = cudaMemcpy(a, dev_a, size * sizeof(uint8_t), cudaMemcpyDeviceToHost);
+    cudaStatus = cudaMemcpy(hst_a, dev_a, size * sizeof(uint8_t), cudaMemcpyDeviceToHost);
 	if (cudaStatus != cudaSuccess) 
 	{
         fprintf(stderr, "cudaMemcpy failed!");
@@ -104,10 +115,10 @@ int main()
 {
     const unsigned width = 1280, height = 720, arraySize = { width * height * 3 };
 	const unsigned iterations = 128;
-	uint8_t* x = new uint8_t[arraySize]{ 0 };
+	uint8_t* hst_x = new uint8_t[arraySize]{ 0 };
 
     // Generate Fractal using CUDA
-	cudaError_t cudaStatus = calculateWithCuda(x, width, height, iterations);
+	cudaError_t cudaStatus = calculateWithCuda(hst_x, width, height, iterations);
 	if (cudaStatus != cudaSuccess) 
 	{
         fprintf(stderr, "calculateWithCuda failed!");
@@ -115,7 +126,7 @@ int main()
 	}
 
 	// Save Fractal to a bitmap file
-	Bitmap::SaveFractal(x, width, height);
+	Bitmap::SaveFractal(hst_x, width, height);
 	
 	return 0;
 }
