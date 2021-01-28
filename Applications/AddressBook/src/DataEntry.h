@@ -1,117 +1,134 @@
 #pragma once
 
+#include <string_view>
+#include <iostream>
 #include <string>
 #include <vector>
 #include <map>
-#include <iostream>
 
 #define VALID_CHARACTERS "abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
+// enum class DATATYPE lists all the type of fields in a data entry
+enum class DataType
+{
+	NAME, SURNAME, EMAIL, TELEPHONE, STREET, TOWN, COUNTRY
+};
+
+// array QUERIES lists all the types of searchs
+constexpr DataType queries[]{ DataType::NAME, DataType::SURNAME,
+	DataType::EMAIL, DataType::TELEPHONE, DataType::TOWN, DataType::COUNTRY };
+
 struct Person
 {
-	std::string firstName{ "Unknown" };
-	std::string otherNames{ "Mr. Smith" };
-	std::string email{ "" };
-	std::string telephone{ "" };
-	std::map<std::string, std::string> address{};
+	std::map<DataType, std::string> details;
 
-	Person(std::string& firstName, std::string& otherNames, std::string& email, std::string& telephone, std::vector<std::string>&& address)
+	Person(std::string_view firstName, std::string_view otherNames, std::string_view email,
+		std::string_view telephone, std::string_view street, std::string_view town, std::string_view country)
+		: details({})
 	{
 		SetFirstName(firstName);
 		SetOtherNames(otherNames);
 		SetEmail(email);
 		SetTelephone(telephone);
-		SetAddress(address);
+		SetStreet(street);
+		SetTown(town);
+		SetCountry(country);
 	}
 
-	bool SetFirstName(const std::string& firstName)
+// Data setters
+	bool SetFirstName(std::string_view firstName)
 	{
 		if (ValidateName(firstName))
 		{
-			this->firstName = firstName;
+			details.emplace(DataType::NAME, firstName);
 			return true;
 		}
 		else
 			return false;
 	}
 
-	bool SetOtherNames(const std::string& otherNames)
+	bool SetOtherNames(std::string_view otherNames)
 	{
 		if (ValidateName(otherNames))
 		{
-			this->otherNames = otherNames;
+			details.emplace(DataType::SURNAME, otherNames);
 			return true;
 		}
 		else
 			return false;
 	}
 
-	bool SetEmail(const std::string& email)
+	bool SetEmail(std::string_view email)
 	{
 		if (ValidateEmail(email))
 		{
-			this->email = email;
+			details.emplace(DataType::EMAIL, email);
 			return true;
 		}
 		else
 			return false;
 	}
 
-	bool SetTelephone(const std::string& telephone)
+	bool SetTelephone(std::string_view telephone)
 	{
 		if (ValidateTelephone(telephone))
 		{
-			this->telephone = telephone;
+			details.emplace(DataType::TELEPHONE, telephone);
 			return true;
 		}
 		else
 			return false;
 	}
 
-	bool SetAddress(const std::vector<std::string>& address)
+	bool SetStreet(std::string_view street)
 	{
-		if (ValidateName(address[0]))
-			this->address["Street"] = address[0];
+		if (ValidateName(street))
+		{
+			details.emplace(DataType::STREET, street);
+			return true;
+		}
 		else
 			return false;
-		if (ValidateName(address[1]))
-			this->address["Town"] = address[1];
+	}
+
+	bool SetTown(std::string_view town)
+	{
+		if (ValidateName(town))
+		{
+			details.emplace(DataType::TOWN, town);
+			return true;
+		}
 		else
 			return false;
-		if (ValidateName(address[2]))
-			this->address["Country"] = address[2];
+	}
+
+	bool SetCountry(std::string_view country)
+	{
+		if (ValidateName(country))
+		{
+			details.emplace(DataType::COUNTRY, country);
+			return true;
+		}
 		else
 			return false;
-
-		return true;
 	}
 
-	static inline bool isChar(const char c)
-	{
-		return ((c >= 'a' && c <= 'z')
-			|| (c >= 'A' && c <= 'Z'));
-	}
-
-	static inline bool isDigit(const char c)
-	{
-		return (c >= '0' && c <= '9');
-	}
-
-	static bool ValidateName(const std::string& name)
+// Validate methods
+	static bool ValidateName(std::string_view name)
 	{
 		return name.find_first_not_of(VALID_CHARACTERS) == std::string::npos;
 	}
 
-	static bool ValidateEmail(const std::string& email)
+	static bool ValidateEmail(std::string_view email)
 	{
 		if (!isChar(email[0])) return 0;
 
 		int At = -1, Dot = -1;
 
-		for (int i = 0; i < email.length(); i++) 
-			if (email[i] == '@') 
+		for (int i = 0; i < email.length(); i++)
+			if (email[i] == '@')
 				At = i;
-			else if (email[i] == '.') 
+			else if (email[i] == '.')
 				Dot = i;
 
 		if (At == -1 || Dot == -1) return 0;
@@ -120,17 +137,32 @@ struct Person
 		return (Dot < (email.length() - 1));
 	}
 
-	static bool ValidateTelephone(const std::string& telephone)
+	static inline bool isChar(const char c)
 	{
-		return telephone.length() > 7 && telephone.length() < 10 && telephone.find_first_not_of("0123456789") == std::string::npos;
+		return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 	}
 
+	static inline bool isDigit(const char c)
+	{
+		return (c >= '0' && c <= '9');
+	}
+
+	static bool ValidateTelephone(std::string_view telephone)
+	{
+		return telephone.length() > 7 && telephone.length() < 10 &&
+			telephone.find_first_not_of("0123456789") == std::string::npos;
+	}
+
+// Operators
 	bool operator==(const Person& p) const
 	{
-		return firstName == p.firstName && otherNames == p.otherNames && email == p.email
-			&& telephone == p.telephone && address.find("Street")->second == p.address.find("Street")->second
-			&& address.find("Town")->second == p.address.find("Town")->second
-			&& address.find("Country")->second == p.address.find("Country")->second;
+		bool bEquals = true;
+		for (auto& q : queries)
+		{
+			bEquals = details.find(q)->second == p.details.find(q)->second;
+			if (!bEquals) break;
+		}
+		return bEquals;
 	}
 
 	bool operator!=(const Person& other) const
@@ -140,8 +172,8 @@ struct Person
 
 	friend std::ostream& operator<<(std::ostream& os, const Person& p)
 	{
-		os << p.firstName << "*" << p.otherNames << "*" << p.email << "*" << p.telephone << "*" 
-			<< p.address.find("Street")->second << "*" << p.address.find("Town")->second << "*" << p.address.find("Country")->second;
+		for (auto& q : queries)
+			os << p.details.find(q)->second << "*";
 		return os;
 	}
 };

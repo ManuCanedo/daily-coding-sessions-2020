@@ -1,7 +1,5 @@
 #include "Application.h"
 
-#include <vector>
-#include <iostream>
 #include <fstream>
 #include <sstream>
 
@@ -37,32 +35,29 @@ void Application::Menu()
 		bExit = true;
 		break;
 	default:
-		Display([]() { 
-			std::cout << "\nInvalid option!" << std::endl; 
-			});
+		Display([]() { std::cout << "\nInvalid option!" << std::endl; });
 		break;
 	}
 }
 
 void Application::Add()
 {
-	std::string firstName, otherNames;
-	std::string email, telephone;
+	std::string firstName, otherNames, email, telephone;
 	std::string street, town, country;
+	
 	std::cin.get();
-
 	do
 	{
 		Display([&]() {
 			std::cout << "Enter a name: ";
-			std::getline(std::cin, firstName); 
+			std::getline(std::cin, firstName);
 			});
 	} while (!Person::ValidateName(firstName));
 	do
 	{
 		Display([&]() {
 			std::cout << "Enter last/other names: ";
-			std::getline(std::cin, otherNames); 
+			std::getline(std::cin, otherNames);
 			});
 	} while (!Person::ValidateName(otherNames));
 	do
@@ -101,7 +96,7 @@ void Application::Add()
 			});
 	} while (!Person::ValidateName(country));
 
-	AddEntry({ firstName, otherNames, email, telephone, { street, town, country } });
+	AddEntry({ firstName, otherNames, email, telephone, street, town, country });
 }
 
 void Application::Remove()
@@ -111,14 +106,10 @@ void Application::Remove()
 	if (p != nullptr)
 	{
 		RemoveEntry(*p);
-		Display([]() {
-			std::cout << "Entry has been removed!" << std::endl;
-			});
+		Display([]() { std::cout << "Entry has been removed!" << std::endl; });
 	}
 	else
-		Display([]() {
-		std::cout << "Unable to remove entry!" << std::endl;
-			});
+		Display([]() { std::cout << "Unable to remove entry!" << std::endl; });
 }
 
 Person* Application::Find()
@@ -150,111 +141,67 @@ Person* Application::Find()
 	switch (query)
 	{
 	case 1:
-		p = Search(QueryType::NAME, keyword);
+		p = Search(DataType::NAME, keyword);
 		break;
 	case 2:
-		p = Search(QueryType::SURNAME, keyword);
+		p = Search(DataType::SURNAME, keyword);
 		break;
 	case 3:
-		p = Search(QueryType::EMAIL, keyword);
+		p = Search(DataType::EMAIL, keyword);
 		break;
 	case 4:
-		p = Search(QueryType::TELEPHONE, keyword);
+		p = Search(DataType::TELEPHONE, keyword);
 		break;
 	case 5:
-		p = Search(QueryType::TOWN, keyword);
+		p = Search(DataType::TOWN, keyword);
 		break;
 	case 6:
-		p = Search(QueryType::COUNTRY, keyword);
+		p = Search(DataType::COUNTRY, keyword);
 		break;
 	case 7:
 		return p;
 	default:
-		Display([]() {
-			std::cout << "\nNot a valid option!" << std::endl;
-			});
+		Display([]() { std::cout << "\nNot a valid option!" << std::endl; });
 		break;
 	}
 
 	if (p != nullptr)
-		Display([]() {
-			std::cout << "Entry has been found!" << std::endl;
-			});
+		Display([]() { std::cout << "Entry has been found!" << std::endl; });
 	else
-		Display([]() {
-			std::cout << "Entry has not been found!" << std::endl;
-			});
-
+		Display([]() { std::cout << "Entry has not been found!" << std::endl; });
 	return p;
 }
+
+
+// Data Management
 
 bool Application::AddEntry(const Person& p)
 {
 	data->push_back(p);
-	name->insert({ p.firstName, &(data->back()) });
-	surname->insert({ p.otherNames, &(data->back()) });
-	email->insert({ p.email, &(data->back()) });
-	telephone->insert({ p.telephone, &(data->back()) });
-	town->insert({ p.address.find("Town")->second, &(data->back()) });
-	country->insert({ p.address.find("Country")->second, &(data->back()) });
-
+	for (auto& q : queries)
+		search->find(q)->second.emplace(p.details.find(q)->second, &(data->back()));
 	return true;
 }
 
 bool Application::RemoveEntry(const Person& p)
 {
-	name->erase(p.firstName);
-	surname->erase(p.otherNames);
-	email->erase(p.email);
-	telephone->erase(p.telephone);
-	town->erase(p.address.find("Town")->second);
-	country->erase(p.address.find("Country")->second);
+	for (auto& q : queries)
+		search->find(q)->second.erase(p.details.find(q)->second);
 	data->remove(p);
-
 	return true;
 }
 
-Person* Application::Search(QueryType query, const std::string& value)
+Person* Application::Search(DataType q, const std::string& value)
 {
 	Person* p = nullptr;
-	QueryMap::iterator it;
 
-	switch (query)
+	auto it = search->find(q);
+	if (it != search->end())
 	{
-	case QueryType::NAME:
-		it = name->find(value);
-		if (it != name->end())
-			p = it->second;
-		break;
-	case QueryType::SURNAME:
-		it = surname->find(value);
-		if (it != surname->end())
-			p = it->second;
-		break;
-	case QueryType::EMAIL:
-		it = email->find(value);
-		if (it != email->end())
-			p = it->second;
-		break;
-	case QueryType::TELEPHONE:
-		it = telephone->find(value);
-		if (it != telephone->end())
-			p = it->second;
-		break;
-	case QueryType::TOWN:
-		it = town->find(value);
-		if (it != town->end())
-			p = it->second;
-		break;
-	case QueryType::COUNTRY:
-		it = country->find(value);
-		if (it != country->end())
-			p = it->second;
-		break;
-	default:
-		break;
+		auto itQueryMap = it->second.find(value);
+		if (itQueryMap != it->second.end())
+			p = itQueryMap->second;
 	}
-
 	return p;
 }
 
@@ -271,7 +218,7 @@ void Application::LoadData()
 			std::stringstream ss(line);
 			for (auto& f : fields)
 				std::getline(ss, f, '*');
-			AddEntry({ fields[0], fields[1] , fields[2], fields[3], {fields[4],fields[5],fields[6]} });
+			AddEntry({ fields[0], fields[1] , fields[2], fields[3], fields[4], fields[5], fields[6] });
 		}
 		file.close();
 	}
@@ -283,7 +230,9 @@ void Application::SaveData()
 	std::copy(data->begin(), data->end(), std::ostream_iterator<Person>(file, "\n"));
 }
 
-// ENTRY POINT
+
+// Entry Point
+
 int main()
 {
 	Application app;
