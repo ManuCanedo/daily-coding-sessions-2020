@@ -19,6 +19,7 @@ public:
 	bool OnUserUpdate(float fElapsedTime) override;
 
 private:
+	void GameOver();
 	void HandleInput();
 	void UpdateWorld(float fElapsedTime);
 	void RenderFrame();
@@ -26,6 +27,9 @@ private:
 private:
 	std::vector<std::unique_ptr<GameObject>> vGameObjects;
 	olc::TileTransformedView tv;
+
+public:
+	bool bGameOver{ false };
 };
 
 

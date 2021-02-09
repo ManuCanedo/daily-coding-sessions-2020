@@ -16,6 +16,7 @@ public:
 
 	static std::string& GetMap() { return s_sMap; }
 	static const olc::vi2d& GetMapSize() { return s_vMapSize; }
+	static void SetLevel(std::string_view map) { s_sMap = map; }
 
 	olc::vf2d vPos;
 	olc::vf2d vVel;
@@ -34,14 +35,16 @@ private:
 class Ball : public GameObject
 {
 public:
-	Ball(const olc::vf2d&& pos = { 3.0f, 3.0f }, float fRadius = 1.0f)
-		: GameObject(pos), fRadius(fRadius) {}
+	Ball(const olc::vf2d& pos = { 3.0f, 3.0f }, float fRadius = 1.0f)
+		: GameObject(pos, {3.0f, 10.0f}), fRadius(fRadius) {}
 
 	void Update(float fElapsedTime) override;
 	void Draw(olc::TileTransformedView& tv) override;
 
-private:
+public:
+	static Ball* p_Ball;
 	float fRadius;
+	bool bOutOfBounds{ false };
 };
 
 
@@ -49,14 +52,15 @@ private:
 class Platform : public GameObject
 {
 public:
-	Platform(const olc::vf2d&& pos, const olc::vf2d&& size)
+	Platform(const olc::vf2d& pos, const olc::vf2d& size)
 		: GameObject(pos), vSize(size) {}
 
 	void Update(float fElapsedTime) override;
 	void Draw(olc::TileTransformedView& tv) override;
 
+public:
+	olc::vf2d vSize;
+
 private:
 	inline void Resize(float width, float height);
-
-	olc::vf2d vSize;
 };

@@ -11,16 +11,21 @@ bool Game::OnUserCreate()
 {
 	vGameObjects.push_back(std::make_unique<Platform>(Platform({ 14.0f, 20.0f }, { 5.0f, 1.0f })));
 	vGameObjects.push_back(std::make_unique<Ball>(Ball({ 15.0f, 12.0f }, 0.5f)));
+	Ball::p_Ball = (Ball*)vGameObjects.back().get();
 
 	tv.ZoomAtScreenPos(0.25f, olc::vf2d(-1.0f, -1.0f));
+
 	return true;
 }
 
 bool Game::OnUserUpdate(float fElapsedTime)
 {
 	// Handle Input
+	if (Ball::p_Ball != nullptr && Ball::p_Ball->bOutOfBounds)
+		GameOver();
+	
 	HandleInput();
-
+	
 	// Update GameObjects
 	UpdateWorld(fElapsedTime);
 
@@ -28,6 +33,38 @@ bool Game::OnUserUpdate(float fElapsedTime)
 	RenderFrame();
 
 	return true;
+}
+
+void Game::GameOver()
+{
+	GameObject::SetLevel({
+		"################################"
+		"#..............................#"
+		"#...####.####.##.##.####.......#"
+		"#...#....#..#.#.#.#.#..........#"
+		"#...#.##.####.#...#.###........#"
+		"#...#..#.#..#.#...#.#..........#"
+		"#...####.#..#.#...#.####.......#"
+		"#..............................#"
+		"#..............................#"
+		"#.....####.#....#.####.###.....#"
+		"#.....#..#..#..#..#....#..#....#"
+		"#.....#..#..#..#..###..###.....#"
+		"#.....#..#...##...#....#.#.....#"
+		"#.....####........####.#..#....#"
+		"#..............................#"
+		"#..............................#"
+		"#..............................#"
+		"#..............................#"
+		"#..............................#"
+		"#..............................#"
+		"#..............................#"
+		"#..............................#"
+		"#..............................#"
+		"################################" });
+
+	vGameObjects.resize(1);
+	Ball::p_Ball = nullptr;
 }
 
 inline void Game::HandleInput()
@@ -49,12 +86,44 @@ inline void Game::HandleInput()
 		vGameObjects[0]->vVel = { 0.0f, 0.0f };
 	if (GetKey(olc::Key::RIGHT).bReleased || GetKey(olc::Key::D).bReleased)
 		vGameObjects[0]->vVel = { 0.0f, 0.0f };
+
+	if (Ball::p_Ball == nullptr && GetKey(olc::Key::SPACE).bPressed)
+	{
+		vGameObjects.push_back(std::make_unique<Ball>(Ball({ 15.0f, 12.0f }, 0.5f)));	
+		Ball::p_Ball = (Ball*)vGameObjects.back().get();
+		
+		GameObject::SetLevel({
+			"################################"
+			"#..............................#"
+			"#..............................#"
+			"#..............................#"
+			"#..............................#"
+			"#..............................#"
+			"#..............................#"
+			"#..............................#"
+			"#..............................#"
+			"#..............................#"
+			"#..............................#"
+			"#..............................#"
+			"#..............................#"
+			"#..............................#"
+			"#..............................#"
+			"#..............................#"
+			"#..............................#"
+			"#..............................#"
+			"#..............................#"
+			"#..............................#"
+			"#..............................#"
+			"#..............................#"
+			"#..............................#"
+			"################################" });
+	}
 }
 
 inline void Game::UpdateWorld(float fElapsedTime)
 {
-	for (auto& obj : vGameObjects)
-		obj->Update(fElapsedTime);
+	for (auto rIt = vGameObjects.rbegin(); rIt != vGameObjects.rend(); ++rIt)
+		(*rIt)->Update(fElapsedTime);
 }
 
 inline void Game::RenderFrame()
@@ -68,9 +137,22 @@ inline void Game::RenderFrame()
 	for (vTile.y = vTL.y; vTile.y < vBR.y; vTile.y++)
 		for (vTile.x = vTL.x; vTile.x < vBR.x; vTile.x++)
 		{
-			if (GameObject::GetMap()[vTile.y * GameObject::GetMapSize().x + vTile.x] == '#')
+			switch (GameObject::GetMap()[vTile.y * GameObject::GetMapSize().x + vTile.x])
 			{
+			case '#':
 				tv.FillRect(vTile, { 1.0f, 1.0f }, olc::VERY_DARK_GREY);
+				break;
+			case '3':
+				tv.FillRect(vTile, { 1.0f, 1.0f }, olc::VERY_DARK_BLUE);
+				break;
+			case '2':
+				tv.FillRect(vTile, { 1.0f, 1.0f }, olc::DARK_BLUE);
+				break;
+			case '1':
+				tv.FillRect(vTile, { 1.0f, 1.0f }, olc::BLUE);
+				break;
+			default:
+				break;
 			}
 		}
 
