@@ -8,6 +8,7 @@
 #include "GameObject.h"
 
 #include <memory>
+#include <Windows.h>
 
 // Game Class
 class Game : public olc::PixelGameEngine

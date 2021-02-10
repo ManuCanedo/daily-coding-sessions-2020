@@ -5,6 +5,17 @@ I am doing a C++ coding session per day. Whithin these files there are dozens of
 Most days I start a new  mathematical or data management coding challenge and I submit a correct and efficient solution to it. Time Complexity of the solution provided is displayed at the bottom of each file. Other days I do some data structures and C++ language features workout.
 <br/><br/>
 
+## **Applications**
+
+#### Games
+
+10-02-2021: [ArcadeBlocksGame](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Applications/ArcadeBlocks)  
+
+#### Other Applications
+
+03-02-2021: [AddressBook](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Applications/AddressBook)  
+23-01-2021: [Fractal](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/ParallelComputing_CUDA/CUDA_Fractal)  
+
 ## **Algorithms**
 
 #### Hall of Fame

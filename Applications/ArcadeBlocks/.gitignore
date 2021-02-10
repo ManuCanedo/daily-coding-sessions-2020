@@ -1,5 +1,6 @@
 # Directories
 .vs/
+bin/Debug/
 bin-int/
 media/
 *_bak
@@ -13,4 +14,7 @@ media/
 *.vcxproj.filters
 *.sln
 *.ini
-.cfg
+*.cfg
+*.iobj
+*.ipdb
+*.pdb

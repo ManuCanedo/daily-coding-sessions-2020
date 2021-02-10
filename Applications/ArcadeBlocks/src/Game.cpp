@@ -216,6 +216,10 @@ const std::string Game::s_sGameOver{
 // Entry point
 int main()
 {
+	#if defined(_WIN32)
+	::ShowWindow(::GetConsoleWindow(), SW_HIDE);
+	#endif
+
 	std::unique_ptr<Game> game = std::make_unique<Game>();
 
 	if (game->Construct(256, 192, 6, 6))
