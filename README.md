@@ -14,7 +14,7 @@ Most days I start a new  mathematical or data management coding challenge and I 
 #### Other Applications
 
 03-02-2021: [AddressBook](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Applications/AddressBook)  
-23-01-2021: [Fractal](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/ParallelComputing_CUDA/CUDA_Fractal)  
+23-01-2021: [FractalImagesGenerator](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/ParallelComputing_CUDA/CUDA_Fractal)  
 
 ## **Algorithms**
 
