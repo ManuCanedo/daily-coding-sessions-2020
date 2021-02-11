@@ -2,6 +2,7 @@
 
 #include "olcPixelGameEngine.h"
 #include "olcPGEX_TransformedView.h"
+#include "AudioManager.h"
 
 #include <string_view>
 
@@ -11,7 +12,7 @@ class GameObject
 public:
 	GameObject() = default;
 
-	virtual void Update(float fElapsedTime) = 0;
+	virtual void Update(float fElapsedTime, AudioManager& audio) = 0;
 	virtual void Draw(olc::TileTransformedView& tv) = 0;
 
 	static std::string& GetMap() { return s_sMap; }
@@ -37,7 +38,7 @@ public:
 	Ball(const olc::vf2d& pos = { 3.0f, 3.0f }, float fRadius = 1.0f)
 		: GameObject(pos, {3.0f - rand()%6, 15.0f}), fRadius(fRadius) {}
 
-	void Update(float fElapsedTime) override;
+	void Update(float fElapsedTime, AudioManager& audio) override;
 	void Draw(olc::TileTransformedView& tv) override;
 
 public:
@@ -54,12 +55,9 @@ public:
 	Platform(const olc::vf2d& pos, const olc::vf2d& size)
 		: GameObject(pos), vSize(size) {}
 
-	void Update(float fElapsedTime) override;
+	void Update(float fElapsedTime, AudioManager& audio) override;
 	void Draw(olc::TileTransformedView& tv) override;
 
 public:
 	olc::vf2d vSize;
-
-private:
-	inline void Resize(float width, float height);
 };

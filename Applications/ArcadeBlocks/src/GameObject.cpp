@@ -1,22 +1,21 @@
 #include "GameObject.h"
 
-std::string GameObject::s_sMap = "";
+std::string GameObject::s_sMap;
 const olc::vi2d GameObject::s_vMapSize = { 32, 24 };
 
 Ball* Ball::p_Ball = nullptr;
 
-void Ball::Update(float fElapsedTime)
+void Ball::Update(float fElapsedTime, AudioManager& audio)
 {
 	static std::string& map = GameObject::GetMap();
-	static olc::vf2d mapWidth = GameObject::GetMapSize();
+	static olc::vf2d mapSize = GameObject::GetMapSize();
 
 	olc::vf2d vTempPos{ vPos.x + vVel.x * fElapsedTime,  vPos.y + vVel.y * fElapsedTime };
 
 	olc::vi2d vCurrentCell = vPos.floor();
 	olc::vi2d vTargetCell = vTempPos;
 	olc::vi2d vAreaTL = (vCurrentCell.min(vTargetCell) - olc::vi2d(1, 1)).max({ 0,0 });
-	olc::vi2d vAreaBR = (vCurrentCell.max(vTargetCell) + olc::vi2d(1, 1)).min(GameObject::GetMapSize());
-
+	olc::vi2d vAreaBR = (vCurrentCell.max(vTargetCell) + olc::vi2d(1, 1)).min(mapSize);
 	olc::vf2d vRayToNearest;
 
 	// Iterate through each cell in test area
@@ -24,7 +23,7 @@ void Ball::Update(float fElapsedTime)
 	for (vCell.y = vAreaTL.y; vCell.y <= vAreaBR.y; vCell.y++)
 		for (vCell.x = vAreaTL.x; vCell.x <= vAreaBR.x; vCell.x++)
 			// Resolve Map Collision
-			if (GameObject::GetMap()[vCell.y * GameObject::GetMapSize().x + vCell.x] != '.')
+			if (map[vCell.y * mapSize.x + vCell.x] != '.')
 			{
 				olc::vf2d vNearestPoint;
 				vNearestPoint.x = std::max(float(vCell.x), std::min(vTempPos.x, float(vCell.x + 1)));
@@ -38,19 +37,25 @@ void Ball::Update(float fElapsedTime)
 				{
 					// Statically resolve the collision
 					vTempPos = vTempPos - vRayToNearest.norm() * fOverlap;
-					
-					switch (GameObject::GetMap()[vCell.y * GameObject::GetMapSize().x + vCell.x])
+					FMOD_VECTOR posSFX = { vTempPos.x, vTempPos.y, 0.0f };
+					FMOD_VECTOR velSFX = { vVel.x, vVel.y , 0.0f};
+
+					switch (map[vCell.y * mapSize.x + vCell.x])
 					{
 					case '3':
-						GameObject::GetMap()[vCell.y * GameObject::GetMapSize().x + vCell.x] = '2';
+						map[vCell.y * mapSize.x + vCell.x] = '2';
+						//audio.PlaySFX("media/sfx/block_bounce.ogg", 0.2f, 0.4f, 0.6f, 1.2f, posSFX, velSFX);
 						break;
 					case '2':
-						GameObject::GetMap()[vCell.y * GameObject::GetMapSize().x + vCell.x] = '1';
+						map[vCell.y * mapSize.x + vCell.x] = '1';
+						//audio.PlaySFX("media/sfx/block_bounce.ogg", 0.2f, 0.4f, 0.6f, 1.2f, posSFX, velSFX);
 						break;
 					case '1':
-						GameObject::GetMap()[vCell.y * GameObject::GetMapSize().x + vCell.x] = '.';
+						map[vCell.y * mapSize.x + vCell.x] = '.';
+						audio.PlaySFX("media/sfx/block_destroyed.ogg", 0.8f, 1.0f, 0.8f, 1.2f, posSFX, velSFX);
 						break;
 					default:
+						//audio.PlaySFX("media/sfx/block_bounce.ogg", 0.2f, 0.4f, 0.6f, 1.2f, posSFX, velSFX);
 						break;
 					}
 
@@ -62,6 +67,8 @@ void Ball::Update(float fElapsedTime)
 						vVel.y = -vVel.y;
 					else
 						vVel.x = -vVel.x;
+
+					// Play SFX on new location
 				}
 			}
 
@@ -73,7 +80,7 @@ void Ball::Draw(olc::TileTransformedView& tv)
 	tv.FillCircle(vPos, fRadius, olc::Pixel(181, 167, 235));
 }
 
-void Platform::Update(float fElapsedTime)
+void Platform::Update(float fElapsedTime, AudioManager& audio)
 {
 	static std::string& map = GameObject::GetMap();
 	static const int mapWidth = GameObject::GetMapSize().x;
@@ -111,17 +118,13 @@ void Platform::Update(float fElapsedTime)
 	{
 		Ball::p_Ball->vVel.y = -Ball::p_Ball->vVel.y;
 		Ball::p_Ball->vVel.x = Ball::p_Ball->vVel.x + vVel.x / 8;
-		Resize(vSize.x - 0.05f, vSize.y);
+		FMOD_VECTOR posSFX = { vPos.x, vPos.y, 0.0f };
+		FMOD_VECTOR velSFX = { vVel.x, vVel.y , 0.0f };
+		audio.PlaySFX("media/sfx/block_bounce.ogg", 0.05f, 0.1f, 0.6f, 1.2f, posSFX, velSFX);
 	}
 }
 
 void Platform::Draw(olc::TileTransformedView& tv)
 {
 	tv.FillRect(vPos, vSize, olc::Pixel(181, 167, 235));
-}
-
-void Platform::Resize(float width, float height)
-{
-	vPos.x += (vSize.x - width) / 2;
-	if (width > 0.2f) vSize.x = width;
 }

@@ -1,17 +1,23 @@
 #include "Game.h"
 
 Game::Game()
+	: audio()
 {
 	vGameObjects.reserve(10);
-	vGameObjects.push_back(std::make_unique<Platform>(Platform({ 14.0f, 20.0f }, { 10.0f, 1.0f })));
 	tv = olc::TileTransformedView({ ScreenWidth(), ScreenHeight() }, { 32, 32 });
 	sAppName = "Arcade Blocks";
 }
 
 bool Game::OnUserCreate()
 {
-	LoadLevel(Level::MENU);
+	const olc::vf2d platformInitPos{ 14.0f, 20.0f };
+	const olc::vf2d platformInitSize{ 7.0f, 1.0f };
+
+	vGameObjects.push_back(std::make_unique<Platform>(Platform(platformInitPos, platformInitSize)));
 	tv.ZoomAtScreenPos(0.25f, { 0, 0 });
+
+	LoadAudio(platformInitPos);
+	LoadLevel(Level::MENU);
 	return true;
 }
 
@@ -20,17 +26,33 @@ bool Game::OnUserUpdate(float fElapsedTime)
 	// Check if player lost
 	if (Ball::p_Ball != nullptr && Ball::p_Ball->bOutOfBounds)
 		LoadLevel(Level::GAMEOVER);
-
 	// Handle Input
 	HandleInput();
-
 	// Update GameObjects
 	UpdateWorld(fElapsedTime);
-
 	// Draw GameObjects
 	RenderFrame();
 
 	return true;
+}
+
+void Game::LoadAudio(const olc::vf2d listenerPos)
+{
+	// Audio Initialization
+	audio.SetMasterVol(1.0f);
+	audio.SetSongsVol(0.6f);
+	audio.SetSFXsVol(1.0f);
+
+	// Reverb
+	FMOD_REVERB_PROPERTIES props = FMOD_PRESET_CONCERTHALL;
+	FMOD_VECTOR posReverb = { listenerPos.x, listenerPos.y, 0.0f };
+	audio.SetReverb(props, posReverb);
+
+	// Load Music and SFX
+	audio.LoadSong("media/song/song_dylan.ogg");
+	//audio.LoadSFX("media/song/.ogg");
+	audio.LoadSFX("media/sfx/block_destroyed.ogg");
+	audio.LoadSFX("media/sfx/block_bounce.ogg");
 }
 
 void Game::LoadLevel(Level level)
@@ -38,9 +60,11 @@ void Game::LoadLevel(Level level)
 	switch (level)
 	{
 	case Level::MENU:
+		audio.PlaySong("media/song/song_dylan.ogg");
 		GameObject::SetLevel(s_sMenu);
 		break;
 	case Level::LEVEL1:
+		audio.SetSongsVol(0.3f);
 		if (Ball::p_Ball == nullptr)
 		{
 			GameObject::SetLevel(s_sLevel1);
@@ -49,6 +73,7 @@ void Game::LoadLevel(Level level)
 		}
 		break;
 	case Level::GAMEOVER:
+		audio.SetSongsVol(0.6f);
 		GameObject::SetLevel(s_sGameOver);
 		vGameObjects.resize(1);
 		Ball::p_Ball = nullptr;
@@ -85,7 +110,8 @@ inline void Game::HandleInput()
 inline void Game::UpdateWorld(float fElapsedTime)
 {
 	for (auto rIt = vGameObjects.rbegin(); rIt != vGameObjects.rend(); ++rIt)
-		(*rIt)->Update(fElapsedTime);
+		(*rIt)->Update(fElapsedTime, audio);
+	audio.Update(fElapsedTime);
 }
 
 inline void Game::RenderFrame()

@@ -5,6 +5,7 @@
 #define OLC_PGEX_TRANSFORMEDVIEW
 #include "olcPGEX_TransformedView.h"
 
+#include "AudioManager.h"
 #include "GameObject.h"
 
 #include <memory>
@@ -25,7 +26,8 @@ public:
 	bool bGameOver{ false };
 
 private:
-	void LoadLevel(Level level);
+	void LoadAudio(const olc::vf2d listenerPos);
+	void LoadLevel(const Level level);
 
 	void HandleInput();
 	void UpdateWorld(float fElapsedTime);
@@ -34,6 +36,7 @@ private:
 private:
 	std::vector<std::unique_ptr<GameObject>> vGameObjects;
 	olc::TileTransformedView tv;
+	AudioManager audio;
 };
 
 
