@@ -2,7 +2,6 @@
 .vs/
 bin/Debug/
 bin-int/
-media/
 *_bak
 
 # Files
