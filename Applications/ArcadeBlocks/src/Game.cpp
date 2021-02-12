@@ -23,13 +23,16 @@ bool Game::OnUserCreate()
 
 bool Game::OnUserUpdate(float fElapsedTime)
 {
-	// Check if player lost
+	// Check Game Over
 	if (Ball::s_Ball != nullptr && Ball::s_Ball->IsOutOfBounds())
 		LoadLevel(Level::GAMEOVER);
+
 	// Handle Input
 	HandleInput();
+
 	// Update GameObjects
 	UpdateWorld(fElapsedTime);
+
 	// Draw GameObjects
 	RenderFrame();
 
@@ -43,9 +46,9 @@ void Game::LoadAudio(const olc::vf2d& listenerPos)
 	audio.SetSongsVol(0.6f);
 	audio.SetSFXsVol(1.0f);
 
-	// Reverb
-	FMOD_REVERB_PROPERTIES props = FMOD_PRESET_CONCERTHALL;
+	// Set Reverb
 	FMOD_VECTOR posReverb = { listenerPos.x, listenerPos.y, 0.0f };
+	FMOD_REVERB_PROPERTIES props = FMOD_PRESET_CONCERTHALL;
 	audio.SetReverb(props, posReverb);
 
 	// Load Music and SFX
@@ -56,6 +59,9 @@ void Game::LoadAudio(const olc::vf2d& listenerPos)
 
 void Game::LoadLevel(const Level& level)
 {
+	constexpr float gameMusicVolume = 0.3f;
+	constexpr float gameOverMusicVolume = 0.6f;
+
 	switch (level)
 	{
 	case Level::MENU:
@@ -63,16 +69,16 @@ void Game::LoadLevel(const Level& level)
 		GameObject::SetLevel(s_sMenu);
 		break;
 	case Level::LEVEL1:
-		audio.SetSongsVol(0.3f);
+		audio.SetSongsVol(gameMusicVolume);
 		if (Ball::s_Ball == nullptr)
 		{
-			GameObject::SetLevel(s_sLevel1);
 			vGameObjects.push_back(std::make_unique<Ball>(Ball({ 16.0f, 10.0f }, 0.5f)));
 			Ball::s_Ball = (Ball*)vGameObjects.back().get();
+			GameObject::SetLevel(s_sLevel1);
 		}
 		break;
 	case Level::GAMEOVER:
-		audio.SetSongsVol(0.6f);
+		audio.SetSongsVol(gameOverMusicVolume);
 		GameObject::SetLevel(s_sGameOver);
 		vGameObjects.resize(1);
 		Ball::s_Ball = nullptr;
@@ -84,11 +90,13 @@ void Game::LoadLevel(const Level& level)
 
 inline void Game::HandleInput()
 {
+	constexpr float platformVel = 15.0f;
+
 	// Handle Platform controls
 	if (GetKey(olc::Key::LEFT).bHeld || GetKey(olc::Key::A).bHeld) 
-		vGameObjects[0]->vVel = { -15.0f, 0.0f };
+		vGameObjects[0]->vVel = { -platformVel, 0.0f };
 	if (GetKey(olc::Key::RIGHT).bHeld || GetKey(olc::Key::D).bHeld) 
-		vGameObjects[0]->vVel = { +15.0f, 0.0f };
+		vGameObjects[0]->vVel = { +platformVel, 0.0f };
 	if (GetKey(olc::Key::LEFT).bReleased || GetKey(olc::Key::A).bReleased)
 		vGameObjects[0]->vVel = { 0.0f, 0.0f };
 	if (GetKey(olc::Key::RIGHT).bReleased || GetKey(olc::Key::D).bReleased)
@@ -108,12 +116,6 @@ inline void Game::UpdateWorld(float fElapsedTime)
 
 inline void Game::RenderFrame()
 {
-	// Block Colouring
-	static const olc::Pixel wallColour(181, 167, 235);
-	static const olc::Pixel hardBlockColour(128, 128, 128);
-	static const olc::Pixel mediumBlockColour(187, 187, 187);
-	static const olc::Pixel softBlockColour(227, 227, 227);
-
 	// Clear Screen
 	Clear(olc::WHITE);
 
@@ -121,8 +123,13 @@ inline void Game::RenderFrame()
 		DrawString({ 16, 128 }, "Press START to play", olc::BLACK);
 
 	// Draw Map
-	olc::vi2d vTL = tv.GetTopLeftTile().max({ 0,0 });
-	olc::vi2d vBR = tv.GetBottomRightTile().min(GameObject::GetMapSize());
+	const olc::Pixel wallColour(181, 167, 235);
+	const olc::Pixel hardBlockColour(128, 128, 128);
+	const olc::Pixel mediumBlockColour(187, 187, 187);
+	const olc::Pixel softBlockColour(227, 227, 227);
+
+	const olc::vi2d vTL = tv.GetTopLeftTile().max({ 0,0 });
+	const olc::vi2d vBR = tv.GetBottomRightTile().min(GameObject::GetMapSize());
 	olc::vi2d vTile;
 
 	for (vTile.y = vTL.y; vTile.y < vBR.y; vTile.y++)

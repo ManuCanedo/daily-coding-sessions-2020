@@ -1,28 +1,27 @@
 #include "AudioManager.h"
 
-#include <math.h>
 #include <stdlib.h>
-#include <time.h>
 #include <iostream>
+#include <math.h>
+#include <time.h>
 
 AudioManager::AudioManager() 
 	: currentSong(0), reverb(), groups(), fade(FadeState::NONE)
 {
-	// Initialize system
 	FMOD::System_Create(&system);
 	system->init(100, FMOD_INIT_NORMAL, 0);
 
 	// Create channel groups for each category
 	system->getMasterChannelGroup(&master);
-	for (int i = 0; i < (int)Category::CATEGORY_COUNT; ++i) 
+	for (int i = 0; i < int(Category::CATEGORY_COUNT); ++i) 
 	{
 		system->createChannelGroup(0, &groups[i]);
 		master->addGroup(groups[i]);
 	}
 
 	// Set up modes for each category
-	modes[(int)Category::SFX] = FMOD_2D;
-	modes[(int)Category::SONG] = FMOD_DEFAULT | FMOD_CREATESTREAM | FMOD_LOOP_NORMAL;
+	modes[int(Category::SFX)] = FMOD_2D;
+	modes[int(Category::SONG)] = FMOD_DEFAULT | FMOD_CREATESTREAM | FMOD_LOOP_NORMAL;
 
 	// Seed random number generator
 	srand(time(0));
@@ -32,7 +31,7 @@ AudioManager::~AudioManager()
 {
 	// Release sounds in each category
 	SoundMap::iterator iter;
-	for (int i = 0; i < (int)Category::CATEGORY_COUNT; ++i) 
+	for (int i = 0; i < int(Category::CATEGORY_COUNT); ++i)
 	{
 		for (iter = sounds[i].begin(); iter != sounds[i].end(); ++iter)
 			iter->second->release();
@@ -56,23 +55,25 @@ void AudioManager::LoadSong(std::string_view path)
 void AudioManager::PlaySFX(std::string_view path, float minVol, float maxVol, float minPitch, float maxPitch, FMOD_VECTOR& pos, FMOD_VECTOR& vel) 
 {
 	// Try to find sound effect and return if not found
-	SoundMap::iterator sound = sounds[(int)Category::SFX].find(std::string(path));
+	SoundMap::iterator sound = sounds[int(Category::SFX)].find(std::string(path));
 
-	if (sound == sounds[(int)Category::SFX].end()) 
+	if (sound == sounds[int(Category::SFX)].end()) 
 		return;
 
 	// Calculate random volume and pitch in selected range
-	float vol = RandomBetween(minVol, maxVol);
-	float pitch = RandomBetween(minPitch, maxPitch);
 
 	// Play the sound effect with these initial values
 	FMOD::Channel* channel;
 	system->playSound(sound->second, NULL, true, &channel);
 	
-	channel->setChannelGroup(groups[(int)Category::SFX]);
+	channel->setChannelGroup(groups[int(Category::SFX)]);
 	channel->set3DAttributes(&pos, &vel);
-	channel->setVolume(vol);
+
+	float vol = RandomBetween(minVol, maxVol);
+	float pitch = RandomBetween(minPitch, maxPitch);
 	float freq;
+
+	channel->setVolume(vol);
 	channel->getFrequency(&freq);
 	channel->setFrequency(ChangeSemitone(freq, pitch));
 	channel->setPaused(false);
@@ -80,7 +81,7 @@ void AudioManager::PlaySFX(std::string_view path, float minVol, float maxVol, fl
 
 void AudioManager::StopSFXs() 
 {
-	groups[(int)Category::SFX]->stop();
+	groups[int(Category::SFX)]->stop();
 }
 
 void AudioManager::PlaySong(std::string_view path) 
@@ -98,15 +99,15 @@ void AudioManager::PlaySong(std::string_view path)
 	}
 
 	// Search for a matching song in the sound map
-	SoundMap::iterator sound = sounds[(int)Category::SONG].find(path.data());
+	SoundMap::iterator sound = sounds[int(Category::SONG)].find(path.data());
 	
-	if (sound == sounds[(int)Category::SONG].end()) 
+	if (sound == sounds[int(Category::SONG)].end()) 
 		return;
 
 	// Start playing song with volume set to 0 and fade in
 	currentSongPath = path;
 	system->playSound(sound->second, NULL, true, &currentSong);
-	currentSong->setChannelGroup(groups[(int)Category::SONG]);
+	currentSong->setChannelGroup(groups[int(Category::SONG)]);
 	currentSong->setVolume(0.0f);
 	currentSong->setPaused(false);
 	fade = FadeState::FADE_IN;
@@ -123,7 +124,7 @@ void AudioManager::StopSongs()
 void AudioManager::Update(float elapsed) 
 {
 	
-	const float fadeTime = 1.0f; // in seconds
+	constexpr float fadeTime = 1.0f; // in seconds
 
 	if (currentSong != 0 && fade == FadeState::FADE_IN) 
 	{
@@ -137,9 +138,7 @@ void AudioManager::Update(float elapsed)
 			fade = FadeState::NONE;
 		}
 		else 
-		{
 			currentSong->setVolume(nextVol);
-		}
 	}
 	else if (currentSong != 0 && fade == FadeState::FADE_OUT) 
 	{
@@ -155,9 +154,7 @@ void AudioManager::Update(float elapsed)
 			fade = FadeState::NONE;
 		}
 		else 
-		{
 			currentSong->setVolume(nextVol);
-		}
 	}
 	else if (currentSong == 0 && !nextSongPath.empty()) 
 	{
@@ -174,11 +171,11 @@ void AudioManager::SetMasterVol(float vol)
 }
 void AudioManager::SetSFXsVol(float vol) 
 {
-	groups[(int)Category::SFX]->setVolume(vol);
+	groups[int(Category::SFX)]->setVolume(vol);
 }
 void AudioManager::SetSongsVol(float vol) 
 {
-	groups[(int)Category::SONG]->setVolume(vol);
+	groups[int(Category::SONG)]->setVolume(vol);
 }
 
 void AudioManager::SetAudioListener(FMOD_VECTOR& pos, FMOD_VECTOR& vel, FMOD_VECTOR& forward, FMOD_VECTOR& up)
@@ -195,24 +192,23 @@ void AudioManager::SetReverb(FMOD_REVERB_PROPERTIES &props, FMOD_VECTOR &pos)
 
 void AudioManager::Load(Category type, std::string_view path)
 {
-	if (sounds[(int)type].find(path.data()) != sounds[(int)type].end())
+	if (sounds[int(type)].find(path.data()) != sounds[int(type)].end())
 		return;
 
 	FMOD::Sound* sound;
-	system->createSound(path.data(), modes[(int)type], 0, &sound);
-	sounds[(int)type].insert(std::make_pair(path, sound));
+	system->createSound(path.data(), modes[int(type)], 0, &sound);
+	sounds[int(type)].insert(std::make_pair(path, sound));
 }
 
 float AudioManager::ChangeSemitone(float freq, float var)
 {
-	static float semitone_ratio = pow(2.0f, 1.0f / 12.0f);
+	static const float semitone_ratio = pow(2.0f, 1.0f / 12.0f);
 	return freq * pow(semitone_ratio, var);
 }
 
 float AudioManager::RandomBetween(float min, float max)
 {
-	if (min == max)
-		return min;
-	float n = (float)rand() / (float)RAND_MAX;
+	if (min == max) return min;
+	const float n = (float)rand() / (float)RAND_MAX;
 	return min + n * (max - min);
 }
