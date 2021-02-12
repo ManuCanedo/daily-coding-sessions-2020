@@ -26,8 +26,8 @@ public:
 	bool bGameOver{ false };
 
 private:
-	void LoadAudio(const olc::vf2d listenerPos);
-	void LoadLevel(const Level level);
+	void LoadAudio(const olc::vf2d& listenerPos);
+	void LoadLevel(const Level& level);
 
 	void HandleInput();
 	void UpdateWorld(float fElapsedTime);

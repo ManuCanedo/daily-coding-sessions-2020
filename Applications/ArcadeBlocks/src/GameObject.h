@@ -2,9 +2,11 @@
 
 #include "olcPixelGameEngine.h"
 #include "olcPGEX_TransformedView.h"
+
 #include "AudioManager.h"
 
 #include <string_view>
+
 
 // Game Object abstract class
 class GameObject
@@ -13,7 +15,7 @@ public:
 	GameObject() = default;
 
 	virtual void Update(float fElapsedTime, AudioManager& audio) = 0;
-	virtual void Draw(olc::TileTransformedView& tv) = 0;
+	virtual void Draw(olc::TileTransformedView& tv) const = 0;
 
 	static std::string& GetMap() { return s_sMap; }
 	static const olc::vi2d& GetMapSize() { return s_vMapSize; }
@@ -31,6 +33,7 @@ private:
 	const static olc::vi2d s_vMapSize;
 };
 
+
 // Ball Game Object
 class Ball : public GameObject
 {
@@ -39,11 +42,15 @@ public:
 		: GameObject(pos, {3.0f - rand()%6, 15.0f}), fRadius(fRadius) {}
 
 	void Update(float fElapsedTime, AudioManager& audio) override;
-	void Draw(olc::TileTransformedView& tv) override;
+	void Draw(olc::TileTransformedView& tv) const override;
+	
+	bool IsOutOfBounds() const { return bOutOfBounds; }
+	void SetOutOfBounds() { bOutOfBounds = true; }
 
-public:
-	static Ball* p_Ball;
 	float fRadius;
+	static Ball* s_Ball;
+
+private:
 	bool bOutOfBounds{ false };
 };
 
@@ -56,8 +63,7 @@ public:
 		: GameObject(pos), vSize(size) {}
 
 	void Update(float fElapsedTime, AudioManager& audio) override;
-	void Draw(olc::TileTransformedView& tv) override;
+	void Draw(olc::TileTransformedView& tv) const override;
 
-public:
 	olc::vf2d vSize;
 };

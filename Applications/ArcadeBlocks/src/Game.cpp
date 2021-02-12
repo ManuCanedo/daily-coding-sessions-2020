@@ -24,7 +24,7 @@ bool Game::OnUserCreate()
 bool Game::OnUserUpdate(float fElapsedTime)
 {
 	// Check if player lost
-	if (Ball::p_Ball != nullptr && Ball::p_Ball->bOutOfBounds)
+	if (Ball::s_Ball != nullptr && Ball::s_Ball->IsOutOfBounds())
 		LoadLevel(Level::GAMEOVER);
 	// Handle Input
 	HandleInput();
@@ -36,7 +36,7 @@ bool Game::OnUserUpdate(float fElapsedTime)
 	return true;
 }
 
-void Game::LoadAudio(const olc::vf2d listenerPos)
+void Game::LoadAudio(const olc::vf2d& listenerPos)
 {
 	// Audio Initialization
 	audio.SetMasterVol(1.0f);
@@ -50,12 +50,11 @@ void Game::LoadAudio(const olc::vf2d listenerPos)
 
 	// Load Music and SFX
 	audio.LoadSong("media/song/song_dylan.ogg");
-	//audio.LoadSFX("media/song/.ogg");
 	audio.LoadSFX("media/sfx/block_destroyed.ogg");
 	audio.LoadSFX("media/sfx/block_bounce.ogg");
 }
 
-void Game::LoadLevel(Level level)
+void Game::LoadLevel(const Level& level)
 {
 	switch (level)
 	{
@@ -65,18 +64,18 @@ void Game::LoadLevel(Level level)
 		break;
 	case Level::LEVEL1:
 		audio.SetSongsVol(0.3f);
-		if (Ball::p_Ball == nullptr)
+		if (Ball::s_Ball == nullptr)
 		{
 			GameObject::SetLevel(s_sLevel1);
 			vGameObjects.push_back(std::make_unique<Ball>(Ball({ 16.0f, 10.0f }, 0.5f)));
-			Ball::p_Ball = (Ball*)vGameObjects.back().get();
+			Ball::s_Ball = (Ball*)vGameObjects.back().get();
 		}
 		break;
 	case Level::GAMEOVER:
 		audio.SetSongsVol(0.6f);
 		GameObject::SetLevel(s_sGameOver);
 		vGameObjects.resize(1);
-		Ball::p_Ball = nullptr;
+		Ball::s_Ball = nullptr;
 		break;
 	default:
 		break;
@@ -85,13 +84,6 @@ void Game::LoadLevel(Level level)
 
 inline void Game::HandleInput()
 {
-	// Handle Pan
-	if (GetMouse(2).bPressed) tv.StartPan(GetMousePos());
-	if (GetMouse(2).bHeld) tv.UpdatePan(GetMousePos());
-	if (GetMouse(2).bReleased) tv.EndPan(GetMousePos());
-	if (GetMouseWheel() > 0) tv.ZoomAtScreenPos(1.2f, GetMousePos());
-	if (GetMouseWheel() < 0) tv.ZoomAtScreenPos(0.8f, GetMousePos());
-
 	// Handle Platform controls
 	if (GetKey(olc::Key::LEFT).bHeld || GetKey(olc::Key::A).bHeld) 
 		vGameObjects[0]->vVel = { -15.0f, 0.0f };
@@ -103,7 +95,7 @@ inline void Game::HandleInput()
 		vGameObjects[0]->vVel = { 0.0f, 0.0f };
 
 	// Handle Space to Play
-	if (Ball::p_Ball == nullptr && GetKey(olc::Key::SPACE).bPressed)
+	if (Ball::s_Ball == nullptr && GetKey(olc::Key::SPACE).bPressed)
 		LoadLevel(Level::LEVEL1);
 }
 
@@ -125,7 +117,7 @@ inline void Game::RenderFrame()
 	// Clear Screen
 	Clear(olc::WHITE);
 
-	if (Ball::p_Ball == nullptr)
+	if (Ball::s_Ball == nullptr)
 		DrawString({ 16, 128 }, "Press START to play", olc::BLACK);
 
 	// Draw Map
@@ -156,7 +148,7 @@ inline void Game::RenderFrame()
 		}
 
 	// Draw Game Objects
-	for (auto& obj : vGameObjects)
+	for (const auto& obj : vGameObjects)
 		obj->Draw(tv);
 }
 

@@ -3,12 +3,12 @@
 std::string GameObject::s_sMap;
 const olc::vi2d GameObject::s_vMapSize = { 32, 24 };
 
-Ball* Ball::p_Ball = nullptr;
+Ball* Ball::s_Ball = nullptr;
 
 void Ball::Update(float fElapsedTime, AudioManager& audio)
 {
-	static std::string& map = GameObject::GetMap();
-	static olc::vf2d mapSize = GameObject::GetMapSize();
+	const olc::vf2d mapSize = GameObject::GetMapSize();
+	std::string& map = GameObject::GetMap();
 
 	olc::vf2d vTempPos{ vPos.x + vVel.x * fElapsedTime,  vPos.y + vVel.y * fElapsedTime };
 
@@ -33,29 +33,24 @@ void Ball::Update(float fElapsedTime, AudioManager& audio)
 				float fOverlap = fRadius - vRayToNearest.mag();
 
 				if (std::isnan(fOverlap)) fOverlap = 0;
-				if (fOverlap >= 0)
+				if (fOverlap > 0)
 				{
 					// Statically resolve the collision
 					vTempPos = vTempPos - vRayToNearest.norm() * fOverlap;
-					FMOD_VECTOR posSFX = { vTempPos.x, vTempPos.y, 0.0f };
-					FMOD_VECTOR velSFX = { vVel.x, vVel.y , 0.0f};
 
 					switch (map[vCell.y * mapSize.x + vCell.x])
 					{
 					case '3':
 						map[vCell.y * mapSize.x + vCell.x] = '2';
-						//audio.PlaySFX("media/sfx/block_bounce.ogg", 0.2f, 0.4f, 0.6f, 1.2f, posSFX, velSFX);
 						break;
 					case '2':
 						map[vCell.y * mapSize.x + vCell.x] = '1';
-						//audio.PlaySFX("media/sfx/block_bounce.ogg", 0.2f, 0.4f, 0.6f, 1.2f, posSFX, velSFX);
 						break;
 					case '1':
 						map[vCell.y * mapSize.x + vCell.x] = '.';
+						FMOD_VECTOR posSFX = { vTempPos.x, vTempPos.y, 0.0f };
+						FMOD_VECTOR velSFX = { vVel.x, vVel.y , 0.0f };
 						audio.PlaySFX("media/sfx/block_destroyed.ogg", 0.8f, 1.0f, 0.8f, 1.2f, posSFX, velSFX);
-						break;
-					default:
-						//audio.PlaySFX("media/sfx/block_bounce.ogg", 0.2f, 0.4f, 0.6f, 1.2f, posSFX, velSFX);
 						break;
 					}
 
@@ -67,15 +62,13 @@ void Ball::Update(float fElapsedTime, AudioManager& audio)
 						vVel.y = -vVel.y;
 					else
 						vVel.x = -vVel.x;
-
-					// Play SFX on new location
 				}
 			}
 
 	vPos = vTempPos;
 }
 
-void Ball::Draw(olc::TileTransformedView& tv)
+void Ball::Draw(olc::TileTransformedView& tv) const
 {
 	tv.FillCircle(vPos, fRadius, olc::Pixel(181, 167, 235));
 }
@@ -86,8 +79,8 @@ void Platform::Update(float fElapsedTime, AudioManager& audio)
 	static const int mapWidth = GameObject::GetMapSize().x;
 	float potentialPos{ vPos.x + vVel.x * fElapsedTime };
 
-	if (Ball::p_Ball != nullptr && Ball::p_Ball->vPos.y > vPos.y)
-		Ball::p_Ball->bOutOfBounds = true;
+	if (Ball::s_Ball != nullptr && Ball::s_Ball->vPos.y > vPos.y)
+		Ball::s_Ball->SetOutOfBounds();
 
 	// Resolve Wall Collision
 	if (vVel.x > 0)
@@ -109,22 +102,23 @@ void Platform::Update(float fElapsedTime, AudioManager& audio)
 
 	// Resolve Ball Collision
 	bool bCollision = 
-		Ball::p_Ball != nullptr &&
-		Ball::p_Ball->vPos.x > vPos.x &&
-		Ball::p_Ball->vPos.x < vPos.x + vSize.x &&
-		Ball::p_Ball->vPos.y + Ball::p_Ball->fRadius >= vPos.y;
+		Ball::s_Ball != nullptr &&
+		Ball::s_Ball->vPos.x + Ball::s_Ball->fRadius / 2 > vPos.x &&
+		Ball::s_Ball->vPos.x - Ball::s_Ball->fRadius / 2 < vPos.x + vSize.x &&
+		Ball::s_Ball->vPos.y + Ball::s_Ball->fRadius >= vPos.y;
 
 	if (bCollision)
 	{
-		Ball::p_Ball->vVel.y = -Ball::p_Ball->vVel.y;
-		Ball::p_Ball->vVel.x = Ball::p_Ball->vVel.x + vVel.x / 8;
+		Ball::s_Ball->vPos.y = vPos.y - Ball::s_Ball->fRadius;
+		Ball::s_Ball->vVel.y = -Ball::s_Ball->vVel.y;
+		Ball::s_Ball->vVel.x = Ball::s_Ball->vVel.x + vVel.x / 8;
 		FMOD_VECTOR posSFX = { vPos.x, vPos.y, 0.0f };
 		FMOD_VECTOR velSFX = { vVel.x, vVel.y , 0.0f };
 		audio.PlaySFX("media/sfx/block_bounce.ogg", 0.05f, 0.1f, 0.6f, 1.2f, posSFX, velSFX);
 	}
 }
 
-void Platform::Draw(olc::TileTransformedView& tv)
+void Platform::Draw(olc::TileTransformedView& tv) const
 {
 	tv.FillRect(vPos, vSize, olc::Pixel(181, 167, 235));
 }
