@@ -1,14 +1,14 @@
-#pragma one
+#ifndef GAME_OBJECT_H
+#define GAME_OBJECT_H
+
+#include <string_view>
 
 #include "olcPixelGameEngine.h"
 #include "olcPGEX_TransformedView.h"
 
 #include "AudioManager.h"
 
-#include <string_view>
-
-
-// Game Object abstract class
+// Abstract Game Object
 class GameObject
 {
 public:
@@ -33,7 +33,6 @@ private:
 	const static olc::vi2d s_vMapSize;
 };
 
-
 // Ball Game Object
 class Ball : public GameObject
 {
@@ -54,7 +53,6 @@ private:
 	bool bOutOfBounds{ false };
 };
 
-
 // Platform Game Object
 class Platform : public GameObject
 {
@@ -67,3 +65,5 @@ public:
 
 	olc::vf2d vSize;
 };
+
+#endif // GAME_OBJECT_H

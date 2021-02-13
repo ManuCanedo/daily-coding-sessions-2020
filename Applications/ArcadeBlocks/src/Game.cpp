@@ -73,7 +73,7 @@ void Game::LoadLevel(const Level& level)
 		if (Ball::s_Ball == nullptr)
 		{
 			vGameObjects.push_back(std::make_unique<Ball>(Ball({ 16.0f, 10.0f }, 0.5f)));
-			Ball::s_Ball = (Ball*)vGameObjects.back().get();
+			Ball::s_Ball = static_cast<Ball*>(vGameObjects.back().get());
 			GameObject::SetLevel(s_sLevel1);
 		}
 		break;
