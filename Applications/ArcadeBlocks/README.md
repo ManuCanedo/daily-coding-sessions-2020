@@ -1,4 +1,4 @@
-# Snake game ripoff
+# Arcade Blocks Game
 
 Simple Arcade Game.
 
