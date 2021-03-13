@@ -1,6 +1,6 @@
 # Snake game ripoff
 
-Simple Arcade Game coded very quickly for my partner to play.
+Simple Arcade Game.
 
 ![ArcadeBlocks](screenshots/ArcadeBlocks.jpg) 
 
