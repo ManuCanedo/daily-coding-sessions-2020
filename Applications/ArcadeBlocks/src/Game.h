@@ -13,10 +13,8 @@
 #include "GameObject.h"
 #include "AudioManager.h"
 
-
 // Game Class
-class Game : public olc::PixelGameEngine
-{
+class Game : public olc::PixelGameEngine {
 public:
 	Game();
 
@@ -33,7 +31,7 @@ private:
 	void RenderFrame();
 
 private:
-	std::vector<std::unique_ptr<GameObject>> vGameObjects;
+	std::vector<std::unique_ptr<GameObject> > vGameObjects;
 	olc::TileTransformedView tv;
 	AudioManager audio;
 	bool bGameOver{ false };
@@ -42,6 +40,3 @@ private:
 };
 
 #endif // GAME_H_
-
-
-

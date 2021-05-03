@@ -1,29 +1,27 @@
 #include <iostream>
 
-template<typename T>
-void print(T obj)
-{   
-    std::cout << "Template version: " << obj << std::endl;
+template <typename T> void print(T obj)
+{
+	std::cout << "Template version: " << obj << std::endl;
 }
 
 void print(int num)
 {
-    std::cout << "Non Template version: " << num << std::endl;
+	std::cout << "Non Template version: " << num << std::endl;
 }
 
-template<typename T, typename K>
-void show(K obj)
+template <typename T, typename K> void show(K obj)
 {
-    std::cout << T(obj) << std::endl;
+	std::cout << T(obj) << std::endl;
 }
 
 int main()
 {
-    int myInt = 1;
+	int myInt = 1;
 
-    print(myInt);
-    print<>(myInt);
-    show<double>(myInt);
+	print(myInt);
+	print<>(myInt);
+	show<double>(myInt);
 
-    return 0;
+	return 0;
 }

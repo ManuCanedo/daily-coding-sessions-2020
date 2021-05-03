@@ -7,14 +7,13 @@
 #include <memory>
 #include <list>
 
-using QueryMap = typename std::unordered_multimap <std::string, Person*>;
+using QueryMap = typename std::unordered_multimap<std::string, Person*>;
 
-class Application
-{
+class Application {
 public:
 	Application()
-		: data(std::make_unique<std::list<Person>>()),
-		search(std::make_unique<std::map<DataType, QueryMap>>())
+		: data(std::make_unique<std::list<Person> >()),
+		  search(std::make_unique<std::map<DataType, QueryMap> >())
 	{
 		for (auto& q : queries)
 			search->insert({ q, {} });
@@ -51,7 +50,6 @@ private:
 
 private:
 	bool bExit{ false };
-	std::unique_ptr<std::list<Person>> data;
-	std::unique_ptr<std::map<DataType, QueryMap>> search;
+	std::unique_ptr<std::list<Person> > data;
+	std::unique_ptr<std::map<DataType, QueryMap> > search;
 };
-

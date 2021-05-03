@@ -1,34 +1,32 @@
 #include <iostream>
 
-class Test
-{
+class Test {
 };
 
-template <typename T>
-void call(T &&arg)
+template <typename T> void call(T&& arg)
 {
-    std::cout << "* no cast: ";
-    check(arg);
-    std::cout << "* static_cast<T>(arg): ";
-    check(static_cast<T>(arg));
-    std::cout << "* std::forward<T>(arg): ";
-    check(std::forward<T>(arg));
+	std::cout << "* no cast: ";
+	check(arg);
+	std::cout << "* static_cast<T>(arg): ";
+	check(static_cast<T>(arg));
+	std::cout << "* std::forward<T>(arg): ";
+	check(std::forward<T>(arg));
 }
 
-void check(Test &lval)
+void check(Test& lval)
 {
-    std::cout << "lvalue" << std::endl;
+	std::cout << "lvalue" << std::endl;
 }
 
-void check(Test &&rval)
+void check(Test&& rval)
 {
-    std::cout << "rvalue" << std::endl;
+	std::cout << "rvalue" << std::endl;
 }
 
 int main()
 {
-    std::cout << " - Function called with an rvalue - " << std::endl;
-    call(Test());
+	std::cout << " - Function called with an rvalue - " << std::endl;
+	call(Test());
 
-    return 0;
+	return 0;
 }

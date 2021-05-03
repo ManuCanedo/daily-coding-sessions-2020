@@ -8,19 +8,19 @@
 #include <fmod.hpp>
 
 class AudioManager {
-
 public:
 	AudioManager();
 	~AudioManager();
 	void Update(float elapsed);
 
-	void SetAudioListener(FMOD_VECTOR &pos, FMOD_VECTOR &vel, FMOD_VECTOR &forward, FMOD_VECTOR &up);
-	void SetReverb(FMOD_REVERB_PROPERTIES &props, FMOD_VECTOR &pos);
+	void SetAudioListener(FMOD_VECTOR& pos, FMOD_VECTOR& vel, FMOD_VECTOR& forward,
+			      FMOD_VECTOR& up);
+	void SetReverb(FMOD_REVERB_PROPERTIES& props, FMOD_VECTOR& pos);
 
 	void LoadSFX(std::string_view path);
 	void LoadSong(std::string_view path);
-	void PlaySFX(std::string_view path, float minVol, float maxVol, 
-		float minPitch, float maxPitch, FMOD_VECTOR& pos, FMOD_VECTOR& vel);
+	void PlaySFX(std::string_view path, float minVol, float maxVol, float minPitch,
+		     float maxPitch, FMOD_VECTOR& pos, FMOD_VECTOR& vel);
 	void PlaySong(std::string_view path);
 	void StopSFXs();
 	void StopSongs();
@@ -53,4 +53,3 @@ private:
 };
 
 #endif // AUDIO_MANAGER_H_
-
