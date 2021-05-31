@@ -1,12 +1,17 @@
 # Welcome to my Daily Coding Sessions
   
-I am doing a C++ coding session per day. Whithin these files there are dozens of algorithms, data structures and language features test applications.
-<br/><br/>
-Most days I start a new  mathematical or algorithmic coding challenge and I submit a correct and efficient solution to it. Time Complexity of the solution provided is displayed at the bottom of each file. Other days I do some data structures and C++ language features workout.
+This repo started when I used to do a C++ coding session a day. Whithin these files there are dozens of algorithms, data structures and language features test applications.
+
 <br/><br/>
 
+Most days I started a new  mathematical or algorithmic coding challenge and I submitted a correct and efficient solution to it. Time Complexity of the solution provided is displayed at the bottom of each file. Other days I did some data structures and C++ language features workout.
+
+<br/><br/>
+
+Now it still serves me to submit PoC and test out new technologies from time to time.
+
 ![dozens-of-algorithms](media/dozens-of-algorithms-ai.jpg?raw=true "'Dozens of algorithms and feature-testing applications', generated with VQGAN+CLIP")  
-*'Dozens of algorithms and feature-testing applications', generated with VQGAN+CLIP*
+*'Dozens of algorithms and feature test applications', generated with VQGAN+CLIP*
 
 ## **Applications**
 
