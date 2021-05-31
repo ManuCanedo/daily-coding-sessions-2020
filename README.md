@@ -5,6 +5,9 @@ I am doing a C++ coding session per day. Whithin these files there are dozens of
 Most days I start a new  mathematical or data management coding challenge and I submit a correct and efficient solution to it. Time Complexity of the solution provided is displayed at the bottom of each file. Other days I do some data structures and C++ language features workout.
 <br/><br/>
 
+![dozens-of-algorithms](media/dozens-of-algorithms-ai.jpg?raw=true "'Dozens of algorithms and feature-testing applications', generated with VQGAN+CLIP")
+*'Dozens of algorithms and feature-testing applications', generated with VQGAN+CLIP*
+
 ## **Applications**
 
 #### Games
