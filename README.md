@@ -160,3 +160,7 @@ Most days I start a new  mathematical or data management coding challenge and I 
 ## Stay in touch
 
 + Linkedin - https://www.linkedin.com/in/manuel-tabares/
+
+<br><br><hr>
+![data-structures](media/data-structures-ai.jpg?raw=true "'Data Structures', generated with VQGAN+CLIP")
+*'Data Structures' - generated with VQGAN+CLIP*
