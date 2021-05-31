@@ -164,4 +164,4 @@ I still use it today to submit PoC and test new technologies.
 
 <br><br><hr>
 ![panda-travelling-across-the-universe](media/panda-travelling-across-the-universe-ai.jpg?raw=true "'A panda travelling across the universe', generated with VQGAN+CLIP")
-A panda travelling across the universe - generated with VQGAN+CLIP
+Panda travelling across the universe - generated with VQGAN+CLIP
