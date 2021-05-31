@@ -1,4 +1,4 @@
-# Welcome to my Daily Coding Sessions
+# Daily Coding Sessions
   
 This repo started when I used to do a C++ coding session a day. Whithin these files there are dozens of algorithms, data structures and language features test applications.
 <br/><br/>
