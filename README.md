@@ -162,5 +162,5 @@ Most days I start a new  mathematical or data management coding challenge and I 
 + Linkedin - https://www.linkedin.com/in/manuel-tabares/
 
 <br><br><hr>
-![data-structures](media/data-structures-ai.jpg?raw=true "'Data Structures', generated with VQGAN+CLIP")
-*'Data Structures' - generated with VQGAN+CLIP*
+![panda-travelling-across-the-universe](media/panda-travelling-across-the-universe-ai.jpg?raw=true "'A panda travelling across the universe', generated with VQGAN+CLIP")
+*'A panda travelling across the universe' - generated with VQGAN+CLIP*
