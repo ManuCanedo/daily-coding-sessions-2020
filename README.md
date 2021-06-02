@@ -7,7 +7,7 @@ Most days I started a new math or algorithmic coding challenge and presented it 
 I still use it today to submit PoC and test new technologies.
  
 <p align="center">
-  <img width="840" height="480" src="media/colourful-universe-ai.jpg">
+  <br> <img width="840" height="480" src="media/colourful-universe-ai.jpg">
   <br> Colourful Universe - generated with VQGAN+CLIP
 </p>
 
