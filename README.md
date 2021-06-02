@@ -165,9 +165,9 @@ I still use it today to submit PoC and test new technologies.
 
 + Linkedin - https://www.linkedin.com/in/manuel-tabares/
 
-<br><br><hr>
+<br><hr>
 
 <p align="center">
-  <img width="480" height="480" src="media/panda-travelling-across-the-universe-ai.jpg">
+  <br> <img width="480" height="480" src="media/panda-travelling-across-the-universe-ai.jpg">
   <br> Panda travelling across the universe - generated with VQGAN+CLIP
 </p>
