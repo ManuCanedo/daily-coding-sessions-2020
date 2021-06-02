@@ -5,9 +5,11 @@ This repo started when I used to do a C++ coding session a day. Whithin these fi
 Most days I started a new math or algorithmic coding challenge and presented it with a correct and efficient solution. The time complexity of the provided solution is displayed at the bottom of each file. Other days I did some data structures and C++ language features exercises.
 <br/><br/>
 I still use it today to submit PoC and test new technologies.
-
-![colourful-universe](media/colourful-universe-ai.jpg?raw=true "'Colourful Universe', generated with VQGAN+CLIP")  
-<p align="center">Colourful Universe - generated with VQGAN+CLIP</p>
+ 
+<p align="center">
+  <img width="840" height="480" src="media/colourful-universe-ai.jpg">
+  Colourful Universe - generated with VQGAN+CLIP
+</p>
 
 ## **Applications**
 
@@ -163,5 +165,8 @@ I still use it today to submit PoC and test new technologies.
 + Linkedin - https://www.linkedin.com/in/manuel-tabares/
 
 <br><br><hr>
-![panda-travelling-across-the-universe](media/panda-travelling-across-the-universe-ai.jpg?raw=true "'A panda travelling across the universe', generated with VQGAN+CLIP")
-Panda travelling across the universe - generated with VQGAN+CLIP
+
+<p align="center">
+  <img width="480" height="480" src="media/panda-travelling-across-the-universe-ai.jpg">
+  Panda travelling across the universe - generated with VQGAN+CLIP
+</p>
