@@ -1,16 +1,17 @@
 # Daily Coding Sessions
-  
+
+<p align="justify">
 This repo started when I used to do a C++ coding session a day. Whithin these files there are dozens of algorithms, data structures and language features test applications.
 <br/><br/>
 Most days I started a new math or algorithmic coding challenge and presented it with a correct and efficient solution. The time complexity of the provided solution is displayed at the bottom of each file. Other days I did some data structures and C++ language features exercises.
 <br/><br/>
 I still use it today to submit PoC and test new technologies.
- 
+</p>
+
 <p align="center">
   <br> <img width="840" height="480" src="media/colourful-universe-ai.jpg">
   <br> Colourful Universe - AI generated (vqgan+clip)
 </p>
-
 
 ## **Applications**
 
