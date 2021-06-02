@@ -6,8 +6,8 @@ Most days I started a new math or algorithmic coding challenge and presented it 
 <br/><br/>
 I still use it today to submit PoC and test new technologies.
 
-![dozens-of-algorithms](media/dozens-of-algorithms-ai.jpg?raw=true "'Dozens of algorithms and feature-testing applications', generated with VQGAN+CLIP")  
-<p align="center">Dozens of algorithms and data structures - generated with VQGAN+CLIP</p>
+![bohemian-lights-ai](media/bohemian-lights-ai.jpg?raw=true "'Bohemian Lights', generated with VQGAN+CLIP")  
+<p align="center">Bohemian Lights - generated with VQGAN+CLIP</p>
 
 ## **Applications**
 
