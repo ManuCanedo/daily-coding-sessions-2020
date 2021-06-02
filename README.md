@@ -8,7 +8,7 @@ I still use it today to submit PoC and test new technologies.
  
 <p align="center">
   <br> <img width="840" height="480" src="media/colourful-universe-ai.jpg">
-  <br> Colourful Universe - generated with VQGAN+CLIP
+  <br> Colourful Universe - AI generated (vqgan+clip)
 </p>
 
 
@@ -166,8 +166,7 @@ I still use it today to submit PoC and test new technologies.
 + Linkedin - https://www.linkedin.com/in/manuel-tabares/
 
 <br><hr>
-
 <p align="center">
   <br> <img width="480" height="480" src="media/panda-travelling-across-the-universe-ai.jpg">
-  <br> Panda travelling across the universe - generated with VQGAN+CLIP
+  <br> Panda travelling across the universe - AI generated (vqgan+clip)
 </p>
