@@ -16,9 +16,9 @@ I still use it today to submit PoC and test new technologies.
 ## **Applications**
 
 #### Games
-<p align="center">
+
 10-02-2021: [ArcadeBlocksGame](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Applications/ArcadeBlocks)  
-</p>
+
 #### Other Applications
 
 03-02-2021: [AddressBook](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Applications/AddressBook)  
