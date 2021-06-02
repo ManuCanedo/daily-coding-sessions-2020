@@ -6,8 +6,8 @@ Most days I started a new math or algorithmic coding challenge and presented it 
 <br/><br/>
 I still use it today to submit PoC and test new technologies.
 
-![bohemian-lights-ai](media/bohemian-lights.jpg?raw=true "'Bohemian Lights', generated with VQGAN+CLIP")  
-<p align="center">Bohemian Lights - generated with VQGAN+CLIP</p>
+![colourful-universe](media/colourful-universe.jpg?raw=true "'Colourful Universe', generated with VQGAN+CLIP")  
+<p align="center">Colourful Universe - generated with VQGAN+CLIP</p>
 
 ## **Applications**
 
