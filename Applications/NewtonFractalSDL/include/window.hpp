@@ -34,6 +34,6 @@ inline std::complex<double> Window::p(const std::complex<double>& x) const
 
 inline std::complex<double> Window::dp(const std::complex<double>& x) const
 {
-	return 5.0 * std::pow(x, 4) + 2.0 * x - std::complex<double>{ 1, 0 };
+	return 5.0 * std::pow(x, 4) + 2.0 * x - std::complex<double>{ 1.0, 0.0 };
 }
 #endif
