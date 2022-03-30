@@ -21,7 +21,7 @@ I still use it today to submit PoC and test new technologies.
 
 #### Other Applications
 
-13-03-2022: [AddressBook](https://github.com/ManuelTabares/daily-coding-sessions/tree/patch-1/Applications/NewtonFractalSDL)
+13-03-2022: [AddressBook](https://github.com/ManuelTabares/daily-coding-sessions/tree/patch-1/Applications/NewtonFractalSDL)  
 03-02-2021: [AddressBook](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/Applications/AddressBook)  
 23-01-2021: [FractalImagesGenerator](https://github.com/ManuCanedo/DailyCodingSessions/tree/master/ParallelComputing_CUDA/CUDA_Fractal)  
 
